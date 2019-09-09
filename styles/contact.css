@@ -1,0 +1,416 @@
+.Contact-div {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #0b0711; */
+    background: url("../images/contact.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+}
+
+.Contact-div .Contact-heading {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.Contact-div .Contact-heading span {
+    color: white;
+    font-size: 6.5em;
+    font-family: "Ikaros-Sans";
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.Contact-div .Contact-heading span::after {
+    position: absolute;
+    left: 90%;
+    bottom: 0;
+    transform: translateX(-50%);
+    content: "";
+    height: 2px;
+    width: 20%;
+    border-bottom: 2px solid #768ad9;
+}
+
+.contact-card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: [col-1] 10% [col-2] 80% [col-3] 10% [col-4] auto [end];
+    grid-template-rows: [row-1] 0vw [row-2] 70vh [row-3] auto [end];
+}
+
+.Contact-div .Cards-div {
+    /* margin-top: 2vh;
+  width: 100%;
+  height: 70vh; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-column-start: col-2;
+    grid-column-end: col-3;
+    grid-row-start: row-1;
+    grid-row-end: row-3;
+    transition: 0.3s ease-in-out;
+}
+
+.des-card {
+    width: 18%;
+    background-color: #1b191e;
+    border-radius: 10px;
+    margin: 0 25px 0 25px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    transition: 0.25s ease-in-out;
+    padding-top: 60px;
+}
+
+.des-card .prof-pic {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* .des-card:nth-of-type(1)  .prof-pic {
+  background: url('../images/Parth.jpg');
+} */
+
+
+/* .des-card:nth-of-type(2)  .prof-pic {
+  background: url('../images/Parth.jpg');
+}
+
+.des-card:nth-of-type(3)  .prof-pic {
+  background: url('../images/adit.png');
+}
+
+/* .des-card:nth-of-type(4)  .prof-pic {
+  background: url('../images/Parth.jpg');
+} */
+
+
+/* .des-card:nth-of-type(5)  .prof-pic {
+  background: url('../images/Parth.jpg');
+} */
+
+
+/* .des-card:nth-of-type(6)  .prof-pic {
+  background: url('../images/tanvi.png');
+} */
+
+.des-card .name {
+    width: 100%;
+    text-align: center;
+    padding: 2% 0 2% 0;
+}
+
+.des-card .name span {
+    font-family: sf-ui;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.des-card .position {
+    width: 100%;
+    text-align: center;
+    padding: 2% 0 2% 0;
+}
+
+.des-card .position span {
+    color: white;
+    font-family: sf-ui;
+    font-size: 0.9em;
+}
+
+.des-card .phone-no {
+    width: 100%;
+    text-align: center;
+    padding: 2% 0 2% 0;
+}
+
+.des-card .phone-no span {
+    color: white;
+    font-family: sf-ui;
+    font-size: 0.7em;
+}
+
+.des-card .email {
+    width: 100%;
+    text-align: center;
+    padding: 2% 0 2% 0;
+}
+
+.des-card .email span {
+    color: white;
+    font-family: sf-ui;
+    font-size: 0.7em;
+}
+
+.des-card .dash {
+    width: 30%;
+    height: 2px;
+    background-color: #768ad9;
+    margin: 5% 0 5% 0;
+}
+
+.Contact-div .footer-div {
+    width: 90%;
+    height: 5vh;
+    border-top: 2px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact-div .footer-div span {
+    color: white;
+    font-family: sf-ui;
+}
+
+.Contact-div .footer-div span a {
+    color: white;
+    font-family: sf-ui;
+    margin-left: 1vw;
+}
+
+.arrow-left-contact {
+    display: flex;
+    border-radius: 50%;
+    background-color: azure;
+    height: 40px;
+    width: 40px;
+    grid-column-start: col-1;
+    grid-column-end: col-2;
+    grid-row-start: row-1;
+    grid-row-end: row-3;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow-right-contact {
+    display: flex;
+    border-radius: 50%;
+    background-color: azure;
+    height: 40px;
+    width: 40px;
+    grid-column-start: col-3;
+    grid-column-end: col-4;
+    grid-row-start: row-1;
+    grid-row-end: row-3;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow-left-contact>div.image {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-image: url("../assets/icons/left-arrow.png");
+    background-size: cover;
+    line-height: 4px;
+}
+
+.arrow-right-contact>div.image {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-image: url("../assets/icons/right-arrow.png");
+    background-size: cover;
+    line-height: 4px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .Contact-div .Contact-heading {
+        margin-top: 0vh;
+    }
+    .Contact-div .Contact-heading span {
+        font-size: 2.5em;
+    }
+    .contact-card-container {
+        width: 80vw;
+    }
+    .Contact-div .Cards-div {
+        margin-top: 0vh;
+        height: 75vh;
+    }
+    .des-card {
+        width: 77%;
+        height: 33%;
+        margin: 0vh 0 0vh 0;
+    }
+    .des-card .prof-pic {
+        width: 108px;
+        height: 108px;
+    }
+    .des-card .name span {
+        font-family: sf-ui;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .Contact-div .footer-div {
+        width: 80%;
+        padding: 0px 20px 0px 20px;
+    }
+    .Contact-div .footer-div span {
+        color: white;
+        font-size: 0.7em;
+        font-family: sf-ui;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+    .Contact-div .Cards-div {
+        overflow: scroll;
+        margin-top: 0vh;
+    }
+    .Contact-div .Cards-div .des-card {
+        width: 35%;
+        height: 25%;
+        margin: 5.5vh 20px 0 20px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 700px) {
+    .Contact-div .Cards-div {
+        overflow: scroll;
+        margin-top: 0vh;
+    }
+    .Contact-div .Cards-div .des-card {
+        width: 35%;
+        height: 31%;
+        margin: 10.5vh 20px 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Contact-div .Contact-heading {
+        margin-top: 0vh;
+    }
+    .Contact-div .Contact-heading span {
+        font-size: 2.2em;
+    }
+    .Contact-div .Cards-div {
+        margin-top: 0vh;
+        height: 75vh;
+    }
+    .des-card {
+        width: 92%;
+        height: 40%;
+        margin: 0vh 0 7vh 0;
+    }
+    .des-card .prof-pic {
+        width: 78px;
+        height: 78px;
+    }
+    .des-card .name span {
+        font-family: sf-ui;
+        color: white;
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+    .des-card .phone-no span {
+        font-size: 0.5em;
+    }
+    .des-card .email span {
+        font-size: 0.5em;
+    }
+    .des-card .position span {
+        font-size: 0.7em;
+    }
+    .Contact-div .footer-div {
+        width: 70%;
+        padding: 0px 20px 0px 20px;
+    }
+    .Contact-div .footer-div span {
+        color: white;
+        font-size: 0.5em;
+        font-family: sf-ui;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 410px) {
+    .des-card {
+        height: 37%;
+        margin: 0vh 0 7vh 0;
+    }
+    .des-card .prof-pic {
+        width: 98px;
+        height: 98px;
+    }
+}
+
+@media (max-width: 380px) and (min-width: 377px) {
+    .des-card {
+        height: 30%;
+    }
+}
+
+@media (max-width: 376px) and (min-width: 340px) {
+    .des-card {
+        height: 37%;
+    }
+}
+
+@media (max-width: 340px) and (min-width: 320px) {
+    .des-card {
+        height: 37%;
+        margin: 0vh 0 7vh 0;
+    }
+}

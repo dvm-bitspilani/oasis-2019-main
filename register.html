@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <title>Registration</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-14236414-1');
+    </script>
+
+</head>
+
+<body>
+    <div class="msg-box">
+        <span class="inner-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
+        suscipit quaerat unde magni architecto adipisci blanditiis,
+        necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit
+        assumenda quod rerum, minus explicabo consectetur!</span
+      >
+      <div class="close-box" onclick="closebox()">OK</div>
+    </div>
+    <div class="form-div">
+      <span class="heading">Registration</span>
+        <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i
+      ></a>
+        <div class="form-container">
+            <div class="input-el">
+                <input type="text" placeholder="Name *" class="text-type" id="name" />
+                <div class="select-wrapper">
+                    <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
+            <option value="" selected disabled>Select your Events</option>
+            </select> -->
+                    <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onkeyup="filterFunction2()" />
+                    <div class="events-list"></div>
+                </div>
+                <div class="select-wrapper">
+                    <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
+            <option value="" selected disabled>Select your Events</option>
+            </select> -->
+                    <input type="text" placeholder="Select your Gender" class="events-input" id="gender_input" onclick="displaylist4()" />
+                    <div class="events-list">
+                        <span onclick="setgendervalue1()">Male</span>
+                        <span onclick="setgendervalue2()">Female</span>
+                        <span onclick="setgendervalue3()">Others</span>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <select id="yos_opt" class="select-input" onchange="getyosvalue()">
+              <option value="">Select your Year of Study</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+                </div>
+
+                <input type="text" placeholder="City *" class="text-type" id="city" />
+            </div>
+            <div class="input-el">
+                <div class="select-wrapper">
+                    <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
+            <option value="" selected disabled>Select your Events</option>
+            </select> -->
+                    <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onkeyup="filterFunction()" />
+                    <div class="events-list"></div>
+                </div>
+                <div class="selected-events"></div>
+                <input type="email" placeholder="Email *" class="text-type" id="email" />
+                <input type="number" placeholder="Phone *" class="text-type" id="phone" />
+                <div class="select-wrapper">
+                    <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
+            <option value="" selected disabled>Select your Events</option>
+            </select> -->
+                    <input type="text" placeholder="Are you a Mentor/Choreographer?" class="events-input" id="choreo_input" onclick="displaylist2()" />
+                    <div class="events-list">
+                        <span class="sports-tag" onclick="setchoreovalue()">Yes</span>
+                        <span class="sports-tag" onclick="setchoreovalue2()">No</span>
+                    </div>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"></div>
+            </div>
+        </div>
+        <span class="register" onclick="prereg()">Register</span>
+    </div>
+</body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="./js/register.js"></script>
+
+</html>

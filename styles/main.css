@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "Haarlem";
+    src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
+}
+
+@font-face {
+    font-family: "sf-ui";
+    src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
+}
+
+@font-face {
+    font-family: 'sf-reg';
+    src: url('../fonts/SF-Pro-Text-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'nobel gas';
+    src: url('../fonts/NobleGaslights.otf');
+}
+
+@font-face {
+    font-family: 'google sans';
+    src: url('../fonts/ProductSans-Medium.woff');
+}
+
+html {
+    overflow: hidden;
+}

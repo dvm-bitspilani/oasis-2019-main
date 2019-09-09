@@ -1,0 +1,375 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Haarlem";
+  src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
+}
+
+@font-face {
+  font-family: "sf-ui";
+  src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
+}
+
+@font-face {
+  font-family: SFpro;
+  src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+}
+
+.msg-box {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  font-family: sf-ui;
+  font-size: 2em;
+  transform: translate(-50%, -50%) scale(0);
+  padding: 0 5% 0 5%;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.msg-box > span {
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.7em;
+}
+
+.msg-box > .close-box {
+  font-size: 0.7em;
+  margin-top: 2vh;
+  background-image: linear-gradient(#be4dff, #4bb4fa);
+  padding: 1% 5% 1% 5%;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.form-div {
+  height: 100vh;
+  width: 100%;
+  background-color: #00002e;
+  padding-top: 5vh;
+}
+
+.form-div > .heading {
+  color: #cbcbcb;
+  font-family: Haarlem;
+  font-size: 6em;
+  letter-spacing: 10px;
+  margin-left: 5vh;
+}
+
+.form-div > .back-btn {
+  float: right;
+  margin-right: 5vh;
+  color: white;
+  font-size: 3em;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-div > .back-btn:hover {
+  transform: scale(1.2);
+}
+
+.form-div > .form-container {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input-el {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column;
+}
+
+.input-el .text-type {
+  background-color: #02021b;
+  width: 60%;
+  padding: 2% 3% 2% 6%;
+  border-radius: 40px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1.4em;
+  font-family: sf-ui;
+}
+
+input:focus {
+  outline: none;
+}
+
+.select-wrapper {
+  width: 69%;
+  height: 12%;
+  border-radius: 40px;
+  position: relative;
+}
+
+.select-wrapper:nth-child(1) {
+  position: relative;
+}
+
+.select-wrapper:nth-child(5) {
+  position: relative;
+}
+
+select {
+  -webkit-appearance: none;
+  border-radius: 40px;
+  padding: 3% 3% 3% 6%;
+  color: #797777;
+  background-color: #02021b;
+  width: 100%;
+  height: 100%;
+  border: solid 3px #2263c1;
+  font-size: 1.2em;
+  font-family: sf-ui;
+}
+
+select:focus {
+  outline: none;
+}
+
+.events-input {
+  background-color: #02021b;
+  width: 90%;
+  padding: 2% 3% 2% 6%;
+  border-radius: 40px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1.4em;
+  font-family: sf-ui;
+  height: 55%;
+}
+
+.events-list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-height: 70vh;
+  background-color: #02021b;
+  display: none;
+  flex-flow: column;
+  z-index: 10;
+  overflow: scroll;
+}
+
+.events-list > span {
+  text-align: start;
+  height: 2vh;
+  padding: 2% 0 2% 8%;
+  color: #cbcbcb;
+  font-family: sf-ui;
+  font-size: 1.2em;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+
+.input-el > .radio-inputs {
+  width: 70%;
+  height: 10%;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.input-el > .radio-inputs > span {
+  margin-left: 2vh;
+  color: #ffffff;
+  font-family: sf-ui;
+  font-size: 1.5em;
+}
+
+.input-el > .radio-inputs > .radio-buttons > input {
+  margin: 2vh;
+}
+
+.selected-events {
+  width: 64%;
+  height: 10%;
+  background-color: #02021b;
+  padding: 2% 2% 2% 2%;
+  border-radius: 10px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1em;
+  font-family: sf-ui;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sports {
+  width: auto;
+  padding: 2% 2% 2% 2%;
+  height: 40%;
+  background-color: #02021b;
+  border-radius: 40px;
+  margin-left: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cbcbcb;
+  border: solid 1px #2263c1;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.textarea-type:focus {
+  outline: none;
+}
+
+.form-div > .register {
+  font-size: 1.7em;
+  letter-spacing: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images//register.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 3vh;
+  color: white;
+  padding: 3% 5% 3% 5%;
+  border-radius: 40px;
+  font-family: SFpro;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #00002e;
+  }
+  .form-div > .heading {
+    font-size: 2em;
+    margin-left: 0vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form-div > .form-container {
+    flex-flow: column;
+    margin-top: 5vh;
+    height: 115vh;
+  }
+
+  .input-el > .radio-inputs > span {
+    font-size: 1.2em;
+  }
+
+  label {
+    font-size: 0.7em;
+  }
+
+  .input-el {
+    width: 100%;
+  }
+
+  .input-el > .radio-inputs {
+    width: 100%;
+    text-align: center;
+  }
+
+  .input-el .text-type {
+    font-size: 1.2em;
+  }
+
+  .events-input {
+    font-size: 1.2em;
+  }
+
+  .events-list {
+    max-height: 40vh;
+  }
+
+  .events-list > span {
+    font-size: 0.9em;
+  }
+
+  select {
+    font-size: 1.2em;
+  }
+
+  .form-div > .register {
+    margin-bottom: 4vh;
+    font-size: 1.2em;
+    padding: 3% 8% 3% 8%;
+  }
+  .back-btn {
+    display: none;
+  }
+  .selected-events {
+    font-size: 0.7em;
+  }
+
+  .msg-box {
+    width: 90vw;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-div > .heading {
+    font-size: 1.5em;
+  }
+  .input-el .text-type {
+    font-size: 0.7em;
+  }
+  select {
+    font-size: 0.7em;
+  }
+  .form-div > .form-container {
+    height: 135vh;
+  }
+  .select-wrapper {
+    width: 70%;
+    height: 9%;
+  }
+  .input-el > .radio-inputs > span {
+    font-size: 1em;
+  }
+
+  .input-el > .textarea-type {
+    font-size: 0.7em;
+  }
+  .form-div > .register {
+    padding: 3% 12% 3% 12%;
+  }
+
+  .events-input {
+    font-size: 0.7em;
+  }
+
+  .events-list {
+    max-height: 40vh;
+  }
+
+  .events-list > span {
+    font-size: 0.7em;
+  }
+}

@@ -1,0 +1,277 @@
+.about {
+    background: url(../../images/about.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #ffffff;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 100vh;
+}
+
+@font-face {
+    font-family: "Ikaros-Sans";
+    src: url("../../fonts/IR.otf");
+}
+
+@font-face {
+    font-family: "berlin-sans";
+    src: url("../../fonts/bsf.ttf");
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10vh 20vh 30px 65vh;
+    grid-template-columns: 10vw 10vw 50vw 10vw 10vw 10vw 10vw;
+}
+
+.about-heading {
+    font-family: "Ikaros-Sans";
+    font-size: 85px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    z-index: 1000;
+}
+
+.line {
+    width: 135px;
+    height: 3px;
+    background: #62a0fb;
+    box-shadow: #e95585 0px 0px 2px;
+    z-index: 0;
+}
+
+.about-text {
+    grid-row-start: 4;
+    font-family: "Bitter", serif;
+    font-size: 20px;
+    line-height: 35px;
+    word-spacing: 2px;
+    grid-column-start: 3;
+    z-index: 140;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.about-text::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#fog {
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+#fog:before,
+#fog:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+#fog:before {
+    background-image: url("../../images/Smoke.png");
+    animation: drift 140s linear 0s infinite;
+}
+
+#fog:after {
+    background-image: url("../../images/Smoke.png");
+    animation: drift 60s linear 0s infinite;
+}
+
+@keyframes drift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-200vw, 0, 0);
+    }
+}
+
+
+/* Now the same background, but with brightness filters*/
+
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("../../images/about.jpg");
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+    z-index: -1;
+}
+
+
+/*Now just a opacity animation*/
+
+.flashit {
+    -webkit-animation: flash ease-out 7s infinite;
+    animation: flash ease-out 7s infinite;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes flash {
+    from {
+        opacity: 0;
+        z-index: 120;
+    }
+    92% {
+        opacity: 0;
+        z-index: 120;
+    }
+    93% {
+        opacity: 0.6;
+        z-index: 120;
+    }
+    94% {
+        opacity: 0.2;
+        z-index: 120;
+    }
+    96% {
+        opacity: 0.9;
+        z-index: 120;
+    }
+    to {
+        opacity: 0;
+        z-index: 99;
+    }
+}
+
+@keyframes flash {
+    from {
+        opacity: 0;
+        z-index: 120;
+    }
+    92% {
+        opacity: 0;
+        z-index: 99;
+    }
+    93% {
+        opacity: 0.6;
+        z-index: 120;
+    }
+    94% {
+        opacity: 0.2;
+        z-index: 120;
+    }
+    96% {
+        opacity: 1;
+        z-index: 120;
+    }
+    to {
+        opacity: 0;
+        z-index: 99;
+    }
+}
+
+
+/*End! is that simple! */
+
+@media (max-width: 1600px) {
+    .about-text {
+        grid-column-end: 5;
+    }
+}
+
+@media (max-width: 1400px) {
+    .about-text {
+        grid-column-end: 5;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-text {
+        font-size: 24px;
+        grid-column-end: 6;
+    }
+    .about-heading {
+        grid-column-end: 5;
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        background: url("../../images/mobile-about.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .lightning {
+        background: url("../../images/mobile-about.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .about-text {
+        font-size: 16px;
+    }
+    .about-heading {
+        font-size: 80px;
+        grid-column-end: 6;
+    }
+    .content {
+        grid-template-rows: 10vh 10vh 40px 70vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .line {
+        display: none;
+    }
+    .content {
+        grid-template-rows: 50px 70px 30px 70vh;
+        grid-template-columns: 5vw 5vw 40vw 30vw 10vw 10vw;
+    }
+    .about-heading {
+        display: flex;
+        grid-column-start: 3;
+        justify-content: center;
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 330px) {
+    .about-text {
+        font-size: 13px;
+        line-height: 17px;
+    }
+}
+
+@media (max-height: 800px) and (max-width: 1600px) and (min-width: 600px) {
+    .about-text {
+        font-size: 1rem;
+    }
+}

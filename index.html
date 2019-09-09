@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/landing.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles//about.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <link rel="stylesheet" href="./styles/video.css" />
+    <link rel="stylesheet" href="./styles/spons.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/oasis-favicon.png" type="image/x-icon">
+    <title>OASIS'19</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-14236414-1');
+    </script>
+
+</head>
+
+<body>
+    <!-- 
+    <div class="loader_wraper">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo">
+            <span>O</span><span>A</span><span>S</span><span>I</span><span>S </span><span>'</span><span>1</span><span>9</span>
+        </div>
+    </div> -->
+
+    <div id="loader-wrapper" style="overflow: hidden">
+        <div id="main-loader">
+            <div class="ring el-1"></div>
+            <div class="ring el-2"></div>
+            <div class="ring el-3"></div>
+            <div class="ring el-4"></div>
+            <div class="ring el-5"></div>
+            <div class="ring el-6"></div>
+            <div class="ring el-7"></div>
+            <div class="ring el-8"></div>
+            <div class="ring el-9"></div>
+            <div class="ring el-10"></div>
+            <div class="ring el-11"></div>
+            <div class="ring el-12"></div>
+            <div class="ring el-13"></div>
+            <div class="ring el-14"></div>
+            <div class="ring el-15"></div>
+        </div>
+        <div id="oasis-text">
+            <div id="oasis-title">
+                <ul>
+                    <li class="oasis-li li-1">O</li>
+                    <li class="oasis-li li-2">A</li>
+                    <li class="oasis-li li-3">S</li>
+                    <li class="oasis-li li-4">I</li>
+                    <li class="oasis-li li-5">S</li>
+                    <li class="oasis-li li-6">'</li>
+                    <li class="oasis-li li-7">1</li>
+                    <li class="oasis-li li-8">9</li>
+                </ul>
+            </div>
+            <div id="oasis-slogan">
+                Neon Noir
+            </div>
+        </div>
+        <div id="oasis-date">
+            19<sup>th</sup> Oct - 23<sup>rd</sup> Oct
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="oasis-logo"></div>
+        <div class="menu-back" onclick="closeNav()"></div>
+        <div class="nav-item" onclick="navigate(0)">HOME</div>
+        <div class="nav-item" onclick="navigate(1)">ABOUT US</div>
+        <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
+        <div class="nav-item" onclick="openSpons()">SPONSORS</div>
+        <div class="nav-item" onclick="navigate(3)">CONTACT US</div>
+        <div class="social-links">
+            <div class="nav-asset"></div>
+            <a href="https://www.facebook.com/oasis.bitspilani/" target="blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/bitsoasis/?hl=en" target="blank"><i class="fab fa-instagram"></i></a>
+            <div class="nav-asset"></div>
+        </div>
+        <div class="oasis-logo"></div>
+    </div>
+
+    <div id="hamburger" onclick="openNav()"></div>
+
+    <div class="landing-wrapper" id="home">
+        <div class="oasis-landing-container">
+            <img src="assets/images/oasist.png" class="oasis-landing">
+
+            <div class="mobile-register">
+                <a href="./register.html">REGISTER</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about" name="about">
+        <div id="fog"></div>
+        <div class="lightning flashit"></div>
+        <div class="content">
+            <div class="about-heading">
+                ABOUT US
+                <div class="line"></div>
+            </div>
+            <div class="about-text">
+                Oasis—the cultural fest of BITS Pilani—is nothing but 96 hours of unadulterated thrills comprising music, dance, drama, art, quizzes, fashion, and humour. With a footfall of around 5000+ every year, it is the second-largest cultural festival of India.
+                This year’s theme—neon-noir—is a confluence of the contraries coexisting in harmony. On a superficial level, the theme is inherently contradictory—the concept of both light and darkness manifested simultaneously. On a metaphysical level,
+                however, neon-noir is a commentary on specific socio-cultural dimensions such as urban decay, consumerism, and industrial encroachment. It is characterised by menacing cityscapes with the luminescence accentuating the shadows. If convoluted
+                storylines, crime, and moral fluctuation enrapture you, this Oasis, from 19th to 23rd October, buckle up for the experience of an aesthetic so powerful that you question your very existence in this realm. Live the life of a Taxi Driver
+                and run on blades of talent in the 49th edition of the fest which promises to leave you in a trance caused by the chiaroscuro of shadow and illumination.
+            </div>
+        </div>
+
+        <div class="video-wrapper" id="videos">
+            <div class="video-heading">
+                <span>VIDEOS</span>
+            </div>
+            <div class="cards-container">
+                <div class="arrow-left">
+                    <div class="image"></div>
+                </div>
+                <div class="arrow-right">
+                    <div class="image"></div>
+                </div>
+
+                <div class="cards cards-left">
+                    <a href="https://www.youtube.com/watch?v=35lWrDmkxko" target="blank"><img src="images/curtain-raiser.jpg" class="thumbnail oasis-teaser"></a>
+                    <div class="info">
+                        <div class="info-heading"><a href="https://www.youtube.com/watch?v=35lWrDmkxko" target="blank">OASIS'19 TEASER</a></div>
+                    </div>
+                </div>
+
+                <div class="cards cards-right">
+                    <a href="https://www.youtube.com/watch?v=kw2MVtXWS4o" target="blank"><img src="images/after-movies.jpg" class="thumbnail oasis-after-movie"></a>
+
+                    <div class="info">
+                        <div class="info-heading">
+                            <a href="https://www.youtube.com/watch?v=kw2MVtXWS4o" target="blank">OASIS AFTER MOVIE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Contact-div" id="contacts">
+            <div class="Contact-heading">
+                <span>CONTACT US</span>
+            </div>
+            <div class="contact-card-container">
+
+                <div class="arrow-left-contact">
+                    <div class="image"></div>
+                </div>
+                <div class="arrow-right-contact">
+                    <div class="image"></div>
+                </div>
+
+                <div class="Cards-div">
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Tanmaay Chandak</span></div>
+                        <div class="position"><span>Registration, Events & Other Enquiries</span></div>
+                        <div class="phone-no"><span>+91 9405010405</span></div>
+                        <div class="email"><span>pcr@bits-oasis.org</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Parth Kashikar</span></div>
+                        <div class="position"><span>Logistics and Operations</span></div>
+                        <div class="phone-no"><span>+91 9686011770</span></div>
+                        <div class="email"><span>controls@bits-oasis.org</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Adit Chandra</span></div>
+                        <div class="position"><span>Sponsorship and Marketing</span></div>
+                        <div class="phone-no"><span>+91 8290801301</span></div>
+                        <div class="email"><span>sponsorship@bits-oasis.org</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Tushar Goel</span></div>
+                        <div class="position"><span>Website, App & Online Payments</span></div>
+                        <div class="phone-no"><span>+91 9694345679</span></div>
+                        <div class="email"><span>webmaster@bits-oasis.org</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Aditya Pawar</span></div>
+                        <div class="position"><span>Art, Design & Publicity</span></div>
+                        <div class="phone-no"><span>+91 9829971666</span></div>
+                        <div class="email"><span>adp@bits-oasis.org</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Tanvi Gupta</span></div>
+                        <div class="position"><span>Reception and Accomodation</span></div>
+                        <div class="phone-no"><span>+91 9057232223</span></div>
+                        <div class="email"><span>recnacc@bits-oasis.org</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>Rahul Bubna</span></div>
+                        <div class="position"><span>Student Union President</span></div>
+                        <div class="phone-no"><span>+91 8952824766</span></div>
+                        <div class="email"><span>President@pilani.bits-pilani.ac.in</span></div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="des-card">
+                        <img class="prof-pic"></img>
+                        <div class="name"><span>V Abishek Balaji</span></div>
+                        <div class="position"><span>Student Union General Secretary</span></div>
+                        <div class="phone-no"><span>+91 9566142660</span></div>
+                        <div class="email"><span>gensec@pilani.bits-pilani.ac.in</span></div>
+                        <div class="dash"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-div">
+                <!-- <span>Department of Visual Media ,BITS Pilani</span> -->
+                <span>FOLLOW US ON
+          <a href="https://www.facebook.com/oasis.bitspilani/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bitsoasis/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="spons-wrapper">
+        <div class="spons-heading">
+            <span>PAST SPONSORS</span>
+        </div>
+        <div class="spons-container">
+            <div class="sponsor">
+                <div class="sponsor-heading">ASSOCIATE SPONSORS</div>
+                <div class="sponsor-card-container">
+                    <div class="spons-details"><img src="images/spons/gaana.png">
+                        <div class="name">Gaana</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/thoughtsol.png">
+                        <div class="name">Thoughtsol</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor">
+                <div class="sponsor-heading">POWERED BY</div>
+                <div class="sponsor-card-container">
+                    <div class="spons-details"><img src="images/spons/hp.png">
+                        <div class="name">Hewllet Peckered</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor">
+                <div class="sponsor-heading">DRIVEN BY</div>
+                <div class="sponsor-card-container">
+                    <div class="spons-details"><img src="images/spons/intel.png">
+                        <div class="name">Intel</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor">
+                <div class="sponsor-heading">OFFICIAL SPONSORS</div>
+                <div class="sponsor-card-container">
+                    <div class="spons-details"><img src="images/spons/s1.jpg">
+                        <div class="name">Panasonic</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s2.jpg">
+                        <div class="name">Bristlecone</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s3.jpg">
+                        <div class="name">Finastra</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s4.jpg">
+                        <div class="name">The Youth Chronicles</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s5.jpg">
+                        <div class="name">Happy Unmarried</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s6.jpg">
+                        <div class="name">Ustra</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s7.jpg">
+                        <div class="name">Winkies</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s8.jpg">
+                        <div class="name">Wiley</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s9.jpg">
+                        <div class="name">Indian Institute of Photography</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s10.jpg">
+                        <div class="name">Resonance</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/indianoil.png">
+                        <div class="name">Indian Oil</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/tcf.png">
+                        <div class="name">The College Fever</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/atkt.png">
+                        <div class="name">ATKT</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/zebronics.png">
+                        <div class="name">Zebronics</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/rblbank.png">
+                        <div class="name">RBL Bank</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s12.png">
+                        <div class="name">OVIYA</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/Monster Energy.png">
+                        <div class="name">Monster Energy</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/Coca Cola.svg.png">
+                        <div class="name">Coca Cola</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/RentoClick Color Gradient.png">
+                        <div class="name">RentoClick</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/nestaway.png">
+                        <div class="name">Nestaway</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/astronomia.png">
+                        <div class="name">Astronomia</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/tiktok.png">
+                        <div class="name">TikTok</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/duexpress.png">
+                        <div class="name">DU Express</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/dubeat.png">
+                        <div class="name">DU Beat</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/hellointern.png">
+                        <div class="name">Hello Intern</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/yesbank.png">
+                        <div class="name">Yes Bank</div>
+                    </div>
+                    <!-- <div class="spons-details"><img src="images/spons/"><div class="name">Hewllet Peckered</div></div> -->
+                </div>
+            </div>
+
+            <div class="sponsor">
+                <div class="sponsor-heading">SPECIAL ASSOCIATIONS</div>
+                <div class="sponsor-card-container">
+                    <div class="spons-details"><img src="images/spons/britishcouncil.jpg">
+                        <div class="name">British Council</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor">
+                <div class="sponsor-heading">MEDIA PARTNERS</div>
+                <div class="sponsor-card-container">
+                    <div class="spons-details"><img src="images/spons/score.png">
+                        <div class="name">Score</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/womansera.png">
+                        <div class="name">Women's Era</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/cocktailzindagi.png">
+                        <div class="name">Cocktail Zindagi</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/dare2compete.png">
+                        <div class="name">Dare2Compete</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/festpav.png">
+                        <div class="name">FestPav</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/indiacollegefest.png">
+                        <div class="name">India College Fest</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/ohcampus.png">
+                        <div class="name">Oh Campus</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/knowafest.png">
+                        <div class="name">Know A Feast</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s13.png">
+                        <div class="name">9XM</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s14.png">
+                        <div class="name">9XO</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/s11.jpg">
+                        <div class="name">Rock Street Journal</div>
+                    </div>
+                    <div class="spons-details"><img src="images/spons/artisttaan.png">
+                        <div class="name">Artisttaan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/video.js"></script>
+<script src="./js/contact.js"></script>
+
+</html>
