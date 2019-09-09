@@ -18,6 +18,27 @@ a:hover {
 }
 
 @font-face {
+    font-family: "lucida";
+    src: url("../fonts/lucida\ sans\ unicode.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "ikaros";
+    src: url("../fonts/Ikaros-Regular.otf");
+}
+
+@font-face {
+    font-family: "Ikaros-Sans";
+    src: url("../../fonts/IR.otf");
+}
+
+@font-face {
+    font-family: "berlin-sans";
+    src: url("../../fonts/bsf.ttf");
+}
+
+@font-face {
     font-family: "Haarlem";
     src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
 }

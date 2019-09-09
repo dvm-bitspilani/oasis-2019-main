@@ -1,7 +1,7 @@
 .landing-wrapper {
     height: 100vh;
     width: 100%;
-    background: url("../images/landing.jpg") no-repeat center center/cover;
+    background: url("../images/assets/landing.jpg") no-repeat center center/cover;
     opacity: 0;
     transition: 0.5s;
     position: absolute;
@@ -69,14 +69,10 @@
     top: 0;
     margin-left: 2vw;
     margin-top: 1vh;
-    background: url("../images/logo_final.png");
+    background: url('../images/assets/logo_final.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.oasis-logo-2x {
-    display: none;
 }
 
 .social-links {
@@ -136,7 +132,7 @@
 .mobile-register a {
     color: #fff;
     padding: 24px 48px;
-    background: url('../images//register.png');
+    background: url('../images/assets/register.png');
     background-size: 100% 100%;
     border-radius: 35px;
     letter-spacing: 2px;
@@ -163,7 +159,6 @@
 }
 
 .oasis-landing {
-    /* background: url("../assets/images/oasist.png") no-repeat center center/cover; */
     width: 70%;
     height: auto;
     margin-top: 25vh;
@@ -176,7 +171,7 @@
 
 @media all and (max-width: 500px) {
     .landing-wrapper {
-        background: url("../assets/images/landing-mobile.jpg");
+        background: url("../images/assets/landing-mobile.jpg");
         background-size: 100% 100%;
     }
     .mousey {
@@ -211,7 +206,7 @@
         left: 15px;
         z-index: 19;
         cursor: pointer;
-        background: url('../images/ham.png');
+        background: url('../images/icons/ham.png');
         width: 35px;
         height: 30px;
         background-size: 100% 100%;
@@ -224,40 +219,26 @@
         z-index: 20;
         transform: translateX(-100vw);
         transition: 0.5s ease-in-out;
-        /* background: url(../images/Rectangle\ 29.png); */
         background: #000000;
-        width: 70%;
+        width: 75%;
         height: 100%;
         justify-content: flex-start;
         flex-direction: column;
         font-size: 1.4rem;
         /* padding: 75vh;*/
+        box-sizing: border-box;
         font-family: 'google sans';
     }
     .oasis-logo {
-        width: 35%;
-        /* height: 15vh; */
-        /* position: inherit; */
+        width: 45%;
         left: 5%;
         top: -2.5%;
-        /* margin: auto; */
         margin-top: 1vh;
-        background: url(../images/oasis-2.png);
+        background: url('../images/assets/logo_final.png');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
-    /* .oasis-logo-2x{
-    width: 40%;
-    height: 15vh;
-    position: initial;
-    margin-left: 2vw;
-    margin-top: 1vh;
-    background: url("../images/oasis-2.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  } */
     .open-nav {
         display: block;
         font-size: 2rem;
@@ -304,7 +285,7 @@
         position: absolute;
         top: 3%;
         right: 7.5%;
-        background: url('../images/menu-back.png');
+        background: url('../images/icons/menu-back.png');
         background-size: 100% 100%;
         cursor: pointer;
     }

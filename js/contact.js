@@ -193,3 +193,23 @@ function moveTouchContact(e) {
 
 document.getElementsByClassName("Contact-div")[0].addEventListener("touchstart", startTouchContact, false);
 document.getElementsByClassName("Contact-div")[0].addEventListener("touchmove", moveTouchContact, false);
+
+
+
+
+var profpic = [
+    "chandak.png",
+    "Parth.jpg",
+    "adit.png",
+    "DVM.png",
+    "pawar.jpg",
+    "tanvi.png",
+    "rahul.jpg",
+    "abhi.jpg"
+];
+
+var url = "images/contacts/";
+
+for (var i = 0; i < document.getElementsByClassName("prof-pic").length; i++) {
+    document.getElementsByClassName("prof-pic")[i].src = url + profpic[i];
+}

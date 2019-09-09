@@ -1,5 +1,5 @@
 .about {
-    background: url(../../images/about.jpg);
+    background: url('../../images/assets/about.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,16 +9,6 @@
     opacity: 0;
     position: absolute;
     top: 100vh;
-}
-
-@font-face {
-    font-family: "Ikaros-Sans";
-    src: url("../../fonts/IR.otf");
-}
-
-@font-face {
-    font-family: "berlin-sans";
-    src: url("../../fonts/bsf.ttf");
 }
 
 .content {
@@ -31,19 +21,25 @@
 
 .about-heading {
     font-family: "Ikaros-Sans";
-    font-size: 85px;
+    font-size: 5em;
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 4;
     z-index: 1000;
 }
 
-.line {
-    width: 135px;
-    height: 3px;
-    background: #62a0fb;
-    box-shadow: #e95585 0px 0px 2px;
-    z-index: 0;
+.about-heading > span {
+    position: relative;
+}
+
+.about-heading span::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 20%;
+    border-bottom: 2px solid #768ad9;
 }
 
 .about-text {
@@ -90,12 +86,12 @@
 }
 
 #fog:before {
-    background-image: url("../../images/Smoke.png");
+    background-image: url('../images/assets/Smoke.png');
     animation: drift 140s linear 0s infinite;
 }
 
 #fog:after {
-    background-image: url("../../images/Smoke.png");
+    background-image: url('../images/assets/Smoke.png');
     animation: drift 60s linear 0s infinite;
 }
 
@@ -117,7 +113,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: url("../../images/about.jpg");
+    background: url('../../images/assets/about.jpg');
     background-position: center center;
     background-origin: content-box;
     background-size: cover;
@@ -214,19 +210,18 @@
     }
     .about-heading {
         grid-column-end: 5;
-        font-size: 110px;
     }
 }
 
 @media (max-width: 768px) {
     .about {
-        background: url("../../images/mobile-about.jpg");
+        background: url('../../images/assets/mobile-about.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     .lightning {
-        background: url("../../images/mobile-about.jpg");
+        background: url('../../images/assets/mobile-about.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -235,7 +230,6 @@
         font-size: 16px;
     }
     .about-heading {
-        font-size: 80px;
         grid-column-end: 6;
     }
     .content {
@@ -243,13 +237,14 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
+
+    .about-heading > span {
+        height: max-content;
+    }
     .about-text {
         font-size: 14px;
         line-height: 18px;
-    }
-    .line {
-        display: none;
     }
     .content {
         grid-template-rows: 50px 70px 30px 70vh;
@@ -259,7 +254,7 @@
         display: flex;
         grid-column-start: 3;
         justify-content: center;
-        font-size: 60px;
+        font-size: 2.5em;
     }
 }
 
@@ -272,6 +267,6 @@
 
 @media (max-height: 800px) and (max-width: 1600px) and (min-width: 600px) {
     .about-text {
-        font-size: 1rem;
+        font-size: 1em;
     }
 }

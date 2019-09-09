@@ -1,31 +1,9 @@
-@font-face {
-    font-family: "Haarlem";
-    src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
-}
-
-@font-face {
-    font-family: "sf-ui";
-    src: url("../fonts/SF-Pro-Text-Regular.ttf");
-    font-weight: 100;
-}
-
-@font-face {
-    font-family: "lucida";
-    src: url("../fonts/lucida\ sans\ unicode.ttf");
-    font-weight: 100;
-}
-
-@font-face {
-    font-family: "Ikaros-Sans";
-    src: url("../../fonts/IR.otf");
-}
-
 .video-wrapper {
     height: 100vh;
     padding-bottom: 6vh;
     padding-top: 8vh;
     width: 100%;
-    background: url('../images/video.jpg') no-repeat center center/cover;
+    background: url('../images/assets/video.jpg') no-repeat center center/cover;
     overflow: hidden;
 }
 
@@ -40,7 +18,7 @@
 
 .video-wrapper .video-heading span {
     color: white;
-    font-size: 6vw;
+    font-size: 5em;
     font-family: "Ikaros-Sans";
     letter-spacing: 5px;
     position: relative;
@@ -198,7 +176,7 @@
         padding-top: 25vh;
     }
     .video-wrapper>.video-heading>span {
-        font-size: 60px;
+        font-size: 2.5em;
     }
     .cards-container {
         height: 60vh;
@@ -339,7 +317,7 @@
         border-radius: 50%;
         height: 20px;
         width: 20px;
-        background-image: url("../assets/icons/left-arrow.png");
+        background-image: url("../images/icons/left-arrow.png");
         background-size: cover;
         line-height: 4px;
     }
@@ -347,7 +325,7 @@
         border-radius: 50%;
         height: 20px;
         width: 20px;
-        background-image: url("../assets/icons/right-arrow.png");
+        background-image: url("../images/icons/right-arrow.png");
         background-size: cover;
         line-height: 4px;
     }

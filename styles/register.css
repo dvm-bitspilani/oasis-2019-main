@@ -16,7 +16,7 @@ body {
 
 @font-face {
   font-family: SFpro;
-  src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+  src: url("../fonts/SF-Pro-Display-Medium.otf");
 }
 
 .msg-box {
@@ -246,7 +246,7 @@ select:focus {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../images//register.png");
+  background: url("../images/assets/register.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
