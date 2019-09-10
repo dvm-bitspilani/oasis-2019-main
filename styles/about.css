@@ -43,6 +43,7 @@
 }
 
 .about-text {
+    text-align: justify;
     grid-row-start: 4;
     font-family: "Bitter", serif;
     font-size: 20px;
