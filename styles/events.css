@@ -5,7 +5,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/assets/events-bg.png');
     background-position: center;
     background-size: cover;
-    padding-top: 7.5vh;
+    padding-top: 5vh;
     position: relative;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .events-wrapper {
-    width: 80%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,12 +48,13 @@
 
 .events-container {
     width: 100vw;
-    padding: 76px 0;
+    height: calc(30vw + 76px);
+    padding: 76px 12.5%;
     box-sizing: border-box;
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
-    transition: transform 0.5s ease-out;
+    transition: 0.5s ease-out;
 }
 
 .event-arrow {
@@ -78,31 +79,24 @@
     right: 5%;
 }
 
-.events-container .events-set {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 65%;
-    width: 65%;
-    margin: 0 17.5%;
-}
-
-.events-container .events-set .events-card {
-    width: 25%;
-    height: 21vw;
+.events-container .events-card {
+    width: 20.33%;
+    min-width: 20.33%;
+    margin: 0 6.5%;
+    height: 22.5vw;
     border-radius: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: radial-gradient(#393636, #1F1F1F);
+    transition: 0.5s ease-out;
 }
 
-.events-container .events-set .events-card:nth-of-type(2) {
-    width: 30%;
-    height: 25vw;
+.events-container .events-card.active {
+    transform: scale(1.2);
 }
 
-.events-container .events-set .events-card .events-card-front {
+.events-container .events-card .events-card-front {
     width: 95%;
     height: 95%;
     padding: 8px;
@@ -115,7 +109,7 @@
     border: 2px solid #9A6D9A;
 }
 
-.events-container .events-set .events-card .events-card-front .event-name {
+.events-container .events-card .events-card-front .event-name {
     font-family: "ikaros";
     font-size: 2rem;
     letter-spacing: 2px;
@@ -123,7 +117,7 @@
     text-align: center;
 }
 
-.events-container .events-set .events-card .events-card-front .event-img {
+.events-container .events-card .events-card-front .event-img {
     height: 10vw;
     width: 10vw;
     border-radius: 50%;
@@ -133,7 +127,7 @@
     background-repeat: no-repeat;
 }
 
-.events-container .events-set .events-card .events-card-front .event-link {
+.events-container .events-card .events-card-front .event-link {
     font-size: 1.5rem;
     color: #ffffff;
     text-align: center;
@@ -142,7 +136,6 @@
 
 .events-nav-dots {
     text-align: center;
-    margin: 32px 0;
 }
 
 .events-nav-dots .event-nav-dot {
@@ -157,8 +150,8 @@
 }
 
 .events-nav-dots .active-dot {
-    width: 46px;
-    border-radius: 8px;
+    width: 40px;
+    border-radius: 7px;
 }
 
 @media (max-width: 600px) {
@@ -166,28 +159,28 @@
         padding: 0;
     }
 
-    .events-container .events-set {
+    .events-container {
         flex-direction: column;
         height: 80vh;
         flex-wrap: wrap;
         align-content: space-evenly;
     }
 
-    .events-container .events-set .events-card {
+    .events-container .events-card {
         width: 30%;
         height: 30%;
         box-shadow: 0 0 25px 1px #333333;
     }
 
-    .events-container .events-set .events-card .events-card-front .event-name {
+    .events-container .events-card .events-card-front .event-name {
         font-size: 1.25rem;
     }
 
-    .events-container .events-set .events-card .events-card-front .event-name {
+    .events-container .events-card .events-card-front .event-name {
         font-size: 1.1rem;
     }
 
-    .events-container .events-set .events-card .events-card-front .event-name {
+    .events-container .events-card .events-card-front .event-name {
         font-size: 0.75rem;
         letter-spacing: 3px;
     }
@@ -195,4 +188,41 @@
     .events-nav-dots {
         margin: 16px 0;
     }    
+}
+
+
+@keyframes shakeEvents {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg) scale(1.2);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg) scale(1.2);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg) scale(1.2);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg) scale(1.2);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg) scale(1.2);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg) scale(1.2);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg) scale(1.2);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg) scale(1.2);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg) scale(1.2);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg) scale(1.2);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg) scale(1.2);
+    }
 }

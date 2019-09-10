@@ -78,9 +78,13 @@
         <div class="menu-back" onclick="closeNav()"></div>
         <div class="nav-item" onclick="navigate(0)">HOME</div>
         <div class="nav-item" onclick="navigate(1)">ABOUT US</div>
-        <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
         <div class="nav-item" onclick="openSpons()">SPONSORS</div>
+        <div class="nav-item" onclick="openEvents()">EVENTS</div>
+        <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
+        <div class="nav-item" onclick="openGallery()">GALLERY</div>
+        <div class="nav-item" onclick="openSpons()">PAST SPONSORS</div>
         <div class="nav-item" onclick="navigate(3)">CONTACT US</div>
+        <div class="nav-item" onclick="openDevlopers()">DEVELOPERS</div>
         <div class="social-links">
             <div class="nav-asset"></div>
             <a href="https://www.facebook.com/oasis.bitspilani/" target="blank"><i class="fab fa-facebook-f"></i></a>
@@ -120,8 +124,8 @@
         </div>
 
         <div class="events">
-            <div class="event-arrow" onclick="navigateEvent(setNumber - 1)"></div>
-            <div class="event-arrow" onclick="navigateEvent(setNumber + 1)"></div>
+            <div class="event-arrow" onclick="navigateEvent(eventIndex - 1)"></div>
+            <div class="event-arrow" onclick="navigateEvent(eventIndex + 1)"></div>
             <div class="events-heading">
                 <span>EVENTS</span>
             </div>
