@@ -70,7 +70,7 @@ const createEvent = () => {
 
 const createEventDots = () => {
     const dotsContainer = document.getElementsByClassName('events-nav-dots')[0];
-    for (i = 0; i < (window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents; i++) {
+    for (i = 0; i < ((window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents); i++) {
         let dot = document.createElement('div');
         dot.className = "event-nav-dot";
         dot.id = (i + 1);
@@ -94,10 +94,10 @@ const changeEventSet = () => {
         eventIndex++;
         if (window.innerWidth > 600) {
             eventsContainer.style.transform = "translate(" + (-27 * (eventIndex - 1)) + "%)";
-            document.getElementsByClassName('events-card')[eventIndex].classList.add('active');
         } else {
-            eventsContainer.style.transform = "translate(" + (-70 * (eventIndex - 1)) + "%)";
+            eventsContainer.style.transform = "translate(" + (-100 * (eventIndex - 1)) + "%)";
         }
+        (eventIndex == numberOfEvents) ? null : document.getElementsByClassName('events-card')[eventIndex].classList.add('active');
         for (dot of document.getElementsByClassName('event-nav-dot')) {
             dot.classList.remove('active-dot');
         }
@@ -109,7 +109,7 @@ const changeEventSet = () => {
 }
 
 const navigateEvent = (dotIndex) => {
-    if (dotIndex <= 0 || dotIndex > (window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents) {
+    if (dotIndex <= 0 || dotIndex > ((window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents)) {
         for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
             document.querySelectorAll('.events-container .events-card')[i].style.animation = "shake 0.5s";
             if(i == eventIndex){
@@ -124,7 +124,7 @@ const navigateEvent = (dotIndex) => {
         return;
     }
     if (eventIndex != dotIndex) {
-        document.getElementsByClassName('events-card')[eventIndex].classList.remove('active');
+        (eventIndex == numberOfEvents) ? null : document.getElementsByClassName('events-card')[eventIndex].classList.remove('active');
         eventIndex = dotIndex - 1;
         changeEventSet();
     }
