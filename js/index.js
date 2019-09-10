@@ -40,16 +40,72 @@ function navigate(x) {
 }
 
 function openNav() {
+    window.scrollTo(0, 0);
     nav.style.transform = "translateX(0)";
     document.getElementsByTagName('html')[0].style.height = '100vh';
     document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
+    document.getElementsByClassName('backdrop')[0].style.display = 'block';
 }
 
 function closeNav() {
     nav.style.transform = "translateX(-100vw)";
     document.getElementsByTagName('html')[0].style.height = 'initial';
     document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
+    document.getElementsByClassName('backdrop')[0].style.display = 'none';
 }
+
+
+if (window.innerWidth < 500) {
+    let initialXContact = null;
+    let initialYContact = null;
+
+    function startTouchContact(e) {
+        initialXContact = e.touches[0].clientX;
+        initialYContact = e.touches[0].clientY;
+    };
+
+    function moveTouchContact(e) {
+
+        if (initialXContact === null) {
+            return;
+        }
+
+        if (initialYContact === null) {
+            return;
+        }
+
+        let currentX = e.touches[0].clientX;
+        let currentY = e.touches[0].clientY;
+
+        let diffX = initialXContact - currentX;
+        let diffY = initialYContact - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            // sliding horizontally
+            if (diffX > 0) {
+                // swiped left
+                closeNav();
+            } else {
+                // swiped right
+                openNav();
+            }
+        }
+        initialXContact = null;
+        initialYContact = null;
+
+        e.preventDefault();
+
+    };
+
+
+    document.getElementById('home').addEventListener("touchstart", startTouchContact, false);
+    document.getElementById('home').addEventListener("touchmove", moveTouchContact, false);
+    document.getElementsByClassName('navigation')[0].addEventListener("touchstart", startTouchContact, false);
+    document.getElementsByClassName('navigation')[0].addEventListener("touchmove", moveTouchContact, false);
+    document.getElementsByClassName('backdrop')[0].addEventListener("touchstart", startTouchContact, false);
+    document.getElementsByClassName('backdrop')[0].addEventListener("touchmove", moveTouchContact, false);
+}
+
 
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);

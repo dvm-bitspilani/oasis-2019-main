@@ -66,3 +66,19 @@ a:hover {
 html {
     overflow: hidden;
 }
+
+.backdrop {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .backdrop {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 19;
+        display: none;
+    }
+}

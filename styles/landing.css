@@ -166,7 +166,6 @@
 
 #hamburger {
     display: none;
-    z-index: 19;
 }
 
 @media all and (max-width: 500px) {
@@ -204,7 +203,7 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        z-index: 19;
+        z-index: 18;
         cursor: pointer;
         background: url('../images/icons/ham.png');
         width: 35px;

@@ -3,7 +3,7 @@
     padding-bottom: 6vh;
     width: 100%;
     background-color: #ffffff;
-    background: url('../images/assets/s') no-repeat center center/cover;
+    background: url('../images/assets/sponsors.png') no-repeat center center/cover;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -96,15 +96,14 @@
 }
 
 .sponsor-card-container img {
-    width: 21.7vw;
-    /* height: 15.5vw; */
+    width: 15vw;
 }
 
 @media (max-width: 600px) {
     .spons-wrapper {
         height: 100vh;
         padding-bottom: 0vh;
-        background: url('../images/sponsors.png') no-repeat center center/cover;
+        background: url('../images/assets/sponsors.png') no-repeat center center/cover;
     }
     .spons-heading {
         margin-top: 10vh;
@@ -162,11 +161,6 @@
         padding-top: 1.5vh;
     }
     .sponsor-card-container img {
-        width: 48.7vw;
-        /* height: 35.5vw; */
-        /* background: url('/images/spons/atkt.png');
-        background-size: contain;
-        background-repeat-y: no-repeat;
-        background-position-y: center; */
+        width: 45vw;
     }
 }

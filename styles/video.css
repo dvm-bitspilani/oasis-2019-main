@@ -136,6 +136,7 @@
 .cards-container a {
     color: white;
     text-shadow: 0 0 25px #768ad9;
+    text-align: center;
 }
 
 .cards-container a:visited {
