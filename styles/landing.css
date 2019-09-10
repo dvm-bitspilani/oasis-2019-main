@@ -142,7 +142,7 @@
     color: white;
     padding: 20px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: text-shadow 0.5s;
     letter-spacing: 3px;
     white-space: nowrap;
     display: none;

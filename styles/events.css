@@ -6,7 +6,11 @@
     background-position: center;
     background-size: cover;
     padding-top: 5vh;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 16;
+    display: none;
 }
 
 .events-heading {
@@ -14,9 +18,8 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-right: 11%
 }
 
 .events-heading span {
