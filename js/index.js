@@ -122,6 +122,8 @@ if (window.innerWidth < 500) {
     document.getElementsByClassName('navigation')[0].addEventListener("touchmove", moveTouchContact, false);
     document.getElementsByClassName('backdrop')[0].addEventListener("touchstart", startTouchContact, false);
     document.getElementsByClassName('backdrop')[0].addEventListener("touchmove", moveTouchContact, false);
+    document.getElementsByClassName('spons-wrapper')[0].addEventListener("touchstart", startTouchContact, false);
+    document.getElementsByClassName('spons-wrapper')[0].addEventListener("touchmove", moveTouchContact, false);
 }
 
 
@@ -131,6 +133,19 @@ window.onbeforeunload = function() {
 
 
 function openSpons() {
+    var events = document.getElementsByClassName('events')[0];
+    if (events.style.display == 'block') {
+        events.style.opacity = 0;
+        setTimeout(() => {
+            events.style.display = 'none';
+        }, 600);
+        document.getElementsByTagName('html')[0].style.height = 'initial';
+        document.getElementsByTagName('html')[0].style.overflow = 'auto';
+
+        document.getElementById('home').style.opacity = 1;
+        document.getElementById('about').style.opacity = 1;
+    }
+    
     document.getElementById('home').style.opacity = 0;
     document.getElementById('about').style.opacity = 0;
     var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
@@ -159,6 +174,19 @@ function openSpons() {
 
 
 function openEvents() {
+    var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
+    if (sponsWrapper.style.display == 'block') {
+        sponsWrapper.style.opacity = 0;
+        setTimeout(() => {
+            sponsWrapper.style.display = 'none';
+        }, 600);
+        document.getElementsByTagName('html')[0].style.height = 'initial';
+        document.getElementsByTagName('html')[0].style.overflow = 'auto';
+
+        document.getElementById('home').style.opacity = 1;
+        document.getElementById('about').style.opacity = 1;
+    }
+
     document.getElementById('home').style.opacity = 0;
     document.getElementById('about').style.opacity = 0;
     var events = document.getElementsByClassName('events')[0];

@@ -129,3 +129,51 @@ const navigateEvent = (dotIndex) => {
         changeEventSet();
     }
 }
+
+
+if (window.innerWidth < 500) {
+    let initialXContact = null;
+    let initialYContact = null;
+
+    function startTouchContact(e) {
+        initialXContact = e.touches[0].clientX;
+        initialYContact = e.touches[0].clientY;
+    };
+
+    function moveTouchContact(e) {
+
+        if (initialXContact === null) {
+            return;
+        }
+
+        if (initialYContact === null) {
+            return;
+        }
+
+        let currentX = e.touches[0].clientX;
+        let currentY = e.touches[0].clientY;
+
+        let diffX = initialXContact - currentX;
+        let diffY = initialYContact - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            // sliding horizontally
+            if (diffX > 0) {
+                // swiped left
+                navigateEvent(eventIndex + 1);
+            } else {
+                // swiped right
+                navigateEvent(eventIndex - 1);
+            }
+        }
+        initialXContact = null;
+        initialYContact = null;
+
+        e.preventDefault();
+
+    };
+
+
+    document.getElementsByClassName('events')[0].addEventListener("touchstart", startTouchContact, false);
+    document.getElementsByClassName('events')[0].addEventListener("touchmove", moveTouchContact, false);
+}
