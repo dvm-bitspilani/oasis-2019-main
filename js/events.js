@@ -165,6 +165,17 @@ const changeEventSet = () => {
 }
 
 const navigateEvent = (dotIndex) => {
+    if (dotIndex <= 0 || dotIndex > Math.ceil(numberOfEvents / numberOfEventsinOneSet)) {
+        for (var i = 0; i < document.querySelectorAll('.events-set:nth-of-type(' + setNumber + ') .events-card').length; i++) {
+            document.querySelectorAll('.events-set:nth-of-type(' + setNumber + ') .events-card')[i].style.animation = "shake 0.5s";
+        }
+        setTimeout(() => {
+            for (var i = 0; i < document.querySelectorAll('.events-set:nth-of-type(' + setNumber + ') .events-card').length; i++) {
+                document.querySelectorAll('.events-set:nth-of-type(' + setNumber + ') .events-card')[i].style.animation = "none";
+            }
+        }, 500);
+        return;
+    }
     if (setNumber != dotIndex) {
         setNumber = dotIndex - 1;
         changeEventSet();
