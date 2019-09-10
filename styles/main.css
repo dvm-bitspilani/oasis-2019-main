@@ -30,12 +30,12 @@ a:hover {
 
 @font-face {
     font-family: "Ikaros-Sans";
-    src: url("../../fonts/IR.otf");
+    src: url("../fonts/IR.otf");
 }
 
 @font-face {
     font-family: "berlin-sans";
-    src: url("../../fonts/bsf.ttf");
+    src: url("../fonts/bsf.ttf");
 }
 
 @font-face {

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/loader.css" />
     <link rel="stylesheet" href="./styles/video.css" />
     <link rel="stylesheet" href="./styles/spons.css" />
+    <link rel="stylesheet" href="./styles/events.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/icons/oasis-favicon.png" type="image/x-icon">
@@ -118,6 +119,18 @@
             </div>
         </div>
 
+        <div class="events">
+            <div class="event-arrow" onclick="navigateEvent(setNumber - 1)"></div>
+            <div class="event-arrow" onclick="navigateEvent(setNumber + 1)"></div>
+            <div class="events-heading">
+                <span>EVENTS</span>
+            </div>
+            <div class="events-wrapper">
+                <div class="events-container"></div>
+            </div>
+            <div class="events-nav-dots"></div>
+        </div>
+
         <div class="video-wrapper" id="videos">
             <div class="video-heading">
                 <span>VIDEOS</span>
@@ -152,7 +165,6 @@
                 <span>CONTACT US</span>
             </div>
             <div class="contact-card-container">
-
                 <div class="arrow-left-contact">
                     <div class="image"></div>
                 </div>
@@ -230,9 +242,9 @@
             <div class="footer-div">
                 <!-- <span>Department of Visual Media ,BITS Pilani</span> -->
                 <span>FOLLOW US ON
-          <a href="https://www.facebook.com/oasis.bitspilani/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/bitsoasis/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </span>
+                    <a href="https://www.facebook.com/oasis.bitspilani/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/bitsoasis/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </span>
             </div>
         </div>
     </div>
@@ -245,7 +257,7 @@
         </div>
         <div class="spons-container">
             <div class="sponsor">
-                <div class="sponsor-heading">ASSOCIATE SPONSORS</div>
+            <div class="sponsor-heading">ASSOCIATE SPONSORS</div>
                 <div class="sponsor-card-container">
                     <div class="spons-details"><img src="images/spons/gaana.png">
                         <div class="name">Gaana</div>
@@ -417,5 +429,6 @@
 <script src="./js/index.js"></script>
 <script src="./js/video.js"></script>
 <script src="./js/contact.js"></script>
+<script src="./js/events.js"></script>
 
 </html>

@@ -1,0 +1,198 @@
+.events {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/assets/events-bg.png');
+    background-position: center;
+    background-size: cover;
+    padding-top: 7.5vh;
+    position: relative;
+}
+
+.events-heading {
+    height: 15vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 11%
+}
+
+.events-heading span {
+    color: white;
+    font-size: 5em;
+    font-family: "Ikaros-Sans";
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.events-heading span::after {
+    position: absolute;
+    right: 2.5%;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 20%;
+    border-bottom: 2px solid #768ad9;
+}
+
+.events-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.events-container {
+    width: 100vw;
+    padding: 76px 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 0.5s ease-out;
+}
+
+.event-arrow {
+    height: 4.5vw;
+    width: 2.5vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../images/icons/events-arrow.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.event-arrow:nth-of-type(1) {
+    transform: translateY(-50%) rotateY(180deg);
+    left: 5%;
+}
+
+.event-arrow:nth-of-type(2) {
+    right: 5%;
+}
+
+.events-container .events-set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 65%;
+    width: 65%;
+    margin: 0 17.5%;
+}
+
+.events-container .events-set .events-card {
+    width: 25%;
+    height: 21vw;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(#393636, #1F1F1F);
+}
+
+.events-container .events-set .events-card:nth-of-type(2) {
+    width: 30%;
+    height: 25vw;
+}
+
+.events-container .events-set .events-card .events-card-front {
+    width: 95%;
+    height: 95%;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5%;
+    border: 2px solid #9A6D9A;
+}
+
+.events-container .events-set .events-card .events-card-front .event-name {
+    font-family: "ikaros";
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.events-container .events-set .events-card .events-card-front .event-img {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    border: 7.5px solid #9A6D9A;
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.events-container .events-set .events-card .events-card-front .event-link {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    font-family: "ikaros";
+}
+
+.events-nav-dots {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.events-nav-dots .event-nav-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 8px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    background: #ffffff
+}
+
+.events-nav-dots .active-dot {
+    width: 46px;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .events-container {
+        padding: 0;
+    }
+
+    .events-container .events-set {
+        flex-direction: column;
+        height: 80vh;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+    }
+
+    .events-container .events-set .events-card {
+        width: 30%;
+        height: 30%;
+        box-shadow: 0 0 25px 1px #333333;
+    }
+
+    .events-container .events-set .events-card .events-card-front .event-name {
+        font-size: 1.25rem;
+    }
+
+    .events-container .events-set .events-card .events-card-front .event-name {
+        font-size: 1.1rem;
+    }
+
+    .events-container .events-set .events-card .events-card-front .event-name {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+    }
+
+    .events-nav-dots {
+        margin: 16px 0;
+    }    
+}
