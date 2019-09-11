@@ -159,6 +159,158 @@
     border-radius: 7px;
 }
 
+
+
+.event-details {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+.event-details-bg {
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.event-details-wrapper {
+    width: 60%;
+    height: 60%;
+    border-radius: 25px;
+    background: #1F1F1F;
+    padding: 20px;
+    position: relative;
+    font-family: "ikaros-light";
+}
+
+.event-details-wrapper > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+#event-details-tab {
+    display: none;
+}
+
+#all-events-tab {
+    font-family: "Ikaros-Sans";
+}
+
+.event-type {
+    font-size: 3rem;
+    color: #9A6D9A;
+}
+
+.all-events {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2.5% 0;
+}
+
+.event {
+    width: 50%;
+    text-align: center;
+    margin: 2.5% 0;
+    color: #ffffff;
+    font-size: 1.75rem;
+}
+
+.close-event {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 6%;
+    right: 3.5%;
+}
+
+.event-detail-name {
+    color: #9A6D9A;
+    font-size: 3rem;
+    font-family: "Ikaros-Sans";
+}
+
+.event-detail {
+    margin: 32px 0;
+    font-size: 1.25rem;
+    width: 90%;
+    text-align: center;
+}
+
+.event-day {
+    color: #9A6D9A;
+    font-family: "Ikaros-Sans";
+}
+
+.event-day span {
+    color: #ffffff;
+}
+
+.event-time {
+    margin: 0 7.5%;
+    color: #9A6D9A;
+    font-family: "Ikaros-Sans";
+}
+
+.event-time span {
+    color: #ffffff;
+}
+
+.event-venue {
+    color: #9A6D9A;
+    font-family: "Ikaros-Sans";
+}
+
+.event-venue span {
+    color: #ffffff;
+}
+
+.event-description {
+    color: #ffffff;
+    width: 90%;
+    font-size: 1.4rem;
+}
+
+.event-description div {
+    color: #9A6D9A;
+    font-family: "Ikaros-Sans";
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+.event-rules {
+    color: #ffffff;
+    width: 90%;
+    font-size: 1.4rem;
+    margin: 40px 0;
+}
+
+.event-rules div {
+    color: #9A6D9A;
+    font-family: "Ikaros-Sans";
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+
+
+
+
 @media (max-width: 600px) {
     .events-heading {
         justify-content: center;
@@ -209,6 +361,64 @@
     .events-nav-dots .active-dot {
         width: 30px;
         border-radius: 4.5px;
+    }
+
+    .event-type {
+        font-size: 1.5rem;
+    }
+
+    .event {
+        width: 900%;
+        text-align: left;
+        margin: 5% 0;
+        font-size: 1rem;
+    }
+
+    .close-event {
+        width: 15px;
+        height: 15px;
+        top: 4%;
+        right: 8%;
+    }
+
+    .event-detail-name {
+        font-size: 1.5rem;
+    }
+
+    .event-detail {
+        margin: 24px 0;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .event-day {
+        display: block;
+    }
+
+    .event-time {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .event-venue {
+        display: block;
+    }
+
+    .event-description {
+        font-size: 0.9rem;
+    }
+
+    .event-description div {
+        font-size: 1.2rem;
+    }
+
+    .event-rules {
+        font-size: 0.9rem;
+        margin: 32px 0;
+    }
+
+    .event-rules div {
+        font-size: 1.2rem;
     }
 }
 

@@ -24,6 +24,11 @@ a:hover {
 }
 
 @font-face {
+    font-family: "ikaros-light";
+    src: url("../fonts/Ikaros-Light.otf");
+}
+
+@font-face {
     font-family: "ikaros";
     src: url("../fonts/Ikaros-Regular.otf");
 }
