@@ -360,11 +360,13 @@
         width: 75%;
         height: 100%;
         justify-content: space-between;
+        align-items: flex-start;
         flex-direction: column;
         font-size: 1.35rem;
         /* padding: 75vh;*/
         box-sizing: border-box;
         font-family: 'google sans';
+
     }
     .oasis-logo {
         width: 45%;

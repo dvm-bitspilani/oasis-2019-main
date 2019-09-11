@@ -165,8 +165,10 @@ function openTags(tagName) {
 
     var navItems = document.querySelectorAll(".navigation .nav-item");
 
-    for (var i = 0; i < navItems.length; i++) {
-        navItems[i].style.display = "none";
+    if (window.innerWidth > 600) {
+        for (var i = 0; i < navItems.length; i++) {
+            navItems[i].style.display = "none";
+        }
     }
 }
 
