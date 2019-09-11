@@ -149,6 +149,9 @@
     letter-spacing: 3px;
     white-space: nowrap;
 }
+.nav-item a {
+    color: #ffffff;
+}
 
 .navigation .nav-item {
     display: none;
