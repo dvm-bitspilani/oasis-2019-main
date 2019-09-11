@@ -1,26 +1,28 @@
 const eventsNames = [
+    'Dance',
     'Drama',
-    'Drama',
-    'Drama',
-    'Drama',
-    'Drama',
-    'Drama',
-    'Drama',
-    'Drama',
-    'Drama',
-    'Drama'
+    'Fine Arts',
+    'Music',
+    'Photography',
+    'Fashion',
+    'Oratory',
+    'Quizzing',
+    'Humour',
+    'Film Fest',
+    'Miscellaneous'
 ];
 const eventsImgUrl = [
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png',
-    'images/events/drama.png'
+    'images/events/dance.svg',
+    'images/events/drama.svg',
+    'images/events/fine arts.svg',
+    'images/events/music.svg',
+    'images/events/photography.svg',
+    'images/events/fashion.svg',
+    'images/events/oratory.svg',
+    'images/events/quizzing.svg',
+    'images/events/humour.svg',
+    'images/events/film fest.svg',
+    'images/events/misc.svg'
 ];
 
 const eventsContainer = document.getElementsByClassName("events-container")[0];

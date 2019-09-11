@@ -204,8 +204,14 @@
         width: 45vw;
     }
 
+    .spons-tab-container {
+        padding: 8px;
+    }
+
     .spons-tab span, .past-spons-tab span {
-        font-size: 0.75rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
         letter-spacing: 1px;
+        padding-bottom: 0.5px;
     }
 }

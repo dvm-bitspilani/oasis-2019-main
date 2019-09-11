@@ -194,6 +194,22 @@
         height: 10vw;
         width: 6vw;
     }
+
+    .events-nav-dots .event-nav-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 6px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.5s ease-out;
+        background: #ffffff
+    }
+
+    .events-nav-dots .active-dot {
+        width: 30px;
+        border-radius: 4.5px;
+    }
 }
 
 
