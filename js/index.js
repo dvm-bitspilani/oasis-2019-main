@@ -157,11 +157,13 @@ function openTags(tagName) {
         hamIcon.classList.remove("pushed");
         sideBar.style.transform = "translateX(25vw)";
     }
-
-    const hamItems = document.querySelectorAll('.side-bar .nav-item');
-    hamItems[0].style.display = "inline-block";
-    hamItems[2].style.display = "inline-block";
-    hamItems[3].style.display = "inline-block";
+    
+    setTimeout(() => {
+        const hamItems = document.querySelectorAll('.side-bar .nav-item');
+        hamItems[0].style.display = "inline-block";
+        hamItems[2].style.display = "inline-block";
+        hamItems[3].style.display = "inline-block";
+    }, 100);
 
     var navItems = document.querySelectorAll(".navigation .nav-item");
 
