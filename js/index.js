@@ -13,48 +13,44 @@ setInterval(() => {
 var nav = document.getElementsByClassName("navigation")[0];
 
 function navigate(x) {
-    var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
-    var events = document.getElementsByClassName('events')[0];
-    if (sponsWrapper.style.display == 'block') {
-        sponsWrapper.style.opacity = 0;
+    for (i = 0; i < tagNames.length; i++) {
+        const tempTag = tagNames[i];
+        document.getElementById(tempTag).style.opacity = 0;
         setTimeout(() => {
-            sponsWrapper.style.display = 'none';
-        }, 600);
-        document.getElementsByTagName('html')[0].style.height = 'initial';
-        document.getElementsByTagName('html')[0].style.overflow = 'auto';
-
-        document.getElementById('home').style.opacity = 1;
-        document.getElementById('about').style.opacity = 1;
+            document.getElementById(tempTag).style.display = 'none';
+        }, 100);
     }
-    if (events.style.display == 'block') {
-        events.style.opacity = 0;
-        setTimeout(() => {
-            events.style.display = 'none';
-        }, 600);
-        document.getElementsByTagName('html')[0].style.height = 'initial';
-        document.getElementsByTagName('html')[0].style.overflow = 'auto';
+    
+    document.getElementsByTagName('html')[0].style.height = 'initial';
+    document.getElementsByTagName('html')[0].style.overflowY = 'auto';
 
-        document.getElementById('home').style.opacity = 1;
-        document.getElementById('about').style.opacity = 1;
-    }
+    document.getElementById('home').style.opacity = 1;
+    document.getElementById('about').style.opacity = 1;
+    
     // location.hash = scroll[x];
     window.scrollTo(0, window.innerHeight * x)
     if (document.documentElement.scrollWidth < 500) {
         closeNav();
+    } else {
+        const hamIcon = document.getElementsByClassName('toggle-icon')[0];
+        const sideBar = document.getElementsByClassName('side-bar')[0];
+        hamIcon.classList.remove("pushed");
+        sideBar.style.transform = "translateX(25vw)";
     }
-    if (x === 0) {
-        var navItems = document.getElementsByClassName("nav-item");
-        if (window.innerWidth < 600) {
-            for (var i = 0; i < navItems.length; i++) {
-                navItems[i].style.display = "inline-block";
-            }
-        } else {
-            navItems[0].style.display = "inline-block";
-            navItems[2].style.display = "inline-block";
-            navItems[3].style.display = "inline-block";
+    var navItems = document.querySelectorAll(".navigation .nav-item");
+    if (window.innerWidth < 600) {
+        for (var i = 0; i < navItems.length; i++) {
+            navItems[i].style.display = "inline-block";
         }
-        navItems[0].style.marginRight = "initial";
+    } else {
+        navItems[0].style.display = "inline-block";
+        navItems[2].style.display = "inline-block";
+        navItems[3].style.display = "inline-block";
     }
+    const hamItems = document.querySelectorAll('.side-bar .nav-item');
+    hamItems[0].style.display = "none";
+    hamItems[2].style.display = "none";
+    hamItems[3].style.display = "none";
 }
 
 function openNav() {
@@ -132,85 +128,46 @@ window.onbeforeunload = function() {
 }
 
 
-function openSpons() {
-    var events = document.getElementsByClassName('events')[0];
-    if (events.style.display == 'block') {
-        events.style.opacity = 0;
-        setTimeout(() => {
-            events.style.display = 'none';
-        }, 600);
-        document.getElementsByTagName('html')[0].style.height = 'initial';
-        document.getElementsByTagName('html')[0].style.overflow = 'auto';
-
-        document.getElementById('home').style.opacity = 1;
-        document.getElementById('about').style.opacity = 1;
+const tagNames = ['events', 'past_sponsors'];
+function openTags(tagName) {
+    for (i = 0; i < tagNames.length; i++) {
+        const tempTag = tagNames[i];
+        if (tempTag != tagName) {
+            document.getElementById(tempTag).style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById(tempTag).style.display = 'none';
+            }, 100);
+        }
     }
-    
     document.getElementById('home').style.opacity = 0;
     document.getElementById('about').style.opacity = 0;
-    var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
-    sponsWrapper.style.display = 'block';
+    var tagPage = document.getElementById(tagName);
+    tagPage.style.display = 'block';
     setTimeout(() => {
-        sponsWrapper.style.opacity = 1;
+        tagPage.style.opacity = 1;
         document.getElementsByTagName('html')[0].style.height = '100vh';
         document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     }, 100);
+
     if (window.innerWidth < 600) {
         closeNav();
-        document.querySelectorAll("#hamburger > div")[0].style.transform = "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[2].style.transform = "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
+    } else {        
+        const hamIcon = document.getElementsByClassName('toggle-icon')[0];
+        const sideBar = document.getElementsByClassName('side-bar')[0];
+        hamIcon.classList.remove("pushed");
+        sideBar.style.transform = "translateX(25vw)";
     }
 
-    var navItems = document.getElementsByClassName("nav-item");
+    const hamItems = document.querySelectorAll('.side-bar .nav-item');
+    hamItems[0].style.display = "inline-block";
+    hamItems[2].style.display = "inline-block";
+    hamItems[3].style.display = "inline-block";
+
+    var navItems = document.querySelectorAll(".navigation .nav-item");
 
     for (var i = 0; i < navItems.length; i++) {
         navItems[i].style.display = "none";
     }
-    navItems[0].style.display = "block";
-    navItems[0].style.marginRight = "8vw";
-
-}
-
-
-function openEvents() {
-    var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
-    if (sponsWrapper.style.display == 'block') {
-        sponsWrapper.style.opacity = 0;
-        setTimeout(() => {
-            sponsWrapper.style.display = 'none';
-        }, 600);
-        document.getElementsByTagName('html')[0].style.height = 'initial';
-        document.getElementsByTagName('html')[0].style.overflow = 'auto';
-
-        document.getElementById('home').style.opacity = 1;
-        document.getElementById('about').style.opacity = 1;
-    }
-
-    document.getElementById('home').style.opacity = 0;
-    document.getElementById('about').style.opacity = 0;
-    var events = document.getElementsByClassName('events')[0];
-    events.style.display = 'block';
-    setTimeout(() => {
-        events.style.opacity = 1;
-        document.getElementsByTagName('html')[0].style.height = '100vh';
-        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-    }, 100);
-    if (window.innerWidth < 600) {
-        closeNav();
-        document.querySelectorAll("#hamburger > div")[0].style.transform = "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[2].style.transform = "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
-    }
-
-    var navItems = document.getElementsByClassName("nav-item");
-
-    for (var i = 0; i < navItems.length; i++) {
-        navItems[i].style.display = "none";
-    }
-    navItems[0].style.display = "block";
-    navItems[0].style.marginRight = "8vw";
-
 }
 
 
@@ -230,11 +187,13 @@ let about = document.getElementsByClassName("about")[0];
 let landingWrapper = document.getElementsByClassName("landing-wrapper")[0];
 let navigation = document.getElementsByClassName("navigation")[0];
 let register = document.getElementsByClassName("mobile-register")[0];
+let hamIcon = document.getElementsByClassName("toggle-icon")[0];
 
 landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
 about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
 navigation.style.transition = "ease-in-out 0.5s"; // fade-in effect for content on loading
 register.style.transition = "opacity ease-out 0.5s";
+hamIcon.style.transition = "opacity ease-out 0.5s";
 document.getElementById('hamburger').style.transition = "opacity ease-out 0.5s";
 document.getElementsByClassName('mobile-register')[0].style.transition = "opacity ease-out 0.5s";
 
@@ -257,6 +216,7 @@ window.onload = function() {
         about.style.opacity = 1;
         navigation.style.opacity = 1;
         register.style.opacity = 1;
+        hamIcon.style.opacity = 1;
         document.getElementById('hamburger').style.opacity = 1
         document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
         document.getElementsByTagName('html')[0].style.overflowY = 'auto';
@@ -268,3 +228,19 @@ window.onload = function() {
         //   document.getElementsByClassName("navigator")[0].style.display = "none";
     }, 3500);
 };
+
+
+// -------------------------------------toggle desktop hamburger--------------------------------------------------
+document.getElementsByClassName('toggle-icon')[0].addEventListener('click', toggleDesktopHam)
+function toggleDesktopHam() {
+    const hamIcon = document.getElementsByClassName('toggle-icon')[0];
+    const sideBar = document.getElementsByClassName('side-bar')[0];
+    if (hamIcon.classList.contains('pushed')) {
+        hamIcon.classList.remove("pushed");
+        sideBar.style.transform = "translateX(25vw)";
+
+    } else {
+        hamIcon.classList.add('pushed');
+        sideBar.style.transform = "translateX(0)";
+    }
+}

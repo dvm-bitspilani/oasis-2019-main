@@ -97,6 +97,7 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    align-items: center;
     font-family: "Ikaros-Sans";
     font-size: 1.5rem;
     padding-top: 40px;
@@ -104,6 +105,9 @@
     z-index: 20;
     top: 0;
     opacity: 0;
+    padding-right: 1%;
+    box-sizing: border-box;
+    height: 12%;
 }
 
 .navigation:focus {
@@ -138,14 +142,17 @@
     letter-spacing: 2px;
 }
 
-.navigation .nav-item {
+.nav-item {
     color: white;
-    padding: 20px;
     cursor: pointer;
     transition: text-shadow 0.5s;
     letter-spacing: 3px;
     white-space: nowrap;
+}
+
+.navigation .nav-item {
     display: none;
+    padding: 20px;
 }
 
 .nav-item:hover {
@@ -175,6 +182,127 @@
 .navigation .nav-item:nth-of-type(6) {
     display: inline-block;
 }
+
+
+.dummy-ham-icon {
+    width: 56px;
+    height: 42px;
+    margin: 0 1%;
+}
+
+/*toggle-icon*/
+.toggle-icon {
+    display: inline-block;
+    height: max-content;
+    margin: 0 1%;
+    transform: translateY(-5%);
+    -webkit-transition: transform 0.25s;
+    -moz-transition: transform 0.25s;
+    transition: transform 0.25s;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    top: 5.75%;
+    right: 1%;
+    opacity: 0;
+}
+
+.toggle-icon .bar {
+    display: block;
+    width: 38px;
+    height: 2px;
+    margin: 9px;
+    border-right: 28px solid #fff;
+    border-left: 6px solid #d6d6d6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+    -moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+    transition-property: transform, margin, border-right-color, box-shadow;
+    -webkit-transition-duration: 0.25s;
+    -moz-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+.toggle-icon .bar:nth-of-type(1) {
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    transition: opacity 300ms;
+}
+.toggle-icon .bar:nth-of-type(2) {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+/*pushed*/
+.toggle-icon.pushed {
+    transform: translateY(-11px);
+}
+
+.pushed .bar:nth-of-type(1) {
+    opacity: 0;
+}
+
+.pushed .bar:nth-of-type(2) {
+    margin-left: 14px;
+    -webkit-transform: rotate(-137deg) translateY(-15px);
+    -moz-transform: rotate(-137deg) translateY(-15px);
+    -ms-transform: rotate(-137deg) translateY(-15px);
+    -o-transform: rotate(-137deg) translateY(-15px);
+    transform: rotate(-137deg) translateY(-15px);
+}
+
+.pushed .bar:nth-of-type(3) {
+    margin-left: 5px;
+    -webkit-transform: rotate(-42deg);
+    -moz-transform: rotate(-42deg);
+    -ms-transform: rotate(-42deg);
+    -o-transform: rotate(-42deg);
+    transform: rotate(-42deg);
+}
+
+
+.pushed:hover .bar:nth-of-type(2) {
+    border-right-color: #e9b8b9;
+    box-shadow: 4px 0 6px 1px rgba(205,40,44,0.75);
+}
+
+.pushed:hover .bar:nth-of-type(3) {
+    border-right-color: #ddf1da;
+    box-shadow: 4px 0 6px 1px rgba(83,228,68,0.65);
+}
+
+.side-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25vw;
+    height: 100vh;
+    z-index: 25;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12.5vh 2.5vw;
+    box-sizing: border-box;
+    background: #000000;
+    font-family: "Ikaros-Sans";
+    font-size: 1.5rem;
+    transform: translateX(25vw);
+    transition: transform 0.25s ease-out;
+}
+
+.side-bar .nav-item:nth-of-type(1),
+.side-bar .nav-item:nth-of-type(3),
+.side-bar .nav-item:nth-of-type(4) {
+    display: none;
+}
+
+
+
 
 @media all and (max-width: 500px) {
     .landing-wrapper {
@@ -223,6 +351,7 @@
         padding-top: 15vh;
         padding-bottom: 10vh;
         padding-left: 15%;
+        padding-right: 0;
         position: absolute;
         z-index: 20;
         transform: translateX(-100vw);
@@ -298,5 +427,14 @@
         background: url('../images/icons/menu-back.png');
         background-size: 100% 100%;
         cursor: pointer;
+    }
+    .toggle-icon {
+        display: none;
+    }
+    .dummy-ham-icon {
+        display: none;
+    }
+    .side-bar {
+        display: none;
     }
 }
