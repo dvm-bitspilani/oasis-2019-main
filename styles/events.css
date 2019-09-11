@@ -201,12 +201,11 @@
     overflow: auto;
 }
 
-/* #event-details-tab {
+#event-details-tab {
     display: none;
-} */
+}
 
 #all-events-tab {
-    display: none;
     font-family: "Ikaros-Sans";
 }
 
@@ -362,6 +361,64 @@
     .events-nav-dots .active-dot {
         width: 30px;
         border-radius: 4.5px;
+    }
+
+    .event-type {
+        font-size: 1.5rem;
+    }
+
+    .event {
+        width: 900%;
+        text-align: left;
+        margin: 5% 0;
+        font-size: 1rem;
+    }
+
+    .close-event {
+        width: 15px;
+        height: 15px;
+        top: 4%;
+        right: 8%;
+    }
+
+    .event-detail-name {
+        font-size: 1.5rem;
+    }
+
+    .event-detail {
+        margin: 24px 0;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .event-day {
+        display: block;
+    }
+
+    .event-time {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .event-venue {
+        display: block;
+    }
+
+    .event-description {
+        font-size: 0.9rem;
+    }
+
+    .event-description div {
+        font-size: 1.2rem;
+    }
+
+    .event-rules {
+        font-size: 0.9rem;
+        margin: 32px 0;
+    }
+
+    .event-rules div {
+        font-size: 1.2rem;
     }
 }
 
