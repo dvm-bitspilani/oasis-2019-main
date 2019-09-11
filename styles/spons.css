@@ -99,6 +99,46 @@
     width: 15vw;
 }
 
+.spons-tab-container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 32px;
+    background: #eeeeee;
+    padding: 16px;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+.spons-tab, .past-spons-tab {
+    width: 50%;
+    padding: 8px auto;
+    font-family: "ikaros";
+    text-align: center;
+    cursor: pointer;
+}
+
+.spons-tab span, .past-spons-tab span {
+    font-size: 2rem;
+    padding-bottom: 2px;
+    color: #222222;
+    transition: 0.5s;
+}
+
+.spons-tab span.active, .past-spons-tab span.active {
+    border-bottom: 2px solid #222222;
+}
+
+.spons {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: 'Ikaros-Sans';
+    height: 70%;
+    width: 100%;
+}
+
 @media (max-width: 600px) {
     .spons-wrapper {
         height: 100vh;
@@ -123,7 +163,7 @@
         border-bottom: 2px solid #768ad9;
     }
     .spons-container {
-        width: 80%;
+        width: 90%;
         height: 66%;
         overflow-y: scroll;
         margin: 0 auto;
@@ -162,5 +202,10 @@
     }
     .sponsor-card-container img {
         width: 45vw;
+    }
+
+    .spons-tab span, .past-spons-tab span {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
     }
 }

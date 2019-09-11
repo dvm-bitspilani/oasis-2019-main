@@ -128,7 +128,7 @@ window.onbeforeunload = function() {
 }
 
 
-const tagNames = ['events', 'past_sponsors'];
+const tagNames = ['events', 'sponsors'];
 function openTags(tagName) {
     for (i = 0; i < tagNames.length; i++) {
         const tempTag = tagNames[i];

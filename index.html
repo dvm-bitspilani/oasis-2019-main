@@ -78,13 +78,11 @@
         <div class="menu-back" onclick="closeNav()"></div>
         <div class="nav-item" onclick="navigate(0)">HOME</div>
         <div class="nav-item" onclick="navigate(1)">ABOUT US</div>
-        <!-- <div class="nav-item" onclick="openTags('sponsors')">SPONSORS</div> -->
-        <div class="nav-item">SPONSORS</div>
+        <div class="nav-item" onclick="openTags('sponsors')">SPONSORS</div>
         <div class="nav-item" onclick="openTags('events')">EVENTS</div>
         <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
         <!-- <div class="nav-item" onclick="openTags('gallery')">GALLERY</div> -->
         <div class="nav-item">GALLERY</div>
-        <div class="nav-item" onclick="openTags('past_sponsors')">PAST SPONSORS</div>
         <div class="nav-item" onclick="navigate(3)">CONTACT US</div>
         <!-- <div class="nav-item" onclick="openTags('developers')">DEVELOPERS</div> -->
         <div class="nav-item">DEVELOPERS</div>
@@ -109,13 +107,11 @@
     <div class="side-bar">
             <div class="nav-item" onclick="navigate(0)">HOME</div>
             <div class="nav-item" onclick="navigate(1)">ABOUT US</div>
-            <!-- <div class="nav-item" onclick="openTags('sponsors')">SPONSORS</div> -->
-            <div class="nav-item">SPONSORS</div>
+            <div class="nav-item" onclick="openTags('sponsors')">SPONSORS</div>
             <div class="nav-item" onclick="openTags('events')">EVENTS</div>
             <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
             <!-- <div class="nav-item" onclick="openTags('gallery')">GALLERY</div> -->
             <div class="nav-item">GALLERY</div>
-            <div class="nav-item" onclick="openTags('past_sponsors')">PAST SPONSORS</div>
             <div class="nav-item" onclick="navigate(3)">CONTACT US</div>
             <!-- <div class="nav-item" onclick="openTags('developers')">DEVELOPERS</div> -->
             <div class="nav-item">DEVELOPERS</div>
@@ -287,173 +283,182 @@
 
 
 
-    <div class="spons-wrapper" id="past_sponsors">
+    <div class="spons-wrapper" id="sponsors">
         <div class="spons-heading">
-            <span>PAST SPONSORS</span>
+            <span>SPONSORS</span>
         </div>
         <div class="spons-container">
-            <div class="sponsor">
-            <div class="sponsor-heading">ASSOCIATE SPONSORS</div>
-                <div class="sponsor-card-container">
-                    <div class="spons-details"><img src="images/spons/gaana.png">
-                        <div class="name">Gaana</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/thoughtsol.png">
-                        <div class="name">Thoughtsol</div>
+            <div class="spons-tab-container">
+                <div class="spons-tab"><span onclick="toggleSponsTab('spons')">SPONSORS</span></div>
+                <div class="past-spons-tab"><span class="active" onclick="toggleSponsTab('past-spons')">PAST SPONSORS</span></div>
+            </div>
+            <div class="spons">
+                Coming Soon...
+            </div>
+            <div class="past-spons">
+                <div class="sponsor">
+                <div class="sponsor-heading">ASSOCIATE SPONSORS</div>
+                    <div class="sponsor-card-container">
+                        <div class="spons-details"><img src="images/spons/gaana.png">
+                            <div class="name">Gaana</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/thoughtsol.png">
+                            <div class="name">Thoughtsol</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="sponsor">
-                <div class="sponsor-heading">POWERED BY</div>
-                <div class="sponsor-card-container">
-                    <div class="spons-details"><img src="images/spons/hp.png">
-                        <div class="name">Hewllet Peckered</div>
+                <div class="sponsor">
+                    <div class="sponsor-heading">POWERED BY</div>
+                    <div class="sponsor-card-container">
+                        <div class="spons-details"><img src="images/spons/hp.png">
+                            <div class="name">Hewllet Peckered</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="sponsor">
-                <div class="sponsor-heading">DRIVEN BY</div>
-                <div class="sponsor-card-container">
-                    <div class="spons-details"><img src="images/spons/intel.png">
-                        <div class="name">Intel</div>
+                <div class="sponsor">
+                    <div class="sponsor-heading">DRIVEN BY</div>
+                    <div class="sponsor-card-container">
+                        <div class="spons-details"><img src="images/spons/intel.png">
+                            <div class="name">Intel</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="sponsor">
-                <div class="sponsor-heading">OFFICIAL SPONSORS</div>
-                <div class="sponsor-card-container">
-                    <div class="spons-details"><img src="images/spons/s1.jpg">
-                        <div class="name">Panasonic</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s2.jpg">
-                        <div class="name">Bristlecone</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s3.jpg">
-                        <div class="name">Finastra</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s4.jpg">
-                        <div class="name">The Youth Chronicles</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s5.jpg">
-                        <div class="name">Happy Unmarried</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s6.jpg">
-                        <div class="name">Ustra</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s7.jpg">
-                        <div class="name">Winkies</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s8.jpg">
-                        <div class="name">Wiley</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s9.jpg">
-                        <div class="name">Indian Institute of Photography</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s10.jpg">
-                        <div class="name">Resonance</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/indianoil.png">
-                        <div class="name">Indian Oil</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/tcf.png">
-                        <div class="name">The College Fever</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/atkt.png">
-                        <div class="name">ATKT</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/zebronics.png">
-                        <div class="name">Zebronics</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/rblbank.png">
-                        <div class="name">RBL Bank</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s12.png">
-                        <div class="name">OVIYA</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/Monster Energy.png">
-                        <div class="name">Monster Energy</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/Coca Cola.svg.png">
-                        <div class="name">Coca Cola</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/RentoClick Color Gradient.png">
-                        <div class="name">RentoClick</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/nestaway.png">
-                        <div class="name">Nestaway</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/astronomia.png">
-                        <div class="name">Astronomia</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/tiktok.png">
-                        <div class="name">TikTok</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/duexpress.png">
-                        <div class="name">DU Express</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/dubeat.png">
-                        <div class="name">DU Beat</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/hellointern.png">
-                        <div class="name">Hello Intern</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/yesbank.png">
-                        <div class="name">Yes Bank</div>
-                    </div>
-                    <!-- <div class="spons-details"><img src="images/spons/"><div class="name">Hewllet Peckered</div></div> -->
-                </div>
-            </div>
-
-            <div class="sponsor">
-                <div class="sponsor-heading">SPECIAL ASSOCIATIONS</div>
-                <div class="sponsor-card-container">
-                    <div class="spons-details"><img src="images/spons/britishcouncil.jpg">
-                        <div class="name">British Council</div>
+                <div class="sponsor">
+                    <div class="sponsor-heading">OFFICIAL SPONSORS</div>
+                    <div class="sponsor-card-container">
+                        <div class="spons-details"><img src="images/spons/s1.jpg">
+                            <div class="name">Panasonic</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s2.jpg">
+                            <div class="name">Bristlecone</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s3.jpg">
+                            <div class="name">Finastra</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s4.jpg">
+                            <div class="name">The Youth Chronicles</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s5.jpg">
+                            <div class="name">Happy Unmarried</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s6.jpg">
+                            <div class="name">Ustra</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s7.jpg">
+                            <div class="name">Winkies</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s8.jpg">
+                            <div class="name">Wiley</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s9.jpg">
+                            <div class="name">Indian Institute of Photography</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s10.jpg">
+                            <div class="name">Resonance</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/indianoil.png">
+                            <div class="name">Indian Oil</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/tcf.png">
+                            <div class="name">The College Fever</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/atkt.png">
+                            <div class="name">ATKT</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/zebronics.png">
+                            <div class="name">Zebronics</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/rblbank.png">
+                            <div class="name">RBL Bank</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s12.png">
+                            <div class="name">OVIYA</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/Monster Energy.png">
+                            <div class="name">Monster Energy</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/Coca Cola.svg.png">
+                            <div class="name">Coca Cola</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/RentoClick Color Gradient.png">
+                            <div class="name">RentoClick</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/nestaway.png">
+                            <div class="name">Nestaway</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/astronomia.png">
+                            <div class="name">Astronomia</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/tiktok.png">
+                            <div class="name">TikTok</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/duexpress.png">
+                            <div class="name">DU Express</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/dubeat.png">
+                            <div class="name">DU Beat</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/hellointern.png">
+                            <div class="name">Hello Intern</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/yesbank.png">
+                            <div class="name">Yes Bank</div>
+                        </div>
+                        <!-- <div class="spons-details"><img src="images/spons/"><div class="name">Hewllet Peckered</div></div> -->
                     </div>
                 </div>
-            </div>
 
-            <div class="sponsor">
-                <div class="sponsor-heading">MEDIA PARTNERS</div>
-                <div class="sponsor-card-container">
-                    <div class="spons-details"><img src="images/spons/score.png">
-                        <div class="name">Score</div>
+                <div class="sponsor">
+                    <div class="sponsor-heading">SPECIAL ASSOCIATIONS</div>
+                    <div class="sponsor-card-container">
+                        <div class="spons-details"><img src="images/spons/britishcouncil.jpg">
+                            <div class="name">British Council</div>
+                        </div>
                     </div>
-                    <div class="spons-details"><img src="images/spons/womansera.png">
-                        <div class="name">Women's Era</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/cocktailzindagi.png">
-                        <div class="name">Cocktail Zindagi</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/dare2compete.png">
-                        <div class="name">Dare2Compete</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/festpav.png">
-                        <div class="name">FestPav</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/indiacollegefest.png">
-                        <div class="name">India College Fest</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/ohcampus.png">
-                        <div class="name">Oh Campus</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/knowafest.png">
-                        <div class="name">Know A Feast</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s13.png">
-                        <div class="name">9XM</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s14.png">
-                        <div class="name">9XO</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/s11.jpg">
-                        <div class="name">Rock Street Journal</div>
-                    </div>
-                    <div class="spons-details"><img src="images/spons/artisttaan.png">
-                        <div class="name">Artisttaan</div>
+                </div>
+
+                <div class="sponsor">
+                    <div class="sponsor-heading">MEDIA PARTNERS</div>
+                    <div class="sponsor-card-container">
+                        <div class="spons-details"><img src="images/spons/score.png">
+                            <div class="name">Score</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/womansera.png">
+                            <div class="name">Women's Era</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/cocktailzindagi.png">
+                            <div class="name">Cocktail Zindagi</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/dare2compete.png">
+                            <div class="name">Dare2Compete</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/festpav.png">
+                            <div class="name">FestPav</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/indiacollegefest.png">
+                            <div class="name">India College Fest</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/ohcampus.png">
+                            <div class="name">Oh Campus</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/knowafest.png">
+                            <div class="name">Know A Feast</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s13.png">
+                            <div class="name">9XM</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s14.png">
+                            <div class="name">9XO</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/s11.jpg">
+                            <div class="name">Rock Street Journal</div>
+                        </div>
+                        <div class="spons-details"><img src="images/spons/artisttaan.png">
+                            <div class="name">Artisttaan</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -466,5 +471,6 @@
 <script src="./js/video.js"></script>
 <script src="./js/contact.js"></script>
 <script src="./js/events.js"></script>
+<script src="./js/spons.js"></script>
 
 </html>
