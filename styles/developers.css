@@ -1,0 +1,200 @@
+.developers {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: #17001E;
+    padding-top: 5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 16;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.developers-heading {
+    height: 15vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developers-heading span {
+    color: white;
+    font-size: 5em;
+    font-family: "Ikaros-Sans";
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.developers-heading span::after {
+    position: absolute;
+    right: 2.5%;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 20%;
+    border-bottom: 2px solid #768ad9;
+}
+
+.developers-container {
+    width: 85%;
+    height: 75vh;
+    margin: 0 auto;
+    padding: 2.5% 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.developers-container::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.developer {
+    justify-self: center;
+    width: 225px;
+    margin: 2.5% 4%;
+}
+
+.developer .dev-image {
+    height: 225px;
+    width: 225px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 4px;
+}
+
+.developer:nth-of-type(1) .dev-image {
+    background-image: url("../images/developers/devansh.jpg");
+}
+
+.developer:nth-of-type(2) .dev-image {
+    background-image: url("../images/developers/mukul.jpg");
+}
+
+.developer:nth-of-type(3) .dev-image {
+    background-image: url("../images/developers/anant.jpg");
+}
+
+.developer:nth-of-type(4) .dev-image {
+    background-image: url("../images/developers/chirag.jpg");
+}
+
+.developer:nth-of-type(5) .dev-image {
+    background-image: url("../images/developers/shivanshu.jpg");
+}
+
+.developer:nth-of-type(6) .dev-image {
+    background-image: url("../images/developers/mohul.jpg");
+}
+
+.developer:nth-of-type(7) .dev-image {
+    background-image: url("../images/developers/anupam.jpg");
+}
+
+.developer:nth-of-type(8) .dev-image {
+    background-image: url("../images/developers/shreyans.jpg");
+}
+
+.developer:nth-of-type(9) .dev-image {
+    background-image: url("../images/developers/akshit.jpg");
+}
+
+.developer:nth-of-type(10) .dev-image {
+    background-image: url("../images/developers/manikya.jpg");
+}
+
+.developer .dev-info {
+    width: 100%;
+    background-color: #100023;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ikaros-Sans";
+}
+
+.developer .dev-info #name {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    padding: 8px 0;
+}
+
+.developer .dev-info #separator {
+    height: 2px;
+    background-color: #C97CCC;
+    width: 50px;
+    margin-bottom: 12px;
+}
+
+.developer .dev-info #team {
+    font-size: 1rem;
+    color: #C97CCC;
+    padding-bottom: 10px;
+}
+
+.developer .dev-info #links {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.developer .dev-info #links div {
+    margin: 0 10px;
+}
+
+.developer .dev-info #links div a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+
+@keyframes rotate {
+    from {
+      transform: rotateZ(0);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+}
+
+
+
+@media all and (max-width: 500px) {
+    .developers {
+        padding-top: 7.5vh;
+    }
+    .developer {
+      margin-bottom: 32px;
+    }
+
+    .developers-heading {
+        justify-content: center;
+        padding-right: 0;
+    }
+    .developers-heading span {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 350px) {
+    .developers-heading span {
+        font-size: 2em;
+    }
+}
+  
