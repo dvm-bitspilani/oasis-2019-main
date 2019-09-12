@@ -172,9 +172,6 @@ function openTags(tagName) {
             navItems[i].style.display = "none";
         }
     }
-    if (tagName == tagNames[0]) {
-        fetchEvents();
-    }
 }
 
 
@@ -234,6 +231,7 @@ window.onload = function() {
         // if (window.innerWidth < 500) {
         //   document.getElementsByClassName("navigator")[0].style.display = "none";
     }, 3500);
+    fetchEvents();
 };
 
 

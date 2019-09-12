@@ -225,19 +225,13 @@
     color: #9A6D9A;
 }
 
-.all-events-wrapper {
-    width: 100%;
-    min-height: 70%;
-    display: flex;
-    align-items: center;
-}
-
 .all-events {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 2.5% 0;
+    overflow: auto;
 }
 
 .event {
