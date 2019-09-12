@@ -25,6 +25,8 @@ const eventsImgUrl = [
     'images/events/misc.svg'
 ];
 
+const URL = "https://bits-oasis.org/registrations/events_details/";
+
 const eventsContainer = document.getElementsByClassName("events-container")[0];
 
 const numberOfEvents = eventsNames.length;
