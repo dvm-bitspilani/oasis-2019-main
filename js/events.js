@@ -35,7 +35,7 @@ const createEvent = () => {
         let eventsCard = document.createElement('div');
         eventsCard.className = "events-card";
         if (j == 1) {
-            eventsCard.classList.add('active'); 
+            eventsCard.classList.add('active');
         }
 
         let eventsCardFront = document.createElement('div');
@@ -67,6 +67,10 @@ const createEvent = () => {
         eventsCard.appendChild(eventsCardFront);
 
         eventsContainer.appendChild(eventsCard);
+        const eventType = eventsNames[j];
+        eventsCard.addEventListener('click', () => {
+            openAllEvents(eventType)
+        });
     }
 }
 
@@ -178,4 +182,71 @@ if (window.innerWidth < 500) {
 
     document.getElementsByClassName('events')[0].addEventListener("touchstart", startTouchContact, false);
     document.getElementsByClassName('events')[0].addEventListener("touchmove", moveTouchContact, false);
+}
+
+
+function openAllEvents(type) {
+    document.getElementById('event-details').style.display = 'flex';
+    document.getElementsByClassName('event-type')[0].innerHTML = type;
+    setTimeout(() => {
+        document.getElementById('event-details').style.opacity = 1;
+    }, 10);
+
+    document.getElementsByClassName('all-events')[0].innerHTML = '';
+    const eventNames = [
+        'Event-1',
+        'Event-2',
+        'Event-3',
+        'Event-4',
+        'Event-5',
+        'Event-6',
+        'Event-7',
+        'Event-8',
+        'Event-9',
+        'Event-10',
+        'Event-11',
+        'Event-12'
+    ]
+    
+    eventNames.map(eventName => {
+        const event = document.createElement('div');
+        event.innerHTML = eventName;
+        event.className = 'event';
+        document.getElementsByClassName('all-events')[0].appendChild(event);
+        event.addEventListener('click', () => viewEventDetails(eventName));
+    });
+}
+
+function closeEventDetails() {
+    document.getElementById('event-details').style.opacity = 0;
+    setTimeout(() => {
+        document.getElementById('all-events-tab').style.opacity = 1;
+        document.getElementById('event-details-tab').style.opacity = 0;
+        document.getElementById('all-events-tab').style.display = 'flex';
+        document.getElementById('event-details-tab').style.display = 'none';
+        document.getElementById('event-details').style.display = 'none';
+    }, 500);
+}
+
+function viewEventDetails(eventName) {
+    document.getElementById('all-events-tab').style.opacity = 0;
+    setTimeout(() => {
+        document.getElementById('all-events-tab').style.display = 'none';
+        document.getElementById('event-details-tab').style.display = 'flex';
+        document.getElementsByClassName('event-detail-name')[0].innerHTML = eventName;
+        setTimeout(() => {
+            document.getElementById('event-details-tab').style.opacity = 1;
+        }, 10);
+    }, 250);
+}
+
+function backEventDetails() {
+    document.getElementById('event-details-tab').style.opacity = 0;
+    setTimeout(() => {
+        document.getElementById('event-details-tab').style.display = 'none';
+        document.getElementById('all-events-tab').style.display = 'flex';
+        setTimeout(() => {
+            document.getElementById('all-events-tab').style.opacity = 1;
+        }, 10);
+    }, 250);
 }

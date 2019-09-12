@@ -95,6 +95,7 @@
     justify-content: center;
     background-image: radial-gradient(#393636, #1F1F1F);
     transition: 0.5s ease-out;
+    cursor: pointer;
 }
 
 .events-container .events-card.active {
@@ -172,6 +173,8 @@
     left: 0;
     z-index: 200;
     display: none;
+    opacity: 0;
+    transition: 0.5s ease;
 }
 
 .event-details-bg {
@@ -200,10 +203,12 @@
     flex-direction: column;
     align-items: center;
     overflow: auto;
+    transition: 0.25s ease;
 }
 
 #event-details-tab {
     display: none;
+    opacity: 0;
 }
 
 #all-events-tab {
@@ -229,6 +234,12 @@
     margin: 2.5% 0;
     color: #ffffff;
     font-size: 1.75rem;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.event:hover {
+    color: #9A6D9A;
 }
 
 .close-event {
@@ -238,6 +249,15 @@
     position: absolute;
     top: 6%;
     right: 3.5%;
+}
+
+.events-back {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 6%;
+    left: 3.5%;
 }
 
 .event-detail-name {
@@ -380,6 +400,13 @@
         height: 15px;
         top: 4%;
         right: 8%;
+    }
+
+    .events-back {
+        width: 15px;
+        height: 15px;
+        top: 4%;
+        left: 8%;
     }
 
     .event-detail-name {
