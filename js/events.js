@@ -1,16 +1,28 @@
+const URL = "https://bits-oasis.org/registrations/events_details/";
+
+let ALL_EVENTS;
+
 const eventsNames = [
     'Dance',
     'Drama',
-    'Fine Arts',
+    'Fine Art',
     'Music',
     'Photography',
     'Fashion',
     'Oratory',
     'Quizzing',
     'Humour',
-    'Film Fest',
+    'Films',
     'Miscellaneous'
 ];
+
+function fetchEvents() {
+    fetch(URL).then(resp => resp.json())
+    .then(function(response) {
+        ALL_EVENTS = response
+    });
+}
+
 const eventsImgUrl = [
     'images/events/dance.svg',
     'images/events/drama.svg',
@@ -24,8 +36,6 @@ const eventsImgUrl = [
     'images/events/film fest.svg',
     'images/events/misc.svg'
 ];
-
-const URL = "https://bits-oasis.org/registrations/events_details/";
 
 const eventsContainer = document.getElementsByClassName("events-container")[0];
 
@@ -70,7 +80,7 @@ const createEvent = () => {
 
         eventsContainer.appendChild(eventsCard);
         const eventType = eventsNames[j];
-        eventsCard.addEventListener('click', () => {
+        eventsCardFrontLink.addEventListener('click', () => {
             openAllEvents(eventType)
         });
     }
@@ -195,27 +205,36 @@ function openAllEvents(type) {
     }, 10);
 
     document.getElementsByClassName('all-events')[0].innerHTML = '';
-    const eventNames = [
-        'Event-1',
-        'Event-2',
-        'Event-3',
-        'Event-4',
-        'Event-5',
-        'Event-6',
-        'Event-7',
-        'Event-8',
-        'Event-9',
-        'Event-10',
-        'Event-11',
-        'Event-12'
-    ]
+
+    const eventNames = [];
+    ALL_EVENTS.map(event => {
+        if (event.category_name == type) {
+            event.events.map(eve => {
+                eventNames.push(eve.name);
+            });
+        }
+        if (type == 'Miscellaneous') {
+            if (event.category_name == 'Entertainment') {
+                event.events.map(eve => {
+                    eventNames.push(eve.name);
+                });
+            }
+            if (event.category_name == 'Writing') {
+                event.events.map(eve => {
+                    eventNames.push(eve.name);
+                });
+            }
+        }
+    });
     
     eventNames.map(eventName => {
         const event = document.createElement('div');
-        event.innerHTML = eventName;
+        const eventText = document.createElement('span');
+        eventText.innerHTML = eventName;
         event.className = 'event';
+        event.appendChild(eventText);
         document.getElementsByClassName('all-events')[0].appendChild(event);
-        event.addEventListener('click', () => viewEventDetails(eventName));
+        eventText.addEventListener('click', () => viewEventDetails(eventName, type));
     });
 }
 
@@ -230,12 +249,39 @@ function closeEventDetails() {
     }, 500);
 }
 
-function viewEventDetails(eventName) {
+function viewEventDetails(eventName, eventType) {
     document.getElementById('all-events-tab').style.opacity = 0;
     setTimeout(() => {
         document.getElementById('all-events-tab').style.display = 'none';
         document.getElementById('event-details-tab').style.display = 'flex';
+
         document.getElementsByClassName('event-detail-name')[0].innerHTML = eventName;
+        ALL_EVENTS.map(event => {
+            if (event.category_name == eventType) {
+                event.events.map(eve => {
+                    if (eve.name == eventName) {
+                        changeEventData(eve);
+                    }
+                });
+            }
+            if (eventType == 'Miscellaneous') {
+                if (event.category_name == 'Entertainment') {
+                    event.events.map(eve => {
+                        if (eve.name == eventName) {
+                            changeEventData(eve);
+                        }
+                    });
+                }
+                if (event.category_name == 'Writing') {
+                    event.events.map(eve => {
+                        if (eve.name == eventName) {
+                            changeEventData(eve);
+                        }
+                    });
+                }
+            }
+        });
+        
         setTimeout(() => {
             document.getElementById('event-details-tab').style.opacity = 1;
         }, 10);
@@ -251,4 +297,13 @@ function backEventDetails() {
             document.getElementById('all-events-tab').style.opacity = 1;
         }, 10);
     }, 250);
+}
+
+function changeEventData(event) {
+    document.querySelector('.event-day > span').innerHTML = event.date_time;
+    document.querySelector('.event-time > span').innerHTML = event.time;
+    document.querySelector('.event-venue > span').innerHTML = event.venue;
+    
+    document.querySelectorAll('.event-description > div')[1].innerHTML = event.details;
+    document.querySelectorAll('.event-rules > div')[1].innerHTML = event.rules;
 }

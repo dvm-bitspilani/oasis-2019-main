@@ -61,6 +61,7 @@ body {
     font-family: Ikaros-Sans;
     background: #F2D138 0% 0% no-repeat padding-box;
     border-radius: 58px;
+    cursor: pointer;
 }
 .reg-button a {
     text-decoration: none;

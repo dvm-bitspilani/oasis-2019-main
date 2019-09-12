@@ -95,7 +95,6 @@
     justify-content: center;
     background-image: radial-gradient(#393636, #1F1F1F);
     transition: 0.5s ease-out;
-    cursor: pointer;
 }
 
 .events-container .events-card.active {
@@ -138,6 +137,12 @@
     color: #ffffff;
     text-align: center;
     font-family: "ikaros";
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.events-container .events-card .events-card-front .event-link:hover {
+    color: #9A6D9A;
 }
 
 .events-nav-dots {
@@ -220,10 +225,17 @@
     color: #9A6D9A;
 }
 
-.all-events {
-    width: 90%;
+.all-events-wrapper {
+    width: 100%;
+    min-height: 70%;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+}
+
+.all-events {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin: 2.5% 0;
 }
@@ -234,12 +246,12 @@
     margin: 2.5% 0;
     color: #ffffff;
     font-size: 1.75rem;
-    cursor: pointer;
-    transition: 0.25s ease;
 }
 
-.event:hover {
+.event span:hover {
     color: #9A6D9A;
+    cursor: pointer;
+    transition: 0.25s ease;
 }
 
 .close-event {

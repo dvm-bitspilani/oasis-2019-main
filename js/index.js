@@ -172,6 +172,9 @@ function openTags(tagName) {
             navItems[i].style.display = "none";
         }
     }
+    if (tagName == tagNames[0]) {
+        fetchEvents();
+    }
 }
 
 
