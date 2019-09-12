@@ -7,5 +7,5 @@ function normal() {
     opacity.style.zIndex = '-1';
 }
 function main() {
-    window.location.href = '/';
+    window.location = './index.html';
 }

@@ -87,12 +87,12 @@
 }
 
 #fog:before {
-    background-image: url('../images/assets/Smoke.png');
+    background-image: url('../images/assets/Smoke.jpg');
     animation: drift 140s linear 0s infinite;
 }
 
 #fog:after {
-    background-image: url('../images/assets/Smoke.png');
+    background-image: url('../images/assets/Smoke.jpg');
     animation: drift 60s linear 0s infinite;
 }
 

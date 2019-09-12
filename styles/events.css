@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/assets/events-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/assets/events-bg.jpg');
     background-position: center;
     background-size: cover;
     padding-top: 5vh;
@@ -319,7 +319,7 @@
     font-size: 1.4rem;
 }
 
-.event-description div {
+.event-description > div:nth-of-type(1) {
     color: #9A6D9A;
     font-family: "Ikaros-Sans";
     font-size: 1.7rem;
@@ -333,7 +333,7 @@
     margin: 40px 0;
 }
 
-.event-rules div {
+.event-rules > div:nth-of-type(1) {
     color: #9A6D9A;
     font-family: "Ikaros-Sans";
     font-size: 1.7rem;
@@ -448,7 +448,7 @@
         font-size: 0.9rem;
     }
 
-    .event-description div {
+    .event-description > div:nth-of-type(1) {
         font-size: 1.2rem;
     }
 
@@ -457,7 +457,7 @@
         margin: 32px 0;
     }
 
-    .event-rules div {
+    .event-rules > div:nth-of-type(1) {
         font-size: 1.2rem;
     }
 }

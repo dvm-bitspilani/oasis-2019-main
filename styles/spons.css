@@ -3,7 +3,7 @@
     padding-bottom: 6vh;
     width: 100%;
     background-color: #ffffff;
-    background: url('../images/assets/sponsors.png') no-repeat center center/cover;
+    background: url('../images/assets/sponsors.jpg') no-repeat center center/cover;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -147,7 +147,7 @@
     .spons-wrapper {
         height: 100vh;
         padding-bottom: 0vh;
-        background: url('../images/assets/sponsors.png') no-repeat center center/cover;
+        background: url('../images/assets/sponsors.jpg') no-repeat center center/cover;
     }
     .spons-heading {
         margin-top: 10vh;
