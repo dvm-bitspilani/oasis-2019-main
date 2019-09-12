@@ -139,6 +139,10 @@
     width: 100%;
 }
 
+.past-spons {
+    width: 100%;
+}
+
 @media (max-width: 600px) {
     .spons-wrapper {
         height: 100vh;
