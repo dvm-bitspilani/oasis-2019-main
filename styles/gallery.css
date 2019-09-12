@@ -31,12 +31,12 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     display: grid;
-    grid-template-rows: 20px 50px 100px 80px 20vh 20px 20vh 20px 20vh 20px;
+    grid-template-rows: 20px 40px 100px 60px 20vh 20px 20vh 20px 20vh 20px;
     grid-template-columns: 7vw 3vw 2vw 16vw 20px 18vw 20px 18vw 20px 10vw 10vw 2vw 8vw;
 }
 .logo {
     font-family: Ikaros-Sans;
-    font-size: 35px;
+    font-size: 31px;
     letter-spacing: 0.06px;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -56,16 +56,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    color: #ffffff;
     letter-spacing: 1.62px;
     font-family: Ikaros-Sans;
-    background: #F2D138 0% 0% no-repeat padding-box;
+    background: #0099F7 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 15px #077BFFB3;
     border-radius: 58px;
     cursor: pointer;
 }
 .reg-button a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 .fas {
     cursor: pointer;
@@ -193,6 +194,7 @@ body {
         font-size: 36px;
         display: flex;
         align-items: center;
+        margin-top: 0;
     }
     .line {
         width: 90px;
