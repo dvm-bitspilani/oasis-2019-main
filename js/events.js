@@ -42,7 +42,7 @@ const eventsContainer = document.getElementsByClassName("events-container")[0];
 const numberOfEvents = eventsNames.length;
 let eventIndex = 1;
 
-const createEvent = () => {
+const createEvent = (parentAppend) => {
     for (j = 0; j < numberOfEvents; j++) {
         let eventsCard = document.createElement('div');
         eventsCard.className = "events-card";
@@ -78,7 +78,7 @@ const createEvent = () => {
 
         eventsCard.appendChild(eventsCardFront);
 
-        eventsContainer.appendChild(eventsCard);
+        parentAppend.appendChild(eventsCard);
         const eventType = eventsNames[j];
         eventsCardFrontLink.addEventListener('click', () => {
             openAllEvents(eventType)
@@ -101,7 +101,8 @@ const createEventDots = () => {
 }
 
 createEventDots();
-createEvent();
+createEvent(eventsContainer);
+createEvent(document.getElementsByClassName('all-events-type-container')[0]);
 
 
 
@@ -306,4 +307,19 @@ function changeEventData(event) {
     
     document.querySelectorAll('.event-description > div')[1].innerHTML = event.details;
     document.querySelectorAll('.event-rules > div')[1].innerHTML = event.rules;
+}
+
+
+function showAllEvents() {
+    document.getElementsByClassName('all-events-type')[0].style.display = 'block';
+    setTimeout(() => {
+        document.getElementsByClassName('all-events-type')[0].style.opacity = 1;
+    }, 10)
+}
+
+function backAllEvents() {
+    document.getElementsByClassName('all-events-type')[0].style.opacity = 0;
+    setTimeout(() => {
+        document.getElementsByClassName('all-events-type')[0].style.display = 'none';
+    }, 500)
 }
