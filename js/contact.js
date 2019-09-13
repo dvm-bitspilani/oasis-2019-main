@@ -1,4 +1,3 @@
-// alert("hello");
 var cardsContact = document.getElementsByClassName("des-card");
 
 var cardDiv = document.getElementsByClassName("Cards-div")[0];
@@ -48,14 +47,8 @@ function nextContact() {
             }
         }
     } else {
-        for (var i = 0; i < cardsContact.length; i++) {
-            cardsContact[i].style.animation = "shake 0.5s";
-        }
-        setTimeout(() => {
-            for (var i = 0; i < cardsContact.length; i++) {
-                cardsContact[i].style.animation = null;
-            }
-        }, 500);
+        group = 0;
+        nextContact();
     }
 }
 
@@ -82,14 +75,8 @@ function backContact() {
             }
         }
     } else {
-        for (var i = 0; i < cardsContact.length; i++) {
-            cardsContact[i].style.animation = "shake 0.5s";
-        }
-        setTimeout(() => {
-            for (var i = 0; i < cardsContact.length; i++) {
-                cardsContact[i].style.animation = null;
-            }
-        }, 500);
+        group = noOfGroups - 1;
+        nextContact();
     }
 }
 

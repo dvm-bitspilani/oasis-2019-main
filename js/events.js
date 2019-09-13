@@ -128,18 +128,28 @@ const changeEventSet = () => {
 }
 
 const navigateEvent = (dotIndex) => {
-    if (dotIndex <= 0 || dotIndex > ((window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents)) {
-        for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
-            document.querySelectorAll('.events-container .events-card')[i].style.animation = "shake 0.5s";
-            if(i == eventIndex){
-                document.querySelectorAll('.events-container .events-card')[i].style.animation = "shakeEvents 0.5s";
-            }
-        }
-        setTimeout(() => {
-            for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
-                document.querySelectorAll('.events-container .events-card')[i].style.animation = "none";
-            }
-        }, 500);
+    // if (dotIndex <= 0 || dotIndex > ((window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents)) {
+    //     for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
+    //         document.querySelectorAll('.events-container .events-card')[i].style.animation = "shake 0.5s";
+    //         if(i == eventIndex){
+    //             document.querySelectorAll('.events-container .events-card')[i].style.animation = "shakeEvents 0.5s";
+    //         }
+    //     }
+    //     setTimeout(() => {
+    //         for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
+    //             document.querySelectorAll('.events-container .events-card')[i].style.animation = "none";
+    //         }
+    //     }, 500);
+    //     return;
+    // }
+    if(dotIndex <= 0) {
+        eventIndex = ((window.innerWidth > 600) ? (numberOfEvents - 3) : (numberOfEvents - 1));;
+        changeEventSet();
+        return;
+    }
+    if(dotIndex > ((window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents)) {
+        eventIndex = 0;
+        changeEventSet();
         return;
     }
     if (eventIndex != dotIndex) {
