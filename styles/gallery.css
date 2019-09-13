@@ -34,6 +34,9 @@ body {
     grid-template-rows: 20px 40px 100px 60px 20vh 20px 20vh 20px 20vh 20px;
     grid-template-columns: 7vw 3vw 2vw 16vw 20px 18vw 20px 18vw 20px 10vw 10vw 2vw 8vw;
 }
+.insta {
+    width: 14px;
+}
 .logo {
     font-family: Ikaros-Sans;
     font-size: 31px;
