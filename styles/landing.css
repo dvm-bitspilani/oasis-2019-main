@@ -63,12 +63,11 @@
 
 .oasis-logo {
     width: 15vw;
-    height: 15vh;
+    height: 12.5vh;
     position: absolute;
     left: 0;
     top: 0;
     margin-left: 2vw;
-    margin-top: 1vh;
     background: url('../images/assets/logo_final.png');
     background-position: center;
     background-size: contain;
@@ -351,7 +350,7 @@
         opacity: 0;
     }
     .navigation {
-        padding-top: 15vh;
+        padding-top: 13vh;
         padding-bottom: 10vh;
         padding-left: 17.5%;
         padding-right: 0;
