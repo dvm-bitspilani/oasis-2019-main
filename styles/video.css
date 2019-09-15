@@ -1,14 +1,14 @@
 .video-wrapper {
     height: 100vh;
-    padding-bottom: 6vh;
     padding-top: 8vh;
     width: 100%;
     background: url('../images/assets/video.jpg') no-repeat center center/cover;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .video-wrapper .video-heading {
-    height: 10vh;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,66 +37,30 @@
 
 .cards-container {
     width: 80vw;
-    height: 90vh;
+    height: 90%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    padding: 2.5% 0;
+    box-sizing: border-box;
 }
 
-
-/* .cards-container .cards-left {
-    height: 22vw;
-    width: 100%;
-    display: grid;
-    grid-template-columns: [col-1] auto [col-2] 30vw [col-3] auto [end];
-    grid-template-rows: [row-1] 6vw [row-2] 3vw [row-3] 14vw [row-4] auto [end];
-} */
-
 .thumbnail {
-    /* grid-column-start: col-2;
-    grid-column-end: col-3;
-    grid-row-start: row-3;
-    grid-row-end: row-4;
-    background-color: rgba(255, 255, 255, 0.7); */
-    margin: 3vh 0;
+    margin-top: 2vh;
     height: 25vh;
     width: 100%;
-    /* width: max-content; */
 }
 
 .cards-container .cards {
+    height: max-content;
     transition: 0.25s ease-in-out;
     display: flex;
     flex-direction: column-reverse;
-    width: 50vh;
-}
-
-
-/* .cards-container .cards-right {
-    height: 22vw;
-    width: 100%;
-    display: grid;
-    grid-template-columns: [col-1] auto [col-2] 30vw [col-3] auto [end];
-    grid-template-rows: [row-1] 6vw [row-2] 3vw [row-3] 14vw [row-4] auto [end];
-    margin-top: 5vh;
-} */
-
-.cards-container .cards-left .info {
-    /* grid-column-start: col-2;
-    grid-column-end: col-3;
-    grid-row-start: row-1;
-    grid-row-end: row-2; */
-    text-align: center;
-}
-
-.cards-container .cards-right .info {
-    /* grid-column-start: col-2;
-    grid-column-end: col-3;
-    grid-row-start: row-1;
-    grid-row-end: row-2; */
-    text-align: center;
+    width: 30%;
+    margin: 0 5%;
+    margin-top: 2%;
 }
 
 .cards-container .info {
@@ -105,10 +69,11 @@
     font-size: 1.5rem;
     color: white;
     font-weight: 100;
+    text-align: center;
 }
 
 .info > .info-heading > a {
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     border-bottom: #768ad9 3px solid;
     white-space: nowrap;
 }
@@ -116,7 +81,7 @@
 .cards-container .info-heading {
     width: 100%;
     font-size: 2rem;
-    margin: 5% 0;
+    margin: 3% 0;
     letter-spacing: 1.18px;
     text-align: center;
 }
@@ -178,80 +143,25 @@
     .cards-container {
         height: 60vh;
         margin-top: 5vh;
-        width: 90vw;
+        width: 95vw;
         position: relative;
-        /* display: grid;
-        grid-template-columns: [col-1] 1vw [col-2] auto [col-3] 50vw [col-4] auto [col-5] 1vw [end];
-        grid-template-rows: [row-1] 10vh [row-2] 30vw [row-3] 4vw [row-4] auto [row-5] auto [end]; */
     }
     .cards-container>.cards {
         position: absolute;
         flex-direction: column;
+        width: 75%;
     }
     .thumbnail {
-        height: 20vh;
-    }
-    .cards-container>.cards-left {
-        width: 75%;
-        /* display: grid;
-        grid-column-start: col-3;
-        grid-column-end: col-4;
-        grid-row-start: row-1;
-        grid-row-end: end;
-        grid-template-columns: [col-1] 1vw [col-2] auto [col-3] 50vw [col-4] auto [col-5] 1vw [end];
-        grid-template-rows: [row-1] 10vh [row-2] 30vw [row-3] 4vw [row-4] auto [row-5] auto [end]; */
-    }
-    /* .cards-container>.cards-left>.thumbnail {
-        grid-column-start: col-3;
-        grid-column-end: col-4;
-        grid-row-start: row-2;
-        grid-row-end: row-3;
-        background-color: rgba(255, 255, 255, 0.7);
-        height: auto;
-        width: 100%
-    } */
-    .cards-container>.cards-right {
-        width: 75%;
-        /* display: grid;
-        grid-column-start: col-3;
-        grid-column-end: col-4;
-        grid-row-start: row-1;
-        grid-row-end: end;
-        grid-template-columns: [col-1] 1vw [col-2] auto [col-3] 50vw [col-4] auto [col-5] 1vw [end];
-        grid-template-rows: [row-1] 10vh [row-2] 30vw [row-3] 4vw [row-4] auto [row-5] auto [end]; */
-    }
-    /* .cards-container>.cards-right>.thumbnail {
-        grid-column-start: col-3;
-        grid-column-end: col-4;
-        grid-row-start: row-2;
-        grid-row-end: row-3;
-        background-color: rgba(255, 255, 255, 0.7);
-        height: auto;
-        width: 100%
-    } */
-    .cards-container .cards-left .info {
-        /* grid-column-start: col-3;
-        grid-column-end: col-4;
-        grid-row-start: row-4;
-        grid-row-end: row-5; */
-        text-align: start;
-        border-bottom: none;
-    }
-    .cards-container .cards-right .info {
-        /* grid-column-start: col-3;
-        grid-column-end: col-4;
-        grid-row-start: row-4;
-        grid-row-end: row-5; */
-        text-align: start;
-        border-bottom: none;
+        height: 25vh;
     }
     .cards-container .info {
         display: inline-block;
         font-family: "sf-ui";
-        font-size: 4vw;
         color: white;
         font-weight: 100;
         overflow: scroll;
+        text-align: start;
+        border-bottom: none;
     }
      ::-webkit-scrollbar {
         width: 0px;
@@ -262,14 +172,13 @@
     .cards-container .info-heading {
         color: rgba(243, 32, 250, 1);
         width: 100%;
-        font-size: 6vw;
+        font-size: 5.25vw;
         margin-top: 4.86vw;
         margin-bottom: 2vw;
         padding-bottom: 0.19vw;
         letter-spacing: 2px;
         text-decoration: none;
         text-align: center;
-        /* text-underline-position: under;  */
     }
     .arrow-left {
         display: flex;
@@ -277,10 +186,6 @@
         background-color: azure;
         height: 25px;
         width: 25px;
-        /* grid-column-start: col-2;
-        grid-column-end: col-3;
-        grid-row-start: row-2;
-        grid-row-end: row-3; */
         justify-self: center;
         align-self: center;
         justify-content: center;
@@ -295,10 +200,6 @@
         background-color: azure;
         height: 25px;
         width: 25px;
-        /* grid-column-start: col-4;
-        grid-column-end: col-5;
-        grid-row-start: row-2;
-        grid-row-end: row-3; */
         justify-self: center;
         align-self: center;
         justify-content: center;
