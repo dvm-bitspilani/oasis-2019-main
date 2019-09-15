@@ -46,6 +46,7 @@ body {
     grid-row-start: 2;
     grid-column-start: 3;
     grid-column-end: 5;
+    cursor: pointer;
 }
 .reg {
     grid-row-start: 2;
