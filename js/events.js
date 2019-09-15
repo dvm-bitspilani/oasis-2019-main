@@ -316,6 +316,12 @@ function changeEventData(event) {
     document.querySelector('.event-venue > span').innerHTML = event.venue;
     
     document.querySelectorAll('.event-description > div')[1].innerHTML = event.details;
+    const descSpan = document.querySelectorAll('.event-description > div:nth-of-type(2) span');
+    for(i = 0; i < descSpan.length; i++) {
+        descSpan[i].style.backgroundColor = 'transparent';
+        descSpan[i].style.color = '#ffffff';
+        descSpan[i].style.fontWeight = 'initial';
+    }
     document.querySelectorAll('.event-rules > div')[1].innerHTML = event.rules;
 }
 
