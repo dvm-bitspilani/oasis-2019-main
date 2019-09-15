@@ -149,6 +149,7 @@
         transform: translateX(-50%) translateY(-50%);
         flex-direction: column;
         width: 75%;
+        height: initial;
         margin: 0;
     }
     .thumbnail {
