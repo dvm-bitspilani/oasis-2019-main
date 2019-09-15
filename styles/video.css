@@ -121,11 +121,7 @@
     align-self: center;
 }
 
-@media (max-width: 700px) {
-    .video-wrapper>.video-heading {
-        height: 100vh;
-        width: 100vw;
-    }
+@media (max-width: 600px) {
     .video-wrapper {
         width: 100vw;
         height: 100vh;
@@ -148,8 +144,12 @@
     }
     .cards-container>.cards {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
         flex-direction: column;
         width: 75%;
+        margin: 0;
     }
     .thumbnail {
         height: 25vh;

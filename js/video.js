@@ -43,7 +43,7 @@ leftButton.addEventListener("click", back);
 
 
 function next() {
-    cards[currentCard - 1].style.transform = "scale(0.5)";
+    cards[currentCard - 1].style.transform = "scale(0.5) translateX(-50%) translateY(-50%)";
     currentCard = currentCard + 1;
     if (currentCard > numberOfCards) {
         currentCard = 1;
@@ -53,16 +53,16 @@ function next() {
         cards[i].style.opacity = 0;
     }
     cards[currentCard - 1].style.opacity = 1;
-    cards[currentCard - 1].style.transform = "scale(1.05)";
+    cards[currentCard - 1].style.transform = "scale(1.05) translateX(-50%) translateY(-50%)";
     // cards[currentCard-1].style.transition = "0.25s";
     setTimeout(() => {
-        cards[currentCard - 1].style.transform = "scale(1)";
+        cards[currentCard - 1].style.transform = "scale(1) translateX(-50%) translateY(-50%)";
     }, 350);
 
 }
 
 function back() {
-    cards[currentCard - 1].style.transform = "scale(0.5)";
+    cards[currentCard - 1].style.transform = "scale(0.5) translateX(-50%) translateY(-50%)";
 
     currentCard = currentCard - 1;
     if (currentCard == 0) {
@@ -73,9 +73,9 @@ function back() {
         cards[i].style.opacity = 0;
     }
     cards[currentCard - 1].style.opacity = 1;
-    cards[currentCard - 1].style.transform = "scale(1.05)";
+    cards[currentCard - 1].style.transform = "scale(1.05) translateX(-50%) translateY(-50%)";
     setTimeout(() => {
-        cards[currentCard - 1].style.transform = "scale(1)";
+        cards[currentCard - 1].style.transform = "scale(1) translateX(-50%) translateY(-50%)";
     }, 350);
 
 }
