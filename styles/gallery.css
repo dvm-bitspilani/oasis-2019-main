@@ -181,7 +181,7 @@ body {
     grid-column-start: 6;
 }
 .gallery-12 {
-    background-image: url('../images/gallery/18.jpg');
+    background-image: url('../images/gallery/26.jpg');
     grid-row-start: 11;
     grid-row-end: 14;
     grid-column-start: 8;
@@ -311,7 +311,7 @@ body {
         transform-origin: 100%;
     }
     .gallery-10 {
-        background-image: url('../images/gallery/25.jpg');
+        background-image: url('../images/gallery/8.jpg');
         grid-row-start: 14;
         grid-column-start: 2;
         transform-origin: 0%;
