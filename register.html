@@ -43,14 +43,14 @@
                     <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
             <option value="" selected disabled>Select your Events</option>
             </select> -->
-                    <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onkeyup="filterFunction2()" />
+                    <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
                     <div class="events-list"></div>
                 </div>
                 <div class="select-wrapper">
                     <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
             <option value="" selected disabled>Select your Events</option>
             </select> -->
-                    <input type="text" placeholder="Select your Gender" class="events-input" id="gender_input" onclick="displaylist4()" />
+                    <input type="text" placeholder="Select your Gender" class="events-input" id="gender_input" onclick="displaylist4()" onfocus="displaylist4()" />
                     <div class="events-list">
                         <span onclick="setgendervalue1()">Male</span>
                         <span onclick="setgendervalue2()">Female</span>
@@ -75,7 +75,7 @@
                     <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
             <option value="" selected disabled>Select your Events</option>
             </select> -->
-                    <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onkeyup="filterFunction()" />
+                    <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onfocus="displaylist()" onkeyup="filterFunction()" />
                     <div class="events-list"></div>
                 </div>
                 <div class="selected-events"></div>
@@ -90,13 +90,13 @@
                 </div> -->
                 <select class="checkboxes" id="choreo">
                     <option disabled selected>Are you a Mentor/Choregrapher?</option>
-                    <option>Yes</option>
-                    <option>No</option>
+                    <option value=true>Yes</option>
+                    <option value=false>No</option>
                 </select>
                 <select class="checkboxes" id="head-of-soc">
                     <option disabled selected>Are you a Head of Society?</option>
-                    <option>Yes</option>
-                    <option>No</option>
+                    <option value=true>Yes</option>
+                    <option value=false>No</option>
                 </select>
             </div>
         </div>

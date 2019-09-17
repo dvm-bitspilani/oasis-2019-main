@@ -8,7 +8,7 @@ var appendevent = document.getElementsByClassName("events-list")[2];
 var eventsidarr = [];
 var collegeid;
 var gender_value;
-var yos;
+var yos_value;
 var i = 0;
 var no_of_events;
 var display = true;
@@ -27,7 +27,6 @@ function displaylist() {
     document.getElementsByClassName("events-list")[2].style.display = "flex";
     document.getElementsByClassName("events-list")[1].style.display = "none";
     document.getElementsByClassName("events-list")[0].style.display = "none";
-    document.getElementsByClassName("events-list")[3].style.display = "none";
     display = false;
   } else if (display == false) {
     document.getElementsByClassName("events-list")[2].style.display = "none";
@@ -53,7 +52,6 @@ function displaylist3() {
   if (display3 == true) {
     document.getElementsByClassName("events-list")[0].style.display = "flex";
     document.getElementsByClassName("events-list")[1].style.display = "none";
-    document.getElementsByClassName("events-list")[3].style.display = "none";
     document.getElementsByClassName("events-list")[2].style.display = "none";
     display3 = false;
   } else if (display3 == false) {
@@ -65,7 +63,6 @@ function displaylist3() {
 function displaylist4() {
   if (display4 == true) {
     document.getElementsByClassName("events-list")[1].style.display = "flex";
-    document.getElementsByClassName("events-list")[3].style.display = "none";
     document.getElementsByClassName("events-list")[0].style.display = "none";
     document.getElementsByClassName("events-list")[2].style.display = "none";
     display4 = false;
@@ -315,8 +312,8 @@ function prereg() {
   const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
-  const isChoreo = document.getElementById("choreo").value || false;
-  const isHeaOfSoc = document.getElementById("head-of-soc").value || false;
+  const isChoreo = (document.getElementById("choreo").value == 'true');
+  const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
   var v = grecaptcha.getResponse();
   console.log(v);
   if (v == "") {
