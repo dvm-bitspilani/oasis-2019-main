@@ -106,19 +106,23 @@
     background-image: url("../images/developers/mohul.jpg");
 }
 
-.developer:nth-of-type(7) .dev-image {
-    background-image: url("../images/developers/anupam.jpg");
+.developer:nth-of-type(8) .dev-image {
+    background-image: url("../images/developers/abhinav.jpg");
 }
 
 .developer:nth-of-type(8) .dev-image {
-    background-image: url("../images/developers/shreyans.jpg");
+    background-image: url("../images/developers/anupam.jpg");
 }
 
 .developer:nth-of-type(9) .dev-image {
-    background-image: url("../images/developers/akshit.jpg");
+    background-image: url("../images/developers/shreyans.jpg");
 }
 
 .developer:nth-of-type(10) .dev-image {
+    background-image: url("../images/developers/akshit.jpg");
+}
+
+.developer:nth-of-type(11) .dev-image {
     background-image: url("../images/developers/manikya.jpg");
 }
 
