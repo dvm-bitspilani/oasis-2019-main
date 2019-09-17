@@ -96,7 +96,7 @@
 }
 
 .sponsor-card-container img {
-    width: 15vw;
+    width: 12.5vw;
 }
 
 .spons-tab-container {
@@ -129,14 +129,9 @@
 }
 
 .spons {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    font-size: 2rem;
-    font-family: 'Ikaros-Sans';
-    height: 70%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .past-spons {
