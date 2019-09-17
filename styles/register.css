@@ -16,7 +16,7 @@ body {
 
 @font-face {
   font-family: "SFpro";
-  src: url("../fonts/SF-Pro-Text-Regular.ttf");
+  src: url("../fonts/ProductSans-Medium.woff");
 }
 
 .msg-box {
@@ -242,6 +242,7 @@ select:focus {
 
 .form-div > .register {
   font-size: 1.7em;
+  letter-spacing: 2px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
