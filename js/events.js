@@ -112,7 +112,7 @@ const changeEventSet = () => {
     if (eventIndex < limit) {
         eventIndex++;
         if (window.innerWidth > 600) {
-            eventsContainer.style.transform = "translate(" + (-27 * (eventIndex - 1)) + "%)";
+            eventsContainer.style.transform = "translate(" + (-27.15 * (eventIndex - 1)) + "%)";
         } else {
             eventsContainer.style.transform = "translate(" + (-100 * (eventIndex - 1)) + "%)";
         }

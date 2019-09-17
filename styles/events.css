@@ -53,8 +53,8 @@
 
 .events-container {
     width: 100vw;
-    height: calc(30vw + 76px);
-    padding: 76px 12.5%;
+    height: calc(30vw + 30px);
+    padding: 30px 12.5%;
     box-sizing: border-box;
     display: inline-flex;
     justify-content: flex-start;
@@ -85,10 +85,10 @@
 }
 
 .events-card {
-    width: 20.33%;
-    min-width: 20.33%;
-    margin: 0 6.5%;
-    height: 22.5vw;
+    width: 19.33%;
+    min-width: 19.33%;
+    margin: 0 7%;
+    height: 20vw;
     border-radius: 5%;
     display: flex;
     align-items: center;
@@ -105,7 +105,7 @@
 }
 
 .events-container .events-card.active {
-    transform: scale(1.2);
+    transform: scale(1.25);
 }
 
 .events-card .events-card-front {
@@ -360,7 +360,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('../images/assets/events-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/assets/events-bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
