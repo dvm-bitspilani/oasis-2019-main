@@ -26,6 +26,9 @@ console.log(document.getElementsByClassName("events-list"));
 function displaylist() {
   if (display == true) {
     document.getElementsByClassName("events-list")[2].style.display = "flex";
+    document.getElementsByClassName("events-list")[1].style.display = "none";
+    document.getElementsByClassName("events-list")[0].style.display = "none";
+    document.getElementsByClassName("events-list")[3].style.display = "none";
     display = false;
   } else if (display == false) {
     document.getElementsByClassName("events-list")[2].style.display = "none";
@@ -37,6 +40,9 @@ function displaylist() {
 function displaylist2() {
   if (display2 == true) {
     document.getElementsByClassName("events-list")[3].style.display = "flex";
+    document.getElementsByClassName("events-list")[1].style.display = "none";
+    document.getElementsByClassName("events-list")[0].style.display = "none";
+    document.getElementsByClassName("events-list")[2].style.display = "none";
     display2 = false;
   } else if (display2 == false) {
     document.getElementsByClassName("events-list")[3].style.display = "none";
@@ -47,6 +53,9 @@ function displaylist2() {
 function displaylist3() {
   if (display3 == true) {
     document.getElementsByClassName("events-list")[0].style.display = "flex";
+    document.getElementsByClassName("events-list")[1].style.display = "none";
+    document.getElementsByClassName("events-list")[3].style.display = "none";
+    document.getElementsByClassName("events-list")[2].style.display = "none";
     display3 = false;
   } else if (display3 == false) {
     document.getElementsByClassName("events-list")[0].style.display = "none";
@@ -57,6 +66,9 @@ function displaylist3() {
 function displaylist4() {
   if (display4 == true) {
     document.getElementsByClassName("events-list")[1].style.display = "flex";
+    document.getElementsByClassName("events-list")[3].style.display = "none";
+    document.getElementsByClassName("events-list")[0].style.display = "none";
+    document.getElementsByClassName("events-list")[2].style.display = "none";
     display4 = false;
   } else if (display4 == false) {
     document.getElementsByClassName("events-list")[1].style.display = "none";
@@ -351,6 +363,7 @@ function prereg() {
         document.getElementsByClassName("inner-text")[0].innerHTML =
           result.message;
         msg_box.style.transform = "translate(-50% , -50%) scale(1)";
+        grecaptcha.reset();
       })
       .catch(function(error) {
         console.log(error);
