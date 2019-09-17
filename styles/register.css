@@ -58,13 +58,13 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #00002e;
-  padding-top: 5vh;
+  padding-top: 4vh;
 }
 
 .form-div > .heading {
   color: #cbcbcb;
   font-family: Haarlem;
-  font-size: 6em;
+  font-size: 5em;
   letter-spacing: 10px;
   margin-left: 5vh;
 }
@@ -83,7 +83,7 @@ body {
 
 .form-div > .form-container {
   width: 100%;
-  height: 65vh;
+  height: 62.5vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -128,7 +128,7 @@ input:focus {
   position: relative;
 }
 
-select {
+select:not(.checkboxes) {
   -webkit-appearance: none;
   border-radius: 40px;
   padding: 3% 3% 3% 6%;
@@ -240,22 +240,79 @@ select:focus {
   outline: none;
 }
 
-.form-div > .register {
-  font-size: 1.7em;
+.reg-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-div > .reg-button-container > .register {
+  font-size: 1.5em;
   letter-spacing: 2px;
-  position: absolute;
+  margin: 1.5vh auto;
+  /* position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   background: url("../images/assets/register.png");
   background-position: center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin-top: 3vh;
   color: white;
-  padding: 3% 5% 3% 5%;
+  padding: 2% 4%;
   border-radius: 40px;
   font-family: SFpro;
   cursor: pointer;
+}
+
+.checkboxes {
+  -webkit-appearance: none;
+  border-radius: 40px;
+  padding: 2% 3% 2% 6%;
+  color: #797777;
+  background-color: #02021b;
+  width: 60%;
+  border: solid 3px #2263c1;
+  font-size: 1.4em;
+  font-family: sf-ui;
+  box-sizing: content-box;
+}
+
+.checkboxes option {
+  background: #02021b;
+  text-align: start;
+  height: 2vh;
+  padding: 2% 0 2% 8%;
+  color: #cbcbcb;
+  font-family: sf-ui;
+  font-size: 1em;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+@supports (-moz-appearance:none) {
+  .checkboxes option {
+    background: #02021b;
+    text-align: start;
+    height: 2vh;
+    padding: 2% 0 2% 8%;
+    color: #cbcbcb;
+    font-family: sf-ui;
+    font-size: 1em;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    cursor: pointer;
+  }
+}
+
+.g-recaptcha {
+  display: inline;
+}
+
+.g-recaptcha-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0.5% 0;
 }
 
 @media (max-width: 500px) {
@@ -311,12 +368,15 @@ select:focus {
     font-size: 0.9em;
   }
 
-  select {
+  select:not(.checkboxes) {
     font-size: 1.2em;
   }
 
-  .form-div > .register {
-    margin-bottom: 4vh;
+  .checkboxes {
+    font-size: 1.2em;
+  }
+
+  .form-div > .reg-button-container > .register {
     font-size: 1.2em;
     padding: 3% 8% 3% 8%;
   }
@@ -340,7 +400,10 @@ select:focus {
   .input-el .text-type {
     font-size: 0.7em;
   }
-  select {
+  select:not(.checkboxes) {
+    font-size: 0.7em;
+  }
+  .checkboxes {
     font-size: 0.7em;
   }
   .form-div > .form-container {
@@ -357,8 +420,9 @@ select:focus {
   .input-el > .textarea-type {
     font-size: 0.7em;
   }
-  .form-div > .register {
-    padding: 3% 12% 3% 12%;
+  .form-div > .reg-button-container > .register {
+    padding: 6% 10% 6% 10%;
+    font-size: 1em;
   }
 
   .events-input {

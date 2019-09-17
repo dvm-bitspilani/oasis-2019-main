@@ -16,7 +16,6 @@ var display2 = true;
 var display3 = true;
 var display4 = true;
 var random = true;
-var isChoreo = false;
 
 // document.getElementsByClassName('selected_el')[0].onclick = function() {
 //   console.log(1);
@@ -37,18 +36,18 @@ function displaylist() {
   console.log(1);
 }
 
-function displaylist2() {
-  if (display2 == true) {
-    document.getElementsByClassName("events-list")[3].style.display = "flex";
-    document.getElementsByClassName("events-list")[1].style.display = "none";
-    document.getElementsByClassName("events-list")[0].style.display = "none";
-    document.getElementsByClassName("events-list")[2].style.display = "none";
-    display2 = false;
-  } else if (display2 == false) {
-    document.getElementsByClassName("events-list")[3].style.display = "none";
-    display2 = true;
-  }
-}
+// function displaylist2() {
+//   if (display2 == true) {
+//     document.getElementsByClassName("events-list")[3].style.display = "flex";
+//     document.getElementsByClassName("events-list")[1].style.display = "none";
+//     document.getElementsByClassName("events-list")[0].style.display = "none";
+//     document.getElementsByClassName("events-list")[2].style.display = "none";
+//     display2 = false;
+//   } else if (display2 == false) {
+//     document.getElementsByClassName("events-list")[3].style.display = "none";
+//     display2 = true;
+//   }
+// }
 
 function displaylist3() {
   if (display3 == true) {
@@ -76,21 +75,21 @@ function displaylist4() {
   }
 }
 
-function setchoreovalue() {
-  isChoreo = true;
-  console.log(isChoreo);
-  document.getElementById("choreo_input").placeholder = "Yes";
-  document.getElementsByClassName("events-list")[3].style.display = "none";
-  display2 = true;
-}
+// function setchoreovalue() {
+//   isChoreo = true;
+//   console.log(isChoreo);
+//   document.getElementById("choreo_input").placeholder = "Yes";
+//   document.getElementsByClassName("events-list")[3].style.display = "none";
+//   display2 = true;
+// }
 
-function setchoreovalue2() {
-  isChoreo = false;
-  console.log(isChoreo);
-  document.getElementById("choreo_input").placeholder = "No";
-  document.getElementsByClassName("events-list")[3].style.display = "none";
-  display2 = true;
-}
+// function setchoreovalue2() {
+//   isChoreo = false;
+//   console.log(isChoreo);
+//   document.getElementById("choreo_input").placeholder = "No";
+//   document.getElementsByClassName("events-list")[3].style.display = "none";
+//   display2 = true;
+// }
 
 function setgendervalue1() {
   gender_value = "M";
@@ -316,6 +315,8 @@ function prereg() {
   const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
+  const isChoreo = document.getElementById("choreo").value || false;
+  const isHeaOfSoc = document.getElementById("head-of-soc").value || false;
   var v = grecaptcha.getResponse();
   console.log(v);
   if (v == "") {
@@ -332,6 +333,7 @@ function prereg() {
     college_id: collegeid,
     events: eventsidarr,
     choreographer: isChoreo,
+    head_of_society: isHeaOfSoc,
     captcha: v
   };
   console.log(data);
