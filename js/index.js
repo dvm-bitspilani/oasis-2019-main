@@ -243,9 +243,12 @@ function toggleDesktopHam() {
     if (hamIcon.classList.contains('pushed')) {
         hamIcon.classList.remove("pushed");
         sideBar.style.transform = "translateX(25vw)";
-
+        document.getElementsByClassName('backdrop')[0].style.display = 'none';
+        document.getElementsByTagName('html')[0].style.overflowY = 'auto';
     } else {
         hamIcon.classList.add('pushed');
         sideBar.style.transform = "translateX(0)";
+        document.getElementsByClassName('backdrop')[0].style.display = 'block';
+        document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
     }
 }
