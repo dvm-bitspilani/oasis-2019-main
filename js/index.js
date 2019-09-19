@@ -36,6 +36,7 @@ function navigate(x) {
         const sideBar = document.getElementsByClassName('side-bar')[0];
         hamIcon.classList.remove("pushed");
         sideBar.style.transform = "translateX(25vw)";
+        document.getElementsByClassName('backdrop')[0].style.display = 'none';
     }
     var navItems = document.querySelectorAll(".navigation .nav-item");
     if (window.innerWidth < 600) {
