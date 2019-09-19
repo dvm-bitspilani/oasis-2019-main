@@ -2,6 +2,10 @@
     font-family: "Ikaros-Sans";
     src: url("../fonts/IR.otf");
 }
+@font-face {
+    font-family: 'google sans';
+    src: url('../fonts/ProductSans-Medium.woff');
+}
 
 html {
     scroll-behavior: smooth;
@@ -44,34 +48,35 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     grid-row-start: 2;
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 5;
     cursor: pointer;
 }
+
+.logo > img {
+    width: 80%;
+    transform: translateY(-15%);
+}
+
 .reg {
-    grid-row-start: 2;
+    grid-row-start: 3;
     grid-column-start: 11;
-    grid-column-end: 14;
+    grid-column-end: 12;
     display: flex;
 }
-.reg-button {
-    width: 139px;
-    height: 33px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    letter-spacing: 1.62px;
-    font-family: Ikaros-Sans;
-    background: #0099F7 0% 0% no-repeat padding-box;
-    box-shadow: 0px 0px 15px #077BFFB3;
-    border-radius: 58px;
-    cursor: pointer;
-}
+
 .reg-button a {
+    font-size: 1.5rem;
+    font-family: "google sans";
+    color: #fff;
+    padding: 24px 48px;
+    background: url('../images/assets/register.png');
+    background-size: 100% 100%;
+    border-radius: 35px;
+    letter-spacing: 2px;
     text-decoration: none;
-    color: #ffffff;
 }
+
 .fas {
     cursor: pointer;
     grid-row-start: 2;
@@ -93,26 +98,29 @@ body {
 }
 .heading {
     grid-row-start: 3;
-    grid-column-end: 12;
-    grid-column-start: 3;
+    grid-column-end: 10;
+    grid-column-start: 6;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Ikaros-Sans;
-    font-size: 72px;
-    letter-spacing: 0.14px;
 }
-.line {
-    grid-row-start: 4;
-    grid-column-end: 9;
-    grid-column-start: 3;
-    display: flex;
-    justify-content: center;
-    width: 180px;
-    margin-left: -60px;
-    height: 4px;
-    background-color: #FFFFFF;
+.heading span {
+    color: white;
+    font-size: 5em;
+    font-family: "Ikaros-Sans";
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.heading span::after {
+    position: absolute;
+    left: 2.5%;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 20%;
+    border-bottom: 2px solid #768ad9;
 }
 .gallery {
     height: 100%;

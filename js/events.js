@@ -128,20 +128,6 @@ const changeEventSet = () => {
 }
 
 const navigateEvent = (dotIndex) => {
-    // if (dotIndex <= 0 || dotIndex > ((window.innerWidth > 600) ? (numberOfEvents - 2) : numberOfEvents)) {
-    //     for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
-    //         document.querySelectorAll('.events-container .events-card')[i].style.animation = "shake 0.5s";
-    //         if(i == eventIndex){
-    //             document.querySelectorAll('.events-container .events-card')[i].style.animation = "shakeEvents 0.5s";
-    //         }
-    //     }
-    //     setTimeout(() => {
-    //         for (var i = 0; i < document.querySelectorAll('.events-container .events-card').length; i++) {
-    //             document.querySelectorAll('.events-container .events-card')[i].style.animation = "none";
-    //         }
-    //     }, 500);
-    //     return;
-    // }
     if(dotIndex <= 0) {
         eventIndex = ((window.innerWidth > 600) ? (numberOfEvents - 3) : (numberOfEvents - 1));;
         changeEventSet();
@@ -322,7 +308,8 @@ function changeEventData(event) {
         descSpan[i].style.color = '#ffffff';
         descSpan[i].style.fontWeight = 'initial';
     }
-    document.querySelectorAll('.event-rules > div')[1].innerHTML = event.rules;
+    const parent = document.querySelectorAll('.event-rules > div')[1];
+    parent.innerHTML = event.rules;
 }
 
 
