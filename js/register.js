@@ -74,9 +74,11 @@ function filterFunction2() {
 }
 
 function geteventsvalue(e) {
+  eventsidarr.push(e.target.id);
   document.getElementById('events_input').selectedIndex = 0;
-  e.target.style.display = 'none';
+  e.target.disabled = true;
   var div = document.createElement("div");
+  div.id = e.target.id;
   div.className += "sports";
   var span = document.createElement("span");
   span.className += "sports-name";
@@ -89,35 +91,19 @@ function geteventsvalue(e) {
   div.appendChild(close);
   selected_events.appendChild(div);
   selected_events.style.display = 'flex';
-  div.onclick = function() {
+  const that = e.target;
+  div.onclick = function(e) {
     this.parentNode.removeChild(this);
-    const x = this.getElementsByTagName("span");
-    for (
-      var i = 1;
-      i < document.getElementsByClassName("sports-tag").length;
-      i++
-    ) {
-      if (
-        x[0].innerHTML ==
-        document.getElementsByClassName("sports-tag")[i].innerHTML
-      ) {
-        document.getElementsByClassName("sports-tag")[i].disabled = false;
-        for (var j = 0; j < eventsidarr.length; j++) {
-          if (
-            eventsidarr[j] ==
-            parseInt(document.getElementsByClassName("sports-tag")[i].id)
-          ) {
-            eventsidarr.splice(j, 1);
-            j--;
-          }
-        }
+    eventsidarr.map(ev => {
+      if(ev == this.id) {
+        eventsidarr.splice(eventsidarr.indexOf(ev), 1);
       }
+    });
+    that.disabled = false;
+    if (eventsidarr.length == 0) {
+      selected_events.style.display = 'none';
     }
   };
-  document.getElementById("events_opt").options[
-    document.getElementById("events_opt").selectedIndex
-  ].disabled = true;
-  eventsidarr.push(parseInt(sports_id));
 }
 
 window.onload = function() {
@@ -184,10 +170,10 @@ function prereg() {
   const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
   var v = grecaptcha.getResponse();
   console.log(v);
-  if (v == "") {
-    alert("Please select Captcha");
-    return;
-  }
+  // if (v == "") {
+  //   alert("Please select Captcha");
+  //   return;
+  // }
   data = {
     email_id: email,
     name: name,
@@ -199,16 +185,16 @@ function prereg() {
     events: eventsidarr,
     choreographer: isChoreo,
     head_of_society: isHeaOfSoc,
-    captcha: v
+    // captcha: v
   };
   console.log(data);
 
   if (
     email == "" ||
     name == "" ||
-    gender_value == null ||
+    gender == null ||
     city == "" ||
-    yos_value == null ||
+    year == null ||
     phone == "" ||
     collegeid == "" ||
     eventsidarr == []
