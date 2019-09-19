@@ -2,12 +2,12 @@ const scroll = ['home', 'about', 'videos', 'contacts'];
 
 let hue = 0;
 setInterval(() => {
-    if (hue < 360) hue += 30;
+    if (hue < 1) hue += 1/10;
     else hue = 0;
 
-    document.getElementsByClassName("landing-wrapper")[0].style.transition = "1s";
+    document.getElementsByClassName("landing-wrapper")[0].style.transition = "5s";
     document.querySelectorAll(".landing-wrapper")[0].style.filter =
-        "hue-rotate(" + hue + "deg)";
+        "hue-rotate(" + hue + "turn)";
 }, 5000);
 
 var nav = document.getElementsByClassName("navigation")[0];
