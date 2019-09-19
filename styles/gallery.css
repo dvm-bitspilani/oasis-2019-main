@@ -250,6 +250,9 @@ body {
         font-size: 46px;
         align-items: flex-end;
     }
+    .heading span {
+        font-size: 1.5rem;
+    }
     .fas {
         grid-row-start: 1;
         grid-column-start: 2;
