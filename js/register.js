@@ -7,8 +7,6 @@ var eventsinput = document.getElementById("events_input");
 var appendevent = document.getElementsByClassName("events-list")[2];
 var eventsidarr = [];
 var collegeid;
-var gender_value;
-var yos_value;
 var i = 0;
 var no_of_events;
 var display = true;
@@ -17,10 +15,6 @@ var display3 = true;
 var display4 = true;
 var random = true;
 
-// document.getElementsByClassName('selected_el')[0].onclick = function() {
-//   console.log(1);
-// }
-console.log(document.getElementsByClassName("events-list"));
 
 function displaylist() {
   if (display == true) {
@@ -32,21 +26,7 @@ function displaylist() {
     document.getElementsByClassName("events-list")[2].style.display = "none";
     display = true;
   }
-  console.log(1);
 }
-
-// function displaylist2() {
-//   if (display2 == true) {
-//     document.getElementsByClassName("events-list")[3].style.display = "flex";
-//     document.getElementsByClassName("events-list")[1].style.display = "none";
-//     document.getElementsByClassName("events-list")[0].style.display = "none";
-//     document.getElementsByClassName("events-list")[2].style.display = "none";
-//     display2 = false;
-//   } else if (display2 == false) {
-//     document.getElementsByClassName("events-list")[3].style.display = "none";
-//     display2 = true;
-//   }
-// }
 
 function displaylist3() {
   if (display3 == true) {
@@ -60,59 +40,8 @@ function displaylist3() {
   }
 }
 
-function displaylist4() {
-  if (display4 == true) {
-    document.getElementsByClassName("events-list")[1].style.display = "flex";
-    document.getElementsByClassName("events-list")[0].style.display = "none";
-    document.getElementsByClassName("events-list")[2].style.display = "none";
-    display4 = false;
-  } else if (display4 == false) {
-    document.getElementsByClassName("events-list")[1].style.display = "none";
-    display4 = true;
-  }
-}
-
-// function setchoreovalue() {
-//   isChoreo = true;
-//   console.log(isChoreo);
-//   document.getElementById("choreo_input").placeholder = "Yes";
-//   document.getElementsByClassName("events-list")[3].style.display = "none";
-//   display2 = true;
-// }
-
-// function setchoreovalue2() {
-//   isChoreo = false;
-//   console.log(isChoreo);
-//   document.getElementById("choreo_input").placeholder = "No";
-//   document.getElementsByClassName("events-list")[3].style.display = "none";
-//   display2 = true;
-// }
-
-function setgendervalue1() {
-  gender_value = "M";
-  console.log(gender_value);
-  document.getElementById("gender_input").placeholder = "Male";
-  document.getElementsByClassName("events-list")[1].style.display = "none";
-  display4 = true;
-}
-
-function setgendervalue2() {
-  gender_value = "F";
-  console.log(gender_value);
-  document.getElementById("gender_input").placeholder = "Female";
-  document.getElementsByClassName("events-list")[1].style.display = "none";
-  display4 = true;
-}
-
-function setgendervalue3() {
-  gender_value = "O";
-  console.log(gender_value);
-  document.getElementById("gender_input").placeholder = "Others";
-  document.getElementsByClassName("events-list")[1].style.display = "none";
-  display4 = true;
-}
-
-function filterFunction() {
+function filterFunction(e) {
+  e.target.value += e.key;
   var input, filter, a, i;
   input = document.getElementById("events_input");
   filter = input.value.toUpperCase();
@@ -144,18 +73,22 @@ function filterFunction2() {
   }
 }
 
-function geteventsvalue() {
-  const val = document.getElementById("events_opt").value;
-  const sports_id = document.getElementById("events_opt")[
-    document.getElementById("events_opt").selectedIndex
-  ].id;
+function geteventsvalue(e) {
+  document.getElementById('events_input').selectedIndex = 0;
+  e.target.style.display = 'none';
   var div = document.createElement("div");
   div.className += "sports";
   var span = document.createElement("span");
   span.className += "sports-name";
-  span.innerHTML = val;
+  span.innerHTML = e.target.innerHTML;
   div.appendChild(span);
+  var close = document.createElement('i');
+  close.className = 'fas fa-times';
+  close.style.paddingLeft = '1vh';
+  close.style.color = 'red';
+  div.appendChild(close);
   selected_events.appendChild(div);
+  selected_events.style.display = 'flex';
   div.onclick = function() {
     this.parentNode.removeChild(this);
     const x = this.getElementsByTagName("span");
@@ -196,73 +129,31 @@ window.onload = function() {
   fetch(URL)
     .then(resp => resp.json())
     .then(function(response) {
-      console.log(response);
       for (var i = 0; i < response.data.length; i++) {
-        var opt = document.createElement("span");
-        opt.innerHTML = response.data[i].name;
-        opt.setAttribute("id", response.data[i].id);
-        opt.className += "sports-tag";
-        opt.onclick = function() {
-          document.getElementsByClassName("events-list")[0].style.display =
-            "none";
-          display3 = true;
-          collegeid = parseInt(this.id);
-          console.log(this.id);
-          console.log(collegeid);
-          document.getElementById("college_input").placeholder = this.innerHTML;
-        };
-        document.getElementsByClassName("events-list")[0].appendChild(opt);
+        const collegeContainer = document.getElementById('college_input');
+        const college = document.createElement('option');
+        college.id = response.data[i].id;
+        college.value = response.data[i].id;
+        college.text = response.data[i].name;
+        collegeContainer.appendChild(college);
       }
     })
     .catch(function(error) {
       console.log(error);
     });
+
   fetch(URL2)
     .then(resp => resp.json())
     .then(function(response) {
       for (var i = 0; i < response.length; i++) {
         for (var j = 0; j < response[i].events.length; j++) {
-          var opt = document.createElement("span");
-          opt.innerHTML = response[i].events[j].name;
-          opt.setAttribute("id", response[i].events[j].id);
-          opt.className += "sports-tag";
-          opt.onclick = function() {
-            selected_events.style.display = "flex";
-            console.log(this.innerHTML);
-            console.log(this.id);
-            document.getElementById(
-              "events_input"
-            ).placeholder = this.innerHTML;
-            document.getElementsByClassName("events-list")[2].style.display =
-              "none";
-            display = true;
-            var div = document.createElement("div");
-            div.className += "sports";
-            var span = document.createElement("span");
-            span.className += "sports-name";
-            span.innerHTML = this.innerHTML;
-            span.setAttribute("id", this.id);
-            div.appendChild(span);
-            div.innerHTML +=
-              '<i class="fas fa-times" style="padding-left:1vh;color:red"></i>';
-            selected_events.appendChild(div);
-            eventsidarr.push(parseInt(this.id));
-            div.onclick = function() {
-              const innerspan = this.getElementsByTagName("span");
-              console.log(innerspan[0].id);
-              this.parentNode.removeChild(this);
-              for (var i = 0; i < eventsidarr.length; i++) {
-                if (eventsidarr[i] == parseInt(innerspan[0].id)) {
-                  eventsidarr.splice(i, 1);
-                  i--;
-                }
-                console.log(eventsidarr);
-              }
-            };
-            console.log(eventsidarr);
-          };
-          appendevent.appendChild(opt);
-          no_of_events++;
+          const eventsContainer = document.getElementById('events_input');
+          const events = document.createElement('option');
+          events.id = response[i].events[j].id;
+          events.value = response[i].events[j].id;
+          events.text = response[i].events[j].name;
+          eventsContainer.appendChild(events);
+          events.addEventListener('click', geteventsvalue);
         }
       }
     })
@@ -278,40 +169,17 @@ function getcollegeid() {
   console.log(collegeid);
 }
 
-function getgendervalue() {
-  const val = document.getElementById("gender_opt").value;
-  gender_value = val;
-  console.log(val);
-}
-
-function getyosvalue() {
-  const val = document.getElementById("yos_opt").value;
-  yos_value = val;
-  console.log(val);
-}
-
 function closebox() {
   msg_box.style.transform = "translate(-50%) scale(0)";
 }
 
 function prereg() {
   const name = document.getElementById("name").value;
-  //   const gender = document.getElementsByName("gender");
-  //   for (var i = 0; i < gender.length; i++) {
-  //     if (gender[i].checked) {
-  //       gender_value = gender[i].value;
-  //     }
-  //   }
-  //   console.log(gender_value);
-  //   const yos = document.getElementsByName("yos");
-  //   for (var i = 0; i < yos.length; i++) {
-  //     if (yos[i].checked) {
-  //       yos_value = yos[i].value;
-  //     }
-  //   }
   const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
+  const year = document.getElementById("yos_opt").value;
+  const gender = document.getElementById('gender_input').value;
   const isChoreo = (document.getElementById("choreo").value == 'true');
   const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
   var v = grecaptcha.getResponse();
@@ -323,9 +191,9 @@ function prereg() {
   data = {
     email_id: email,
     name: name,
-    gender: gender_value,
+    gender,
     city: city,
-    year: yos_value,
+    year,
     phone: phone,
     college_id: collegeid,
     events: eventsidarr,
@@ -334,6 +202,7 @@ function prereg() {
     captcha: v
   };
   console.log(data);
+
   if (
     email == "" ||
     name == "" ||

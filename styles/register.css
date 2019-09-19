@@ -1,3 +1,6 @@
+html {
+  overflow: auto;
+}
 body {
   margin: 0;
   padding: 0;
@@ -59,6 +62,7 @@ body {
   width: 100%;
   background-color: #00002e;
   padding-top: 4vh;
+  box-sizing: border-box;
 }
 
 .form-div > .heading {
@@ -131,13 +135,13 @@ input:focus {
 select:not(.checkboxes) {
   -webkit-appearance: none;
   border-radius: 40px;
-  padding: 3% 3% 3% 6%;
+  padding: 2% 3% 2% 6%;
   color: #797777;
   background-color: #02021b;
   width: 100%;
   height: 100%;
   border: solid 3px #2263c1;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: sf-ui;
 }
 
@@ -222,6 +226,7 @@ select:focus {
 .sports {
   width: auto;
   padding: 2% 2% 2% 2%;
+  margin: 1%;
   height: 40%;
   background-color: #02021b;
   border-radius: 40px;
