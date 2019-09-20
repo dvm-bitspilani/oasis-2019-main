@@ -427,13 +427,13 @@ select:focus {
     font-size: 1.5em;
   }
   .input-el .text-type {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   select:not(.checkboxes) {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .checkboxes {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .form-div > .form-container {
     height: 135vh;
@@ -443,7 +443,7 @@ select:focus {
   }
 
   .input-el > .textarea-type {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .form-div > .reg-button-container > .register {
     padding: 6% 10% 6% 10%;
@@ -451,7 +451,7 @@ select:focus {
   }
 
   .events-input {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   .events-list {
@@ -459,6 +459,6 @@ select:focus {
   }
 
   .events-list > span {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
