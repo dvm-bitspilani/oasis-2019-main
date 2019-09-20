@@ -5,7 +5,7 @@ setInterval(() => {
     if (hue < 1) hue += 1/10;
     else hue = 0;
 
-    document.getElementsByClassName("landing-wrapper")[0].style.transition = "5s";
+    document.getElementsByClassName("landing-wrapper")[0].style.transition = "filter 5s ease";
     document.querySelectorAll(".landing-wrapper")[0].style.filter =
         "hue-rotate(" + hue + "turn)";
 }, 5000);
