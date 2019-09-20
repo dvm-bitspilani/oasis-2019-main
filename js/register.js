@@ -73,40 +73,54 @@ var random = true;
 //   }
 // }
 
+
+document.querySelector('input[list="events_input"]').addEventListener('input', geteventsvalue)
+
 function geteventsvalue(e) {
-  if (eventsidarr.includes(e.target.id)) {
-    return;
-  }
-  eventsidarr.push(e.target.id);
-  document.getElementById('events_input').selectedIndex = 0;
-  e.target.disabled = true;
-  var div = document.createElement("div");
-  div.id = e.target.id;
-  div.className += "sports";
-  var span = document.createElement("span");
-  span.className += "sports-name";
-  span.innerHTML = e.target.innerHTML;
-  div.appendChild(span);
-  var close = document.createElement('i');
-  close.className = 'fas fa-times';
-  close.style.paddingLeft = '1vh';
-  close.style.color = 'red';
-  div.appendChild(close);
-  selected_events.appendChild(div);
-  selected_events.style.display = 'flex';
-  const that = e.target;
-  div.onclick = function(e) {
-    this.parentNode.removeChild(this);
-    eventsidarr.map(ev => {
-      if(ev == this.id) {
-        eventsidarr.splice(eventsidarr.indexOf(ev), 1);
+  var input = e.target,
+       val = input.value;
+       list = input.getAttribute('list'),
+       options = document.getElementById(list).childNodes;
+
+  for(var i = 0; i < options.length; i++) {
+    if(options[i].innerText === val) {
+      if(eventsidarr.includes(options[i].id)) {
+        return;
       }
-    });
-    that.disabled = false;
-    if (eventsidarr.length == 0) {
-      selected_events.style.display = 'none';
+      eventsidarr.push(options[i].id);
+      e.target.value = '';
+      e.target.blur();
+      options[i].disabled = true;
+      var div = document.createElement("div");
+      div.id = options[i].id;
+      div.className += "sports";
+      var span = document.createElement("span");
+      span.className += "sports-name";
+      span.innerHTML = options[i].innerText;
+      div.appendChild(span);
+      var close = document.createElement('i');
+      close.className = 'fas fa-times';
+      close.style.paddingLeft = '1vh';
+      close.style.color = 'red';
+      div.appendChild(close);
+      selected_events.appendChild(div);
+      selected_events.style.display = 'flex';
+      const that = options[i];
+      div.onclick = function(e) {
+        this.parentNode.removeChild(this);
+        eventsidarr.map(ev => {
+          if(ev == this.id) {
+            eventsidarr.splice(eventsidarr.indexOf(ev), 1);
+          }
+        });
+        that.disabled = false;
+        if (eventsidarr.length == 0) {
+          selected_events.style.display = 'none';
+        }
+      };
+      break;
     }
-  };
+  }
 }
 
 window.onload = function() {
@@ -139,7 +153,7 @@ window.onload = function() {
           const eventsContainer = document.getElementById('events_input');
           const events = document.createElement('option');
           events.id = response[i].events[j].id;
-          events.value = response[i].events[j].id;
+          events.value = response[i].events[j].name;
           events.text = response[i].events[j].name;
           eventsContainer.appendChild(events);
           events.addEventListener('click', geteventsvalue);
@@ -182,10 +196,10 @@ function prereg() {
   const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
   var v = grecaptcha.getResponse();
   console.log(v);
-  if (v == "") {
-    alert("Please select Captcha");
-    return;
-  }
+  // if (v == "") {
+  //   alert("Please select Captcha");
+  //   return;
+  // }
   data = {
     email_id: email,
     name: name,
@@ -197,7 +211,7 @@ function prereg() {
     events: eventsidarr,
     choreographer: isChoreo,
     head_of_society: isHeaOfSoc,
-    captcha: v
+    // captcha: v
   };
   console.log(data);
 
