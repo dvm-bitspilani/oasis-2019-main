@@ -355,6 +355,7 @@ select:focus {
 
   .input-el {
     width: 100%;
+    height: max-content;
   }
 
   .input-el > .radio-inputs {
