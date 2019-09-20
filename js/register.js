@@ -74,6 +74,9 @@ function filterFunction2() {
 }
 
 function geteventsvalue(e) {
+  if (eventsidarr.includes(e.target.id)) {
+    return;
+  }
   eventsidarr.push(e.target.id);
   document.getElementById('events_input').selectedIndex = 0;
   e.target.disabled = true;
