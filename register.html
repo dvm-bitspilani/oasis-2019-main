@@ -34,15 +34,18 @@
     </div>
     <div class="form-div">
       <span class="heading">Registration</span>
-        <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i
-      ></a>
+        <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
         <div class="form-container">
             <div class="input-el">
                 <input type="text" placeholder="Name *" class="text-type" id="name" />
                 <div class="select-wrapper">
                     <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
                     <div class="events-list"></div> -->
-                    <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input">
+                    <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input" onfocus="
+                    const cOpts = document.querySelectorAll('#college_input > option');
+                    for(i = 0; i < cOpts.length; i++) {
+                        cOpts[i].style.display = 'block';
+                    }">
                     <datalist id="college_input" autocomplete="off" class="checkboxes">
                     </datalist>
                 </div>
