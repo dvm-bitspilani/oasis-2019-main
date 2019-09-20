@@ -63,6 +63,7 @@ body {
   background-color: #00002e;
   padding-top: 4vh;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .form-div > .heading {
@@ -326,17 +327,21 @@ select:focus {
     overflow-y: scroll;
     background-color: #00002e;
   }
+
+  .form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .form-div > .heading {
     font-size: 2em;
     margin-left: 0vw;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .form-div > .form-container {
     flex-flow: column;
-    margin-top: 5vh;
+    margin-top: 2vh;
     height: 115vh;
   }
 
@@ -375,10 +380,28 @@ select:focus {
 
   select:not(.checkboxes) {
     font-size: 1.2em;
+    margin: 2vh 0;
   }
 
   .checkboxes {
     font-size: 1.2em;
+    margin: 2vh 0;
+  }
+
+  .select-wrapper {
+    margin: 2vh 0;
+  }
+
+  .select-wrapper > select {
+    margin: 0;
+  }
+
+  .select-wrapper > input {
+    margin: 0;
+  }
+
+  input {
+    margin: 2vh 0;
   }
 
   .form-div > .reg-button-container > .register {
