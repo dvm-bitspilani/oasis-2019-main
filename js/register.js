@@ -16,62 +16,62 @@ var display4 = true;
 var random = true;
 
 
-function displaylist() {
-  if (display == true) {
-    document.getElementsByClassName("events-list")[2].style.display = "flex";
-    document.getElementsByClassName("events-list")[1].style.display = "none";
-    document.getElementsByClassName("events-list")[0].style.display = "none";
-    display = false;
-  } else if (display == false) {
-    document.getElementsByClassName("events-list")[2].style.display = "none";
-    display = true;
-  }
-}
+// function displaylist() {
+//   if (display == true) {
+//     document.getElementsByClassName("events-list")[2].style.display = "flex";
+//     document.getElementsByClassName("events-list")[1].style.display = "none";
+//     document.getElementsByClassName("events-list")[0].style.display = "none";
+//     display = false;
+//   } else if (display == false) {
+//     document.getElementsByClassName("events-list")[2].style.display = "none";
+//     display = true;
+//   }
+// }
 
-function displaylist3() {
-  if (display3 == true) {
-    document.getElementsByClassName("events-list")[0].style.display = "flex";
-    document.getElementsByClassName("events-list")[1].style.display = "none";
-    document.getElementsByClassName("events-list")[2].style.display = "none";
-    display3 = false;
-  } else if (display3 == false) {
-    document.getElementsByClassName("events-list")[0].style.display = "none";
-    display3 = true;
-  }
-}
+// function displaylist3() {
+//   if (display3 == true) {
+//     document.getElementsByClassName("events-list")[0].style.display = "flex";
+//     document.getElementsByClassName("events-list")[1].style.display = "none";
+//     document.getElementsByClassName("events-list")[2].style.display = "none";
+//     display3 = false;
+//   } else if (display3 == false) {
+//     document.getElementsByClassName("events-list")[0].style.display = "none";
+//     display3 = true;
+//   }
+// }
 
-function filterFunction(e) {
-  e.target.value += e.key;
-  var input, filter, a, i;
-  input = document.getElementById("events_input");
-  filter = input.value.toUpperCase();
-  a = appendevent.getElementsByTagName("span");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
+// function filterFunction(e) {
+//   e.target.value += e.key;
+//   var input, filter, a, i;
+//   input = document.getElementById("events_input");
+//   filter = input.value.toUpperCase();
+//   a = appendevent.getElementsByTagName("span");
+//   for (i = 0; i < a.length; i++) {
+//     txtValue = a[i].textContent || a[i].innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       a[i].style.display = "";
+//     } else {
+//       a[i].style.display = "none";
+//     }
+//   }
+// }
 
-function filterFunction2() {
-  var input, filter, a, i;
-  input = document.getElementById("college_input");
-  filter = input.value.toUpperCase();
-  a = document
-    .getElementsByClassName("events-list")[0]
-    .getElementsByTagName("span");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
+// function filterFunction2() {
+//   var input, filter, a, i;
+//   input = document.getElementById("college_input");
+//   filter = input.value.toUpperCase();
+//   a = document
+//     .getElementsByClassName("events-list")[0]
+//     .getElementsByTagName("span");
+//   for (i = 0; i < a.length; i++) {
+//     txtValue = a[i].textContent || a[i].innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       a[i].style.display = "";
+//     } else {
+//       a[i].style.display = "none";
+//     }
+//   }
+// }
 
 function geteventsvalue(e) {
   if (eventsidarr.includes(e.target.id)) {
@@ -122,7 +122,7 @@ window.onload = function() {
         const collegeContainer = document.getElementById('college_input');
         const college = document.createElement('option');
         college.id = response.data[i].id;
-        college.value = response.data[i].id;
+        college.value = response.data[i].name;
         college.text = response.data[i].name;
         collegeContainer.appendChild(college);
       }
@@ -151,11 +151,20 @@ window.onload = function() {
     });
 };
 
-function getcollegeid() {
-  const val = document.getElementById("city_opt").value;
-  console.log(val);
-  collegeid = parseInt(val);
-  console.log(collegeid);
+document.querySelector('input[list="college_input"]').addEventListener('input', getcollegeid)
+
+function getcollegeid(e) {
+  var input = e.target,
+       val = input.value;
+       list = input.getAttribute('list'),
+       options = document.getElementById(list).childNodes;
+
+  for(var i = 0; i < options.length; i++) {
+    if(options[i].innerText === val) {
+      collegeid = options[i].id;
+      break;
+    }
+  }
 }
 
 function closebox() {
@@ -173,10 +182,10 @@ function prereg() {
   const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
   var v = grecaptcha.getResponse();
   console.log(v);
-  // if (v == "") {
-  //   alert("Please select Captcha");
-  //   return;
-  // }
+  if (v == "") {
+    alert("Please select Captcha");
+    return;
+  }
   data = {
     email_id: email,
     name: name,
@@ -188,7 +197,7 @@ function prereg() {
     events: eventsidarr,
     choreographer: isChoreo,
     head_of_society: isHeaOfSoc,
-    // captcha: v
+    captcha: v
   };
   console.log(data);
 
