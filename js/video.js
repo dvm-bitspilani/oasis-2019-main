@@ -3,22 +3,22 @@ let cards = document.getElementsByClassName("cards");
 let currentCard = 1;
 let numberOfCards = cards.length;
 
-window.addEventListener("resize", () => {
-    screenWidth = window.innerWidth;
-    currentCard = 1;
-    if (screenWidth < 700) {
-        for (let i = 1; i < cards.length; i++) {
-            cards[i].style.opacity = 0;
-        }
-        cards[0].style.display = "grid";
-    } else {
-        for (let i = 0; i < cards.length; i++) {
-            // cards[i].style.display = "grid";
-            cards[i].style.opacity = 1;
-            cards[i].style.transform = "scale(1)";
-        }
-    }
-});
+// window.addEventListener("resize", () => {
+//     screenWidth = window.innerWidth;
+//     currentCard = 1;
+//     if (screenWidth < 700) {
+//         for (let i = 1; i < cards.length; i++) {
+//             cards[i].style.opacity = 0;
+//         }
+//         cards[0].style.display = "grid";
+//     } else {
+//         for (let i = 0; i < cards.length; i++) {
+//             // cards[i].style.display = "grid";
+//             cards[i].style.opacity = 1;
+//             cards[i].style.transform = "scale(1)";
+//         }
+//     }
+// });
 
 if (screenWidth < 700) {
     currentCard = 1;
