@@ -75,9 +75,16 @@
                 <div class="select-wrapper">
                     <!-- <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onfocus="displaylist()" onkeyup="filterFunction()" />
                     <div class="events-list"></div> -->
-                    <select id="events_input" autocomplete="off" onchange="geteventsvalue({ 'target': document.querySelectorAll('#events_input > option')[this.selectedIndex] })">
+                    <!-- <select id="events_input" autocomplete="off">
                         <option disabled selected>Select your events</option>
-                    </select>
+                    </select> -->
+                    <input list="events_input" placeholder="Select your events" autocomplete="off" class="events-input" onfocus="
+                    const eOpts = document.querySelectorAll('#events_input > option');
+                    for(i = 0; i < eOpts.length; i++) {
+                        eOpts[i].style.display = 'block';
+                    }">
+                    <datalist id="events_input" autocomplete="off" class="checkboxes">
+                    </datalist>
                 </div>
                 <div class="selected-events"></div>
                 
