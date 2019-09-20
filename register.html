@@ -41,11 +41,7 @@
                 <div class="select-wrapper">
                     <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
                     <div class="events-list"></div> -->
-                    <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input" onfocus="
-                    const cOpts = document.querySelectorAll('#college_input > option');
-                    for(i = 0; i < cOpts.length; i++) {
-                        cOpts[i].style.display = 'block';
-                    }">
+                    <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input" onclick="this.focus()"" onfocus="showData('college_input')">
                     <datalist id="college_input" autocomplete="off" class="checkboxes">
                     </datalist>
                 </div>
@@ -78,11 +74,7 @@
                     <!-- <select id="events_input" autocomplete="off">
                         <option disabled selected>Select your events</option>
                     </select> -->
-                    <input list="events_input" placeholder="Select your events" autocomplete="off" class="events-input" onfocus="
-                    const eOpts = document.querySelectorAll('#events_input > option');
-                    for(i = 0; i < eOpts.length; i++) {
-                        eOpts[i].style.display = 'block';
-                    }">
+                    <input list="events_input" placeholder="Select your events" autocomplete="off" class="events-input" onclick="this.focus()" onfocus="showData('events_input')">
                     <datalist id="events_input" autocomplete="off" class="checkboxes">
                     </datalist>
                 </div>

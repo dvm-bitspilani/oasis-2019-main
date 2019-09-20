@@ -196,10 +196,10 @@ function prereg() {
   const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
   var v = grecaptcha.getResponse();
   console.log(v);
-  // if (v == "") {
-  //   alert("Please select Captcha");
-  //   return;
-  // }
+  if (v == "") {
+    alert("Please select Captcha");
+    return;
+  }
   data = {
     email_id: email,
     name: name,
@@ -211,7 +211,7 @@ function prereg() {
     events: eventsidarr,
     choreographer: isChoreo,
     head_of_society: isHeaOfSoc,
-    // captcha: v
+    captcha: v
   };
   console.log(data);
 
@@ -248,5 +248,12 @@ function prereg() {
       .catch(function(error) {
         console.log(error);
       });
+  }
+}
+
+function showData(id) {
+  const eOpts = document.querySelectorAll('#' + id + ' > option');
+  for(i = 0; i < eOpts.length; i++) {
+    eOpts[i].style.display = 'block';
   }
 }
