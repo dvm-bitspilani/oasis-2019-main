@@ -156,7 +156,7 @@ body {
     grid-row-start: 5;
 }
 .gallery-4 {
-    background-image: url('../images/gallery/4.jpg');
+    background-image: url('../images/gallery/96.jpg');
     grid-column-start: 8;
     grid-row-start: 7;
 }
@@ -182,7 +182,7 @@ body {
     grid-column-start: 8;
 }
 .gallery-9 {
-    background-image: url('../images/gallery/9.jpg');
+    background-image: url('../images/gallery/78.jpg');
     grid-row-start: 9;
     grid-column-start: 10;
     grid-column-end: 12;
@@ -198,7 +198,7 @@ body {
     grid-column-start: 6;
 }
 .gallery-12 {
-    background-image: url('../images/gallery/104.jpg');
+    background-image: url('../images/gallery/9.jpg');
     grid-row-start: 11;
     grid-row-end: 14;
     grid-column-start: 8;
@@ -244,7 +244,7 @@ body {
     grid-column-end: 7;
 }
 .gallery-20 {
-    background-image: url('../images/gallery/20.jpg');
+    background-image: url('../images/gallery/50.jpg');
     grid-column-start: 8;
     grid-row-start: 17;
 }
@@ -309,7 +309,7 @@ body {
     grid-column-start: 4;
 }
 .gallery-32 {
-    background-image: url('../images/gallery/32.jpg');
+    background-image: url('../images/gallery/40.jpg');
     grid-row-start: 25;
     grid-column-start: 6;
 }
@@ -317,28 +317,36 @@ body {
     background-image: url('../images/gallery/63.jpg');
     grid-row-start: 27;
     grid-column-start: 4;
+    transform-origin: 100% 100%;
 }
 .gallery-34{
     background-image: url('../images/gallery/54.jpg');
     grid-row-start: 27;
+    transform-origin: 100% 100%;
     grid-column-start: 6;
 }
 .gallery-35 {
     background-image: url('../images/gallery/93.jpg');
     grid-row-start: 27;
     grid-column-start: 8;
+    transform-origin: 100% 100%;
 }
 .gallery-36 {
     background-image: url('../images/gallery/95.jpg');
     grid-row-start: 27;
     grid-column-start: 10;
     grid-column-end: 12;
+    transform-origin: 100% 100%;
 }
 
 .gallery-1:hover, .gallery-2:hover, .gallery-3:hover, .gallery-4:hover, .gallery-5:hover,
 .gallery-6:hover, .gallery-7:hover, .gallery-8:hover, .gallery-9:hover, .gallery-10:hover,
 .gallery-11:hover, .gallery-12:hover, .gallery-13:hover, .gallery-14:hover, .gallery-15:hover,
-.gallery-15:hover, .gallery-16:hover, .gallery-17:hover, .gallery-18:hover {
+.gallery-15:hover, .gallery-16:hover, .gallery-17:hover, .gallery-18:hover, .gallery-19:hover,
+.gallery-20:hover, .gallery-21:hover, .gallery-22:hover, .gallery-23:hover, .gallery-24:hover,
+.gallery-25:hover, .gallery-26:hover, .gallery-27:hover, .gallery-28:hover, .gallery-29:hover,
+.gallery-30:hover, .gallery-31:hover, .gallery-32:hover, .gallery-33:hover, .gallery-34:hover,
+.gallery-35:hover, .gallery-36:hover {
     transform: scale(1.2);
     z-index: 10;
 }
@@ -431,6 +439,7 @@ body {
         transform-origin: 100%;
     }
     .gallery-10 {
+        background-image: url('../images/gallery/84.jpg');
         grid-row-start: 14;
         grid-column-start: 2;
         transform-origin: 0%;
@@ -528,11 +537,11 @@ body {
         transform-origin: 0%;
     }
     .gallery-26 {
-        background-image: url('../images/gallery/27.jpg');
+        background-image: url('../images/gallery/72.jpg');
         grid-row-start: 34;
         grid-row-end: 37;
         grid-column-start: 2;
-        transform-origin: 100%;
+        transform-origin: 0%;
     }
     .gallery-27 {
         grid-row-start: 34;
@@ -543,7 +552,7 @@ body {
     .gallery-28 {
         grid-row-start: 36;
         grid-column-start: 4;
-        transform-origin: 0%;
+        transform-origin: 100%;
     }
     .gallery-30 {
         background-image: url('../images/gallery/30.jpg');
@@ -573,7 +582,7 @@ body {
         grid-row-end: 45;
         grid-column-start: 2;
         grid-column-end: 3;
-        transform-origin: 100%;
+        transform-origin: 0%;
     }
     .gallery-33 {
         grid-row-start: 42;
@@ -585,7 +594,7 @@ body {
         grid-row-start: 44;
         grid-column-start: 4;
         grid-column-end: 4;
-        transform-origin: 0%;
+        transform-origin: 100%;
     }
     .gallery-35 {
         background-image: url('../images/gallery/44.jpg');
@@ -593,7 +602,7 @@ body {
         grid-row-end: 49;
         grid-column-start: 4;
         grid-column-end: 4;
-        transform-origin: 100%;
+        transform-origin: 100% 100%;
     }
     .gallery-36 {
         grid-row-start: 46;
@@ -604,7 +613,7 @@ body {
     .gallery-22 {
         grid-column-start: 2;
         grid-row-start: 48;
-        transform-origin: 0%;
+        transform-origin: 0% 100%;
     }
 }
 @media(max-width: 576px) {
