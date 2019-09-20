@@ -438,10 +438,6 @@ select:focus {
   .form-div > .form-container {
     height: 135vh;
   }
-  .select-wrapper {
-    width: 70%;
-    height: 9%;
-  }
   .input-el > .radio-inputs > span {
     font-size: 1em;
   }
