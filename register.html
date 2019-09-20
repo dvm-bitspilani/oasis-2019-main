@@ -42,9 +42,9 @@
                 <div class="select-wrapper">
                     <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
                     <div class="events-list"></div> -->
-                    <select id="college_input" autocomplete="off">
-                        <option disabled selected>Select your College</option>
-                    </select>
+                    <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input">
+                    <datalist id="college_input" autocomplete="off" class="checkboxes">
+                    </datalist>
                 </div>
                 <div class="select-wrapper">
                     <select id="gender_input" autocomplete="off">
