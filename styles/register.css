@@ -21,7 +21,11 @@ body {
   font-family: "SFpro";
   src: url("../fonts/ProductSans-Medium.woff");
 }
-
+.text-type::-webkit-inner-spin-button, 
+.text-type::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 .msg-box {
   position: absolute;
   height: 50vh;
