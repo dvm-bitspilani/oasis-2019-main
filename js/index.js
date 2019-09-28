@@ -2,8 +2,8 @@ const scroll = ['home', 'about', 'videos', 'contacts'];
 
 let hue = 0;
 setInterval(() => {
-    if (hue < 1) hue += 1/10;
-    else hue = 0;
+
+    hue += 0.1;
 
     document.getElementsByClassName("landing-wrapper")[0].style.transition = "filter 5s ease";
     document.querySelectorAll(".landing-wrapper")[0].style.filter =
@@ -24,7 +24,7 @@ function navigate(x) {
     document.getElementsByTagName('html')[0].style.height = 'initial';
     document.getElementsByTagName('html')[0].style.overflowY = 'auto';
 
-    document.getElementById('home').style.opacity = 1;
+    document.getElementById('home').style.opaty = 1;
     document.getElementById('about').style.opacity = 1;
     
     // location.hash = scroll[x];
