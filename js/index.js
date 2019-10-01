@@ -24,7 +24,7 @@ function navigate(x) {
     document.getElementsByTagName('html')[0].style.height = 'initial';
     document.getElementsByTagName('html')[0].style.overflowY = 'auto';
 
-    document.getElementById('home').style.opaty = 1;
+    document.getElementById('home').style.opacity = 1;
     document.getElementById('about').style.opacity = 1;
     
     // location.hash = scroll[x];
@@ -140,6 +140,7 @@ function openTags(tagName) {
             }, 100);
         }
     }
+    document.getElementsByClassName('backdrop')[0].style.display = 'none';
     document.getElementById('home').style.opacity = 0;
     document.getElementById('about').style.opacity = 0;
     var tagPage = document.getElementById(tagName);
