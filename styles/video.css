@@ -1,5 +1,5 @@
 .video-wrapper {
-    height: 100vh;
+    height: fit-content;
     padding-top: 8vh;
     width: 100%;
     background: url('../images/assets/video.jpg') no-repeat center center/cover;
