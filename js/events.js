@@ -269,6 +269,13 @@ function viewEventDetails(eventName, eventType) {
                         }
                     });
                 }
+                if (event.category_name == 'Prereg') {
+                    event.events.map(eve => {
+                        if (eve.name == eventName) {
+                            changeEventData(eve);
+                        }
+                    });
+                }
                 if (event.category_name == 'Writing') {
                     event.events.map(eve => {
                         if (eve.name == eventName) {
