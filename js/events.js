@@ -304,7 +304,7 @@ function backEventDetails() {
 }
 
 function changeEventData(event) {
-    document.querySelector('.event-day > span').innerHTML = event.date_time;
+    document.querySelector('.event-day > span').innerHTML = event.date_time.substr(0, 10);
     document.querySelector('.event-time > span').innerHTML = event.time;
     document.querySelector('.event-venue > span').innerHTML = event.venue;
     
