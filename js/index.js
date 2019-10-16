@@ -233,7 +233,6 @@ window.onload = function() {
         // if (window.innerWidth < 500) {
         //   document.getElementsByClassName("navigator")[0].style.display = "none";
     }, 3500);
-    fetchEvents();
 };
 
 

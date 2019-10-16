@@ -19,9 +19,12 @@ const eventsNames = [
 function fetchEvents() {
     fetch(URL).then(resp => resp.json())
     .then(function(response) {
+        console.log(response);
         ALL_EVENTS = response
     });
 }
+
+fetchEvents();
 
 const eventsImgUrl = [
     'images/events/dance.svg',
@@ -174,7 +177,7 @@ if (window.innerWidth < 500) {
         if (Math.abs(diffX) > Math.abs(diffY)) {
             // sliding horizontally
             if (diffX > 0) {
-                // swiped left
+                // swiped leftevent.events.splice(i, 1);
                 navigateEvent(eventIndex + 1);
             } else {
                 // swiped right
@@ -187,7 +190,6 @@ if (window.innerWidth < 500) {
         e.preventDefault();
 
     };
-
 
     document.getElementsByClassName('events')[0].addEventListener("touchstart", startTouchContact, false);
     document.getElementsByClassName('events')[0].addEventListener("touchmove", moveTouchContact, false);
@@ -204,8 +206,19 @@ function openAllEvents(type) {
     document.getElementsByClassName('all-events')[0].innerHTML = '';
 
     const eventNames = [];
+    
     ALL_EVENTS.map(event => {
         if (event.category_name == type) {
+            for (let  i = 0; i < event.events.length; i++) {
+                for (let j =  1;  j <  event.events.length;  j++) {
+                    if (event.events[i].name === event.events[j].name) {
+                        if (event.events[i].date_time >= event.events[j].date_time) {
+                            event.events.splice(i, 1);
+                            break;
+                        }
+                    }
+                }
+            }
             event.events.map(eve => {
                 eventNames.push(eve.name);
             });
