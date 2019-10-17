@@ -208,41 +208,28 @@ function openAllEvents(type) {
     const eventNames = [];
     
     ALL_EVENTS.map(event => {
-        if (event.category_name == eventType) {
+        if (event.category_name == type) {
             event.events.map(eve => {
-                if (eve.name == eventName) {
-                    changeEventData(eve);
-                }
+                eventNames.push(eve.name);
             });
         }
-        if (eventType == 'Miscellaneous') {
+        if (type == 'Miscellaneous') {
             if (event.category_name == 'Entertainment') {
                 event.events.map(eve => {
-                    if (eve.name == eventName) {
-                        changeEventData(eve);
-                    }
-                });
-            }
-            if (event.category_name == 'Prereg') {
-                event.events.map(eve => {
-                    if (eve.name == eventName) {
-                        changeEventData(eve);
-                    }
+                    eventNames.push(eve.name);
                 });
             }
             if (event.category_name == 'Writing') {
                 event.events.map(eve => {
-                    if (eve.name == eventName) {
-                        changeEventData(eve);
-                    }
+                    eventNames.push(eve.name);
                 });
             }
         }
     });
     
+    let expSet = false;
     eventNames.map(eventName => {
-        let expSet = false;
-        if (eventName != 'Exposure') {
+        if (!eventName.includes('Exposure')) {
             const event = document.createElement('div');
             const eventText = document.createElement('span');
             eventText.innerHTML = eventName;
@@ -251,7 +238,9 @@ function openAllEvents(type) {
             document.getElementsByClassName('all-events')[0].appendChild(event);
             eventText.addEventListener('click', () => viewEventDetails(eventName, type));
         } else {
-            if(!expSet) {
+            console.log(eventName, expSet)
+            if (!expSet) {
+                expSet = true;
                 const event = document.createElement('div');
                 const eventText = document.createElement('span');
                 eventText.innerHTML = eventName;
@@ -259,7 +248,6 @@ function openAllEvents(type) {
                 event.appendChild(eventText);
                 document.getElementsByClassName('all-events')[0].appendChild(event);
                 eventText.addEventListener('click', () => viewEventDetails(eventName, type));
-                expSet = true
             }
         }
     });
