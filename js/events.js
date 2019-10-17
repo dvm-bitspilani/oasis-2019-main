@@ -275,7 +275,10 @@ function viewEventDetails(eventName, eventType) {
             if (event.category_name == eventType) {
                 event.events.map(eve => {
                     if (eve.name == eventName) {
-                        changeEventData(eve);
+                        if (eventName.includes('Exposure'))
+                            changeEventData({ ...eve, date_time: '2019-10-19' })
+                        else
+                            changeEventData(eve);
                     }
                 });
             }
