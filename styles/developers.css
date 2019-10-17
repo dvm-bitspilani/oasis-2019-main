@@ -128,6 +128,10 @@
     background-image: url("../images/developers/manikya.jpg");
 }
 
+.developer:nth-of-type(13) .dev-image {
+    background-image: url("../images/developers/divyansh.jpg");
+}
+
 .developer .dev-info {
     width: 100%;
     background-color: #100023;

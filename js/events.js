@@ -208,43 +208,60 @@ function openAllEvents(type) {
     const eventNames = [];
     
     ALL_EVENTS.map(event => {
-        if (event.category_name == type) {
-            for (let  i = 0; i < event.events.length; i++) {
-                for (let j =  1;  j <  event.events.length;  j++) {
-                    if (event.events[i].name === event.events[j].name) {
-                        if (event.events[i].date_time >= event.events[j].date_time) {
-                            event.events.splice(i, 1);
-                            break;
-                        }
-                    }
-                }
-            }
+        if (event.category_name == eventType) {
             event.events.map(eve => {
-                eventNames.push(eve.name);
+                if (eve.name == eventName) {
+                    changeEventData(eve);
+                }
             });
         }
-        if (type == 'Miscellaneous') {
+        if (eventType == 'Miscellaneous') {
             if (event.category_name == 'Entertainment') {
                 event.events.map(eve => {
-                    eventNames.push(eve.name);
+                    if (eve.name == eventName) {
+                        changeEventData(eve);
+                    }
+                });
+            }
+            if (event.category_name == 'Prereg') {
+                event.events.map(eve => {
+                    if (eve.name == eventName) {
+                        changeEventData(eve);
+                    }
                 });
             }
             if (event.category_name == 'Writing') {
                 event.events.map(eve => {
-                    eventNames.push(eve.name);
+                    if (eve.name == eventName) {
+                        changeEventData(eve);
+                    }
                 });
             }
         }
     });
     
     eventNames.map(eventName => {
-        const event = document.createElement('div');
-        const eventText = document.createElement('span');
-        eventText.innerHTML = eventName;
-        event.className = 'event';
-        event.appendChild(eventText);
-        document.getElementsByClassName('all-events')[0].appendChild(event);
-        eventText.addEventListener('click', () => viewEventDetails(eventName, type));
+        let expSet = false;
+        if (eventName != 'Exposure') {
+            const event = document.createElement('div');
+            const eventText = document.createElement('span');
+            eventText.innerHTML = eventName;
+            event.className = 'event';
+            event.appendChild(eventText);
+            document.getElementsByClassName('all-events')[0].appendChild(event);
+            eventText.addEventListener('click', () => viewEventDetails(eventName, type));
+        } else {
+            if(!expSet) {
+                const event = document.createElement('div');
+                const eventText = document.createElement('span');
+                eventText.innerHTML = eventName;
+                event.className = 'event';
+                event.appendChild(eventText);
+                document.getElementsByClassName('all-events')[0].appendChild(event);
+                eventText.addEventListener('click', () => viewEventDetails(eventName, type));
+                expSet = true
+            }
+        }
     });
 }
 
