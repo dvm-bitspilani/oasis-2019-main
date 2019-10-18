@@ -352,6 +352,7 @@ function changeEventData(event) {
         descSpan[i].style.fontWeight = 'initial';
     }
     const parent = document.querySelectorAll('.event-contact > div')[1];
+    // parent.innerHTML = event.contact
     parent.innerHTML = (event.contact) ? event.contact : 'NA';
 }
 
