@@ -228,8 +228,9 @@ function openAllEvents(type) {
     });
     
     let expSet = false;
+    let tripSet  = false;
     eventNames.map(eventName => {
-        if (!eventName.includes('Exposure')) {
+        if (!eventName.includes('Exposure') && !eventName.includes('TRIPPED: A VR Gaming Event')) {
             const event = document.createElement('div');
             const eventText = document.createElement('span');
             eventText.innerHTML = eventName;
@@ -239,15 +240,29 @@ function openAllEvents(type) {
             eventText.addEventListener('click', () => viewEventDetails(eventName, type));
         } else {
             console.log(eventName, expSet)
-            if (!expSet) {
-                expSet = true;
-                const event = document.createElement('div');
-                const eventText = document.createElement('span');
-                eventText.innerHTML = eventName;
-                event.className = 'event';
-                event.appendChild(eventText);
-                document.getElementsByClassName('all-events')[0].appendChild(event);
-                eventText.addEventListener('click', () => viewEventDetails(eventName, type));
+            if (eventName.includes('Exposure')) {
+                if (!expSet) {
+                    expSet = true;
+                    const event = document.createElement('div');
+                    const eventText = document.createElement('span');
+                    eventText.innerHTML = eventName;
+                    event.className = 'event';
+                    event.appendChild(eventText);
+                    document.getElementsByClassName('all-events')[0].appendChild(event);
+                    eventText.addEventListener('click', () => viewEventDetails(eventName, type));
+                }
+            }
+            if (eventName.includes('TRIPPED: A VR Gaming Event')) {
+                if (!tripSet) {
+                    tripSet = true;
+                    const event = document.createElement('div');
+                    const eventText = document.createElement('span');
+                    eventText.innerHTML = eventName;
+                    event.className = 'event';
+                    event.appendChild(eventText);
+                    document.getElementsByClassName('all-events')[0].appendChild(event);
+                    eventText.addEventListener('click', () => viewEventDetails(eventName, type));
+                }
             }
         }
     });
@@ -275,7 +290,7 @@ function viewEventDetails(eventName, eventType) {
             if (event.category_name == eventType) {
                 event.events.map(eve => {
                     if (eve.name == eventName) {
-                        if (eventName.includes('Exposure'))
+                        if (eventName.includes('Exposure') || eventName.includes('TRIPPED: A VR Gaming Event'))
                             changeEventData({ ...eve, date_time: '2019-10-19' })
                         else
                             changeEventData(eve);
