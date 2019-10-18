@@ -331,20 +331,19 @@
 }
 
 .event-description > div:nth-of-type(1) {
-    color: #9A6D9A;
     font-family: "Ikaros-Sans";
-    font-size: 1.7rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
 }
 
-.event-rules {
+.event-contact {
     color: #ffffff;
     width: 90%;
     font-size: 1.4rem;
     margin: 40px 0;
 }
 
-.event-rules > div:nth-of-type(1) {
+.event-contact > div:nth-of-type(1) {
     color: #9A6D9A;
     font-family: "Ikaros-Sans";
     font-size: 1.7rem;
@@ -585,12 +584,12 @@
         font-size: 1.2rem;
     }
 
-    .event-rules {
+    .event-contact {
         font-size: 0.9rem;
         margin: 32px 0;
     }
 
-    .event-rules > div:nth-of-type(1) {
+    .event-contact > div:nth-of-type(1) {
         font-size: 1.2rem;
     }
 

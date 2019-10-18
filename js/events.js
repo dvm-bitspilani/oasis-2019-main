@@ -344,15 +344,15 @@ function changeEventData(event) {
     document.querySelector('.event-time > span').innerHTML = event.time;
     document.querySelector('.event-venue > span').innerHTML = event.venue;
     
-    document.querySelectorAll('.event-description > div')[1].innerHTML = event.details;
-    const descSpan = document.querySelectorAll('.event-description > div:nth-of-type(2) span');
-    for(i = 0; i < descSpan.length; i++) {
-        descSpan[i].style.backgroundColor = 'transparent';
-        descSpan[i].style.color = '#ffffff';
-        descSpan[i].style.fontWeight = 'initial';
-    }
-    const parent = document.querySelectorAll('.event-rules > div')[1];
-    parent.innerHTML = event.rules;
+    document.querySelectorAll('.event-description')[0].innerHTML = event.details;
+    // const descSpan = document.querySelectorAll('.event-description > div:nth-of-type(2) span');
+    // for(i = 0; i < descSpan.length; i++) {
+    //     descSpan[i].style.backgroundColor = 'transparent';
+    //     descSpan[i].style.color = '#ffffff';
+    //     descSpan[i].style.fontWeight = 'initial';
+    // }
+    const parent = document.querySelectorAll('.event-contact > div')[1];
+    parent.innerHTML = (event.contact) ? event.contact : 'NA';
 }
 
 
