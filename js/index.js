@@ -215,7 +215,7 @@ window.onload = function() {
     setTimeout(function() {
         loaderWrapper.style.display = "none";
 
-        document.getElementsByTagName("body")[0].style.overflowY = "scroll";
+        document.getElementsByTagName("body")[0].style.overflowY = "auto";
         loaderWrapper.style.display = "none";
         // document.getElementsByClassName("bottom-div")[0].style.opacity = "1";
         landingWrapper.style.opacity = 1;
@@ -225,7 +225,7 @@ window.onload = function() {
         hamIcon.style.opacity = 1;
         document.getElementById('hamburger').style.opacity = 1
         document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
-        document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
+        document.getElementsByTagName('html')[0].style.overflowY = 'auto';
         // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
         // document.getElementsByClassName("sidebar")[0].style.display = "flex";
         // if (window.innerWidth > 500)
