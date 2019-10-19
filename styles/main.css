@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
-    /* -webkit-overflow-scrolling: touch; */
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
     padding: 0;
     overflow: hidden;
     background: #000000;
-    -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -68,10 +68,6 @@ a:hover {
 @font-face {
     font-family: 'google sans';
     src: url('../fonts/ProductSans-Medium.woff');
-}
-
-html {
-    overflow: hidden;
 }
 
 .backdrop {
