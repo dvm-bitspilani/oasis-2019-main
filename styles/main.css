@@ -8,7 +8,7 @@ body {
     padding: 0;
     overflow: hidden;
     background: #000000;
-    /* -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
 }
 
 a {
