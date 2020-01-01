@@ -185,12 +185,13 @@ document.getElementsByClassName("Contact-div")[0].addEventListener("touchmove", 
 
 
 var profpic = [
-    "chandak.png",
-    "Parth.jpg",
-    "adit.png",
-    "DVM.png",
-    "pawar.jpg",
-    "tanvi.png",
+    "Kartikeya.jpg",
+    // "Parth.jpg",
+    "Nischay.jpg",
+    "Rishabh.jpg",
+    "Sujith.png",
+    "Ruchir.jpg",
+    "Rutul.jpeg",
     "rahul.jpg",
     "abhi.jpg"
 ];
