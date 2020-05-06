@@ -1,552 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./styles/landing.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/contact.css" />
-    <link rel="stylesheet" href="./styles//about.css" />
-    <link rel="stylesheet" href="./styles/loader.css" />
-    <link rel="stylesheet" href="./styles/video.css" />
-    <link rel="stylesheet" href="./styles/spons.css" />
-    <link rel="stylesheet" href="./styles/events.css" />
-    <link rel="stylesheet" href="./styles/developers.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="images/icons/oasis-favicon.png" type="image/x-icon">
-    <title>OASIS'19</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-14236414-1');
-    </script>
-
+    <link rel="stylesheet" href="./styles/spons.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>OASIS'19 | Sponsors</title>
 </head>
-
 <body>
-    <div id="loader-wrapper" style="overflow: hidden">
-        <div id="main-loader">
-            <div class="ring el-1"></div>
-            <div class="ring el-2"></div>
-            <div class="ring el-3"></div>
-            <div class="ring el-4"></div>
-            <div class="ring el-5"></div>
-            <div class="ring el-6"></div>
-            <div class="ring el-7"></div>
-            <div class="ring el-8"></div>
-            <div class="ring el-9"></div>
-            <div class="ring el-10"></div>
-            <div class="ring el-11"></div>
-            <div class="ring el-12"></div>
-            <div class="ring el-13"></div>
-            <div class="ring el-14"></div>
-            <div class="ring el-15"></div>
-        </div>
-        <div id="oasis-text">
-            <div id="oasis-title">
-                <ul>
-                    <li class="oasis-li li-1">O</li>
-                    <li class="oasis-li li-2">A</li>
-                    <li class="oasis-li li-3">S</li>
-                    <li class="oasis-li li-4">I</li>
-                    <li class="oasis-li li-5">S</li>
-                    <li class="oasis-li li-6">'</li>
-                    <li class="oasis-li li-7">1</li>
-                    <li class="oasis-li li-8">9</li>
-                </ul>
-            </div>
-            <div id="oasis-slogan">
-                Neon Noir
-            </div>
-        </div>
-        <div id="oasis-date">
-            19<sup>th</sup> Oct - 23<sup>rd</sup> Oct
-        </div>
-    </div>
-
-    <div class="navigation">
-        <div class="oasis-logo" onclick="navigate(0)"></div>
-        <div class="menu-back" onclick="closeNav()"></div>
-        <div class="nav-item" onclick="navigate(0)">HOME</div>
-        <div class="nav-item" onclick="navigate(1)">ABOUT US</div>
-        <div class="nav-item" onclick="openTags('sponsors')">SPONSORS</div>
-        <div class="nav-item" onclick="openTags('past-sponsors')">PAST SPONSORS</div>
-        <div class="nav-item" onclick="openTags('events')">EVENTS</div>
-        <!-- <div class="nav-item"><a href="https://bits-oasis.org/registrations/login/">LOGIN</a></div> -->
-        <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
-        <div class="nav-item"><a href="./gallery.html">GALLERY</a></div>
-        <div class="nav-item"><a href="https://bits-oasis.org/rocktaves/">ROCKTAVES</a></div>
-        <div class="nav-item"><a href="https://bits-oasis.org/profshows/">PROFSHOWS</a></div>
-        <div class="nav-item" onclick="navigate(3)">CONTACT US</div>
-        <div class="nav-item" onclick="openTags('developers')">DEVELOPERS</div>
-
-        <div class="dummy-ham-icon"></div>
-  
-        <div class="social-links">
-            <div class="nav-asset"></div>
-            <a href="https://www.facebook.com/oasis.bitspilani/" target="blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/bitsoasis/?hl=en" target="blank"><i class="fab fa-instagram"></i></a>
-            <div class="nav-asset"></div>
-        </div>
-    </div>
-
-
-    <div class="toggle-icon">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div><!-- /toggle-icon -->
-
-    <div class="side-bar">
-            <div class="nav-item" onclick="navigate(0)">HOME</div>
-            <div class="nav-item" onclick="navigate(1)">ABOUT US</div>
-            <div class="nav-item" onclick="openTags('sponsors')">SPONSORS</div>
-            <div class="nav-item" onclick="openTags('past-sponsors')">PAST SPONSORS</div>
-            <div class="nav-item" onclick="openTags('events')">EVENTS</div>
-            <!-- <div class="nav-item"><a href="https://bits-oasis.org/registrations/login/">LOGIN</a></div> -->
-            <div class="nav-item" onclick="navigate(2)">VIDEOS</div>
-            <div class="nav-item"><a href="./gallery.html">GALLERY</a></div>
-            <div class="nav-item"><a href="https://bits-oasis.org/rocktaves/">ROCKTAVES</a></div>
-            <div class="nav-item"><a href="https://bits-oasis.org/profshows/">PROFSHOWS</a></div>
-            <div class="nav-item" onclick="navigate(3)">CONTACT US</div>
-            <div class="nav-item" onclick="openTags('developers')">DEVELOPERS</div>
-    </div>
-
-    <div id="hamburger" onclick="openNav()"></div>
-
-    <div class="landing-wrapper" id="home">
-        <div class="oasis-landing-container">
-            <img src="images/assets/oasist.png" class="oasis-landing">
-
-            <div class="mobile-register">
-                <a href="./register.html">REGISTER</a>
-                <a href="https://bits-oasis.org/registrations/login/">LOGIN</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="about" id="about" name="about">
-        <div id="fog"></div>
-        <div class="lightning flashit"></div>
-        <div class="content">
-            <div class="about-heading">
-                <span>
-                    ABOUT US
-                </span>
-            </div>
-            <div class="about-text">
-                Oasis—the cultural fest of BITS Pilani—is nothing but 96 hours of unadulterated thrills comprising music, dance, drama, art, quizzes, fashion, and humour. With a footfall of around 5000+ every year, it is the second-largest cultural festival of India.
-                This year’s theme—neon-noir—is a confluence of the contraries coexisting in harmony. On a superficial level, the theme is inherently contradictory—the concept of both light and darkness manifested simultaneously. On a metaphysical level,
-                however, neon-noir is a commentary on specific socio-cultural dimensions such as urban decay, consumerism, and industrial encroachment. It is characterised by menacing cityscapes with the luminescence accentuating the shadows. If convoluted
-                storylines, crime, and moral fluctuation enrapture you, this Oasis, from 19th to 23rd October, buckle up for the experience of an aesthetic so powerful that you question your very existence in this realm. Live the life of a Taxi Driver
-                and run on blades of talent in the 49th edition of the fest which promises to leave you in a trance caused by the chiaroscuro of shadow and illumination.
-            </div>
-        </div>
-    
-        <div class="video-wrapper" id="videos">
-            <div class="video-heading">
-                <span>VIDEOS</span>
-            </div>
-            <div class="cards-container">
-                <div class="arrow-left">
-                    <div class="image"></div>
-                </div>
-                <div class="arrow-right">
-                    <div class="image"></div>
-                </div>
-
-                <div class="cards cards-left">
-                    <iframe class="thumbnail" src="https://www.youtube.com/embed/35lWrDmkxko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="info">
-                        <div class="info-heading"><a href="https://www.youtube.com/watch?v=35lWrDmkxko" target="blank">OASIS'19 TEASER</a></div>
-                    </div>
-                </div>
-
-                <div class="cards cards-right">
-                    <iframe class="thumbnail" src="https://www.youtube.com/embed/kw2MVtXWS4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="info">
-                        <div class="info-heading">
-                            <a href="https://www.youtube.com/watch?v=kw2MVtXWS4o" target="blank">OASIS'18 AFTER MOVIE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards cards-left">
-                    <iframe class="thumbnail" src="https://www.youtube.com/embed/oWDZY6y7ED8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="info">
-                        <div class="info-heading">
-                            <a href="https://www.youtube.com/watch?v=kw2MVtXWS4o" target="blank">OASIS'18 TEASER</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards cards-right">
-                    <iframe class="thumbnail" src="https://www.youtube.com/embed/FN71wnk58Hg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="info">
-                        <div class="info-heading"><a href="https://www.youtube.com/watch?v=35lWrDmkxko" target="blank">OASIS'17 TEASER</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="Contact-div" id="contacts">
-            <div class="Contact-heading">
-                <span>CONTACT US</span>
-            </div>
-            <div class="contact-card-container">
-                <div class="arrow-left-contact">
-                    <div class="image"></div>
-                </div>
-                <div class="arrow-right-contact">
-                    <div class="image"></div>
-                </div>
-
-                <div class="Cards-div">
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>Kartikeya Gupta</span></div>
-                        <div class="position"><span>Registration, Events & Other Enquiries</span></div>
-                        <div class="phone-no"><span>+91 9119225019</span></div>
-                        <div class="email"><span>pcr@bits-oasis.org</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>Nischay Shopurkar</span></div>
-                        <div class="position"><span>Logistics and Operations</span></div>
-                        <div class="phone-no"><span>+91 8839250651</span></div>
-                        <div class="email"><span>controls@bits-oasis.org</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>Rishabh Jain</span></div>
-                        <div class="position"><span>Sponsorship and Marketing</span></div>
-                        <div class="phone-no"><span>+91 7240374333</span></div>
-                        <div class="email"><span>sponsorship@bits-oasis.org</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>M. Sujith Reddy</span></div>
-                        <div class="position"><span>Website, App & Online Payments</span></div>
-                        <div class="phone-no"><span>+91 8465017924</span></div>
-                        <div class="email"><span>webmaster@bits-oasis.org</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>Ruchir Aggarwal</span></div>
-                        <div class="position"><span>Online Collaborations and Publicity</span></div>
-                        <div class="phone-no"><span>+91 8800550716</span></div>
-                        <div class="email"><span>collaborations@bits-oasis.org</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>Rutul Tarnekar</span></div>
-                        <div class="position"><span>Reception and Accomodation</span></div>
-                        <div class="phone-no"><span>+91 9975077810</span></div>
-                        <div class="email"><span>recnacc@bits-oasis.org</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>Rahul Bubna</span></div>
-                        <div class="position"><span>Student Union President</span></div>
-                        <div class="phone-no"><span>+91 8952824766</span></div>
-                        <div class="email"><span>President@pilani.bits-pilani.ac.in</span></div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="des-card">
-                        <img class="prof-pic"></img>
-                        <div class="name"><span>V Abishek Balaji</span></div>
-                        <div class="position"><span>Student Union General Secretary</span></div>
-                        <div class="phone-no"><span>+91 9566142660</span></div>
-                        <div class="email"><span>gensec@pilani.bits-pilani.ac.in</span></div>
-                        <div class="dash"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-div">
-                <!-- <span>Department of Visual Media ,BITS Pilani</span> -->
-                <span>FOLLOW US ON
-                    <a href="https://www.facebook.com/oasis.bitspilani/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/bitsoasis/" target="_blank"><i class="fab fa-instagram"></i></a>
-                </span>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="events" id="events">
-        <div class="event-arrow" onclick="navigateEvent(eventIndex - 1)"></div>
-        <div class="event-arrow" onclick="navigateEvent(eventIndex + 1)"></div>
-        <div class="events-heading">
-            <span>EVENTS</span>
-        </div>
-        <div class="events-wrapper">
-            <div class="events-container"></div>
-        </div>
-        <div class="events-nav-dots"></div>
-        <div class="all-events-type-button" onclick="showAllEvents()"><span>ALL CATEGORIES</span></div>
-    </div>
-
-
-    <div class="event-details" id="event-details">
-        <div class="event-details-bg"></div>
-        <div class="event-details-wrapper">
-            <img src="images/icons/close.png" class="close-event" onclick="closeEventDetails()">
-            <div id="all-events-tab">
-                <div class="event-type">
-                    Event Type
-                </div>
-                <hr size="3px" width="10%" color="#9A6D9A" />
-                <div class="all-events">
-                <!-- ALL EVENTS OF A PARTICULAR TYPE GOES HERE -->
-                </div>
-            </div>
-            <div id="event-details-tab">
-                <img src="images/icons/menu-back.png" class="events-back" onclick="backEventDetails()" />
-                <div class="event-detail-name">
-                    Event name
-                </div>
-                <hr size="3px" width="10%" color="#9A6D9A" />
-                <div class="event-detail">
-                    <span class="event-day">
-                        Day: <span>EventDay</span>
-                    </span>
-                    <span class="event-time">
-                        Time: <span>Event PM</span>
-                    </span>
-                    <span class="event-venue">
-                        Venue: <span>Event 6000</span>
-                    </span>
-                </div>
-                <div class="event-description">
-                    <!-- EVENT DESCRIPTION  GOES  HERE -->
-                </div>
-                <div class="event-contact">
-                    <div>Contact</div>
-                    <div>
-                        <!-- CONTACT GOES  HERE -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="all-events-type">
-        <img src="images/icons/menu-back.png" class="events-back" onclick="backAllEvents()" />
-        <div class="all-events-type-heading"><span>ALL CATEGORIES</span></div>
-        <div class="all-events-type-container">
-            <!-- ALL EVENTS CATEGORIES GOES HERE -->
-        </div>
-    </div>
-
-
-
-
-    <div class="developers" id="developers">
-        <div class="developers-heading">
-            <span>DEVELOPERS</span>
-        </div>
-        <div class="developers-container">
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Devansh Agarwal</div>
-                    <div id="separator"></div>
-                    <div id="team">UI/UX Designer</div>
-                    <div id="links">
-                        <div style="z-index: 6000"><a href="https://www.behance.net/devanshag" target="blank"><i class="fab fa-behance"></i></a></div>
-                        <div style="z-index: 6000"><a href="https://dribbble.com/Devansh22" target="blank"><i class="fab fa-dribbble"></i></a></div>
-                        <div style="z-index: 6000"><a href="https://www.instagram.com/devansh_ag_/" target="blank" style="z-index: 6000"><i class="fab fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Mukul Gupta</div>
-                    <div id="separator"></div>
-                    <div id="team">Frontend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/mukul0596" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/mukul-gupta-7931b4171/" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Chirag Singhal</div>
-                    <div id="separator"></div>
-                    <div id="team">Frontend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/chirag-singhal" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/chirag-singhal-389a6a16a/" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Anant Verma</div>
-                    <div id="separator"></div>
-                    <div id="team">UI/UX Designer</div>
-                    <div id="links">
-                        <!-- <div><a href="" target="blank"><i class="fab fa-behance"></i></a></div> -->
-                        <div><a href="https://www.instagram.com/anantverma275/" target="blank"><i class="fab fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Shivanshu Ayachi</div>
-                    <div id="separator"></div>
-                    <div id="team">Backend Developer</div>
-                    <div id="links">
-                        <div><a href="http://www.github.com/shivanshu1234" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="http://www.linkedin.com/in/shivanshuayachi" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Mohul Maheshwari</div>
-                    <div id="separator"></div>
-                    <div id="team">UI/UX Designer</div>
-                    <div id="links">
-                        <div><a href="https://dribbble.com/moshino44" target="blank"><i class="fab fa-dribbble"></i></a></div>
-                        <div><a href="https://www.instagram.com/mohul_maheshwari/" target="blank"><i class="fab fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Abhinav Tiwari</div>
-                    <div id="separator"></div>
-                    <div id="team">Backend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/abhinav824" target="blank"><i class="fab fa-github"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Pradyumna Bang</div>
-                    <div id="separator"></div>
-                    <div id="team">Backend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/bangpradyumna/" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/pradyumna-bang-28011b168/" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Anupam Srivastava</div>
-                    <div id="separator"></div>
-                    <div id="team">Frontend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/meliodas113" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/anupam-srivastava-9b6369186/" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Shreyans Jain</div>
-                    <div id="separator"></div>
-                    <div id="team">Frontend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/jshreyans551" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/shreyans-jain-7a02aa169" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Akshit Patel</div>
-                    <div id="separator"></div>
-                    <div id="team">Frontend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/Akshit-Patel" target="blank"><i class="fab fa-github"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/akshit-patel-39075476/" target="blank"><i class="fab fa-linkedin"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Manikya Varshney</div>
-                    <div id="separator"></div>
-                    <div id="team">UI/UX Designer</div>
-                    <div id="links">
-                        <!-- <div><a href="" target="blank"><i class="fab fa-behance"></i></a></div> -->
-                        <div><a href="https://www.instagram.com/manikya.varshney/" target="blank"><i class="fab fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
-                <div class="dev-image"></div>
-                <div class="dev-info">
-                    <div id="name">Divyansh Agarwal</div>
-                    <div id="separator"></div>
-                    <div id="team">Backend Developer</div>
-                    <div id="links">
-                        <div><a href="https://github.com/Senpai1199" target="blank"><i class="fab fa-github"></i></a></div>
-                        <!-- <div><a href="https://www.linkedin.com/in/akshit-patel-39075476/" target="blank"><i class="fab fa-linkedin"></i></a></div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="spons-wrapper" id="sponsors">
+    <div class="spons-wrapper" id="sponsors" style="display: initial; opacity: 1;">
         <div class="spons-heading">
             <span>SPONSORS</span>
-        </div>
-        <div class="spons-container">
-            <div class="spons">
-                <div class="sponsor">
-                        <div class="sponsor-card-container">
-                            <div class="spons-details">
-                                <a href="http://www.inmovidutech.com/" id="logo" target="_blank">                                
-                                <img src="images/spons/present/Inmovidu Logo.png">
-                                <div class="name">Inmovidu</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>            
-    </div>
-    <div class="spons-wrapper" id="past-sponsors">
-        <div class="spons-heading">
-            <span>PAST SPONSORS</span>
         </div>
         <div class="spons-container">
             <!-- <div class="spons-tab-container">
@@ -558,11 +24,8 @@
                 <div class="sponsor">
                     <div class="sponsor-heading">TITLE SPONSORS</div>
                         <div class="sponsor-card-container">
-                            <div class="spons-details">
-                                <a href="https://www.cisco.com/c/en_in/index.html" id="logo" target="_blank">                                
-                                <img src="images/spons/cisco_blue_transparent.png">
+                            <div class="spons-details"><img src="images/spons/cisco_blue_transparent.png">
                                 <div class="name">Cisco</div>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -570,23 +33,17 @@
                 <div class="sponsor">
                     <div class="sponsor-heading">ASSOCIATE TITLE SPONSORS and OFFICIAL SMARTPHONE PARTNER</div>
                     <div class="sponsor-card-container">
-                        <div class="spons-details">
-                            <a href="https://www.realme.com/in/" id="logo" target="_blank">                                                            
-                            <img src="images/spons/Realme-realme--logo-box-CMYK.png">
+                        <div class="spons-details"><img src="images/spons/Realme-realme--logo-box-CMYK.png">
                             <div class="name">Realme</div>
-                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="sponsor">
                     <div class="sponsor-heading">INDIE NIGHT PARTNER</div>
                     <div class="sponsor-card-container">
-                        <div class="spons-details">
-                            <a href="https://www.realme.com/in/" id="logo" target="_blank">                            
-                            <img src="images/spons/skillbox_white.png">
+                        <div class="spons-details"><img src="images/spons/skillbox_white.png">
                             <div class="name">Skillbox</div>
-                            </a>
-                        </div>
+                        </div>    
                     </div>
                 </div>
                 <div class="sponsor">
@@ -608,37 +65,24 @@
                 <div class="sponsor">
                     <div class="sponsor-heading">OFFICIAL POKER PARTNER</div>
                     <div class="sponsor-card-container">
-                        <div class="spons-details">
-                            <a href="https://www.spartanpoker.com/" id="logo" target="_blank">                                                        
-                            <img src="images/spons/poker-partner.png">
+                        <div class="spons-details"><img src="images/spons/poker-partner.png">
                             <div class="name">Spartan</div>
-                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="sponsor">
                     <div class="sponsor-heading">OFFICIAL MEDIA SPONSORS</div>
-
                     <div class="sponsor-card-container">
-                        <div class="spons-details">
-                            <a href="https://www.firstpost.com/" id="logo" target="_blank">                                                  
-                            <img src="images/spons//firstpost.png">Your logo name
+                        <div class="spons-details"><img src="images/spons//firstpost.png">
                             <div class="name">Firstpost</div>
-                            </a>
                         </div>
-                            <a href="https://www.news18.com/" id="logo" target="_blank">                                                  
-                            <div class="spons-details"><img src="images/spons/news18-logo-200x200_n.png">
+                        <div class="spons-details"><img src="images/spons/news18-logo-200x200_n.png">
                             <div class="name">News18</div>
-                            </a>
                         </div>
-                        <div class="spons-details">
-                            <!-- <a href="https://www.cisco.com/c/en_in/index.html" id="logo" target="_blank">                                                                               -->
-                            <img src="images/spons/YourStory_Logo-02 (2).png">
+                        <div class="spons-details"><img src="images/spons/YourStory_Logo-02 (2).png">
                             <div class="name">YourStory</div>
-                            <!-- </a> -->
                         </div>
-                        <div class="spons-details">
-                            <img src="images/spons/HBRAscend_Logo-1024x379.png">
+                        <div class="spons-details"><img src="images/spons/HBRAscend_Logo-1024x379.png">
                             <div class="name">HBR Ascend</div>
                         </div>
                         <div class="spons-details"><img src="images/spons/1698709.png">
@@ -679,7 +123,7 @@
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="sponsor">
                     <div class="sponsor-heading">CELEBRITY PARTNER</div>
                     <div class="sponsor-card-container">
@@ -709,20 +153,13 @@
                             <div class="name">Topcat</div>
                         </div>
                         <div class="spons-details"><img src="images/spons/cornitos-logo-standard-3.png">
-                            <a href="https://www.cornitos.in/" id="logo" target="_blank">                             
                             <div class="name">Cornitos</div>
-                            </a>
                         </div>
                         <div class="spons-details"><img src="images/spons/ice-tea-partner.png">
-                            <a href="http://www.thebrewhouse.in/" id="logo" target="_blank"> 
                             <div class="name">Brew House</div>
-                            </a>
                         </div>
-                        <div class="spons-details">
-                            <a href="https://creambell.com/" id="logo" target="_blank">                             
-                            <img src="images/spons/creambell-logo_for-web_3.jpg">
+                        <div class="spons-details"><img src="images/spons/creambell-logo_for-web_3.jpg">
                             <div class="name">Creambell</div>
-                            </a> 
                         </div>
                         <div class="spons-details"><img src="images/spons/logo-with-trade-mark(1).jpg">
                             <div class="name">Wrogn</div>
@@ -750,16 +187,8 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
-                            
-    <div class="backdrop" onclick="if (window.innerWidth < 600) { closeNav() } else { toggleDesktopHam() }"></div>
 </body>
-<script src="./js/index.js"></script>
-<script src="./js/video.js"></script>
-<script src="./js/contact.js"></script>
-<script src="./js/events.js"></script>
-
 </html>
