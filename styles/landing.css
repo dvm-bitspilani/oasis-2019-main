@@ -383,7 +383,7 @@
     }
     .open-nav {
         display: block;
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: #fff;
     }
     .oasis-landing-container {
@@ -400,7 +400,7 @@
         margin-bottom: 7.5vh;
     }
     .mobile-register a {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: #fff;
         padding: 16px 36px;
         border-radius: 35px;
@@ -446,7 +446,7 @@
 
 @media (max-width: 350px) {
     .navigation {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
     .mobile-register a {
         font-size: 1rem;
