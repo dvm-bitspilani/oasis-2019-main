@@ -70,6 +70,16 @@ a:hover {
     src: url('../fonts/ProductSans-Medium.woff');
 }
 
+@font-face {
+    font-family: 'Playfair';
+    src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Gilroy-FREE/Gilroy-FREE/Gilroy-Light.otf');
+}
+
 .backdrop {
     width: 100vw;
     height: 100vh;
