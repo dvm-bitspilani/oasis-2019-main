@@ -38,7 +38,7 @@ var customText = document.getElementById("custom-text");
 function showLink(events) {
   if (events.length !== 0) {
     if (events.length === 1) {
-      if (events[0] === "4") {
+      if (events[0] === "168") {
         addFileContainer.style.display = "flex";
         videoLink.style.display = "none";
       }
@@ -48,7 +48,7 @@ function showLink(events) {
       }
     }
     else {
-      if (events.includes("4")) {
+      if (events.includes("168")) {
         addFileContainer.style.display = "flex";
       }
       else {
