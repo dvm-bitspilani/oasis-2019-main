@@ -15,11 +15,11 @@ var display3 = true;
 var display4 = true;
 var random = true;
 var events_arr = [
-  { id: 1, name: 'Pitch Perfect' },
-  { id: 2, name: 'Swaranjali' },
-  { id: 3, name: 'Desert Duel' },
-  { id: 4, name: 'Unspoken' },
-  { id: 5, name: 'Scene' }
+  { id: 165, name: 'Pitch Perfect' },
+  { id: 166, name: 'Swaranjali' },
+  { id: 167, name: 'Desert Duel' },
+  { id: 168, name: 'Unspoken' },
+  { id: 169, name: 'And...Scene' }
 ]
 
 
@@ -201,21 +201,21 @@ window.onload = function () {
 
 
 
-  // fetch(URL)
-  //   .then(resp => resp.json())
-  //   .then(function (response) {
-  //     for (var i = 0; i < response.data.length; i++) {
-  //       const collegeContainer = document.getElementById('college_input');
-  //       const college = document.createElement('option');
-  //       college.id = response.data[i].id;
-  //       college.value = response.data[i].name;
-  //       college.text = response.data[i].name;
-  //       collegeContainer.appendChild(college);
-  //     }
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
+  fetch(URL)
+    .then(resp => resp.json())
+    .then(function (response) {
+      for (var i = 0; i < response.data.length; i++) {
+        const collegeContainer = document.getElementById('college_input');
+        const college = document.createElement('option');
+        college.id = response.data[i].id;
+        college.value = response.data[i].name;
+        college.text = response.data[i].name;
+        collegeContainer.appendChild(college);
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
 
 
@@ -253,21 +253,21 @@ window.onload = function () {
   //   });
 };
 
-// document.querySelector('input[list="college_input"]').addEventListener('input', getcollegeid)
+document.querySelector('input[list="college_input"]').addEventListener('input', getcollegeid)
 
-// function getcollegeid(e) {
-//   var input = e.target,
-//     val = input.value;
-//   list = input.getAttribute('list'),
-//     options = document.getElementById(list).childNodes;
+function getcollegeid(e) {
+  var input = e.target,
+    val = input.value;
+  list = input.getAttribute('list'),
+    options = document.getElementById(list).childNodes;
 
-//   for (var i = 0; i < options.length; i++) {
-//     if (options[i].innerText === val) {
-//       collegeid = options[i].id;
-//       break;
-//     }
-//   }
-// }
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].innerText === val) {
+      collegeid = options[i].id;
+      break;
+    }
+  }
+}
 
 function closebox() {
   msg_box.style.transform = "translate(-50%) scale(0)";
@@ -277,7 +277,7 @@ function prereg() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
-  const college_name = document.getElementById('college_name').value;
+  // const college_name = document.getElementById('college_name').value;
   const file = document.querySelector("input[type='file']");
   const link = document.getElementById("videoLink").value;
   var v = grecaptcha.getResponse();
@@ -290,9 +290,9 @@ function prereg() {
     email: email,
     name: name,
     phone: phone,
-    //college: collegeid,
-    college: college_name,
-    event: eventsidarr,
+    college: collegeid,
+    // college: college_name,
+    event: parseInt(eventsidarr[0]),
     captcha: v
   };
   if (link) {
@@ -317,8 +317,8 @@ function prereg() {
     // city == "" ||
     // year == null ||
     phone == "" ||
-    // collegeid == "" ||
-    college_name == "" ||
+    collegeid == "" ||
+    // college_name == "" ||
     eventsidarr == []
   ) {
     alert("Please enter all the selected feilds");
