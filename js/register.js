@@ -142,11 +142,18 @@ function geteventsvalue(e) {
   list = input.getAttribute('list'),
     options = document.getElementById(list).childNodes;
 
+  selected_events.innerHTML = ''
+  for (var i = 0; i < options.length; i++) {
+    options[i].disabled = false
+  }
+
   for (var i = 0; i < options.length; i++) {
     if (options[i].innerText === val) {
-      if (eventsidarr.includes(options[i].id)) {
-        return;
-      }
+
+      // if (eventsidarr.includes(options[i].id)) {
+      //   return;
+      // }
+      eventsidarr = []
       eventsidarr.push(options[i].id);
       e.target.value = '';
       e.target.blur();
@@ -177,6 +184,7 @@ function geteventsvalue(e) {
         if (eventsidarr.length == 0) {
           selected_events.style.display = 'none';
         }
+
         showLink(eventsidarr);
       };
       break;
