@@ -1,117 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./styles/register.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-      crossorigin="anonymous"
-    />
-    <title>Registration</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./styles/register.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+  <title>Registration</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      gtag("config", "UA-14236414-1");
-    </script>
-  </head>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <div class="msg-box">
-      <span class="inner-text"
-        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
-        suscipit quaerat unde magni architecto adipisci blanditiis,
-        necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit
-        assumenda quod rerum, minus explicabo consectetur!</span
-      >
-      <div class="close-box" onclick="closebox()">OK</div>
-    </div>
-    <div class="form-div">
-      <span class="heading">Registration</span>
-      <a href="./index.html" class="back-btn"
-        ><i class="fas fa-arrow-left"></i
-      ></a>
-      <div class="form-container">
-        <div class="input-el">
-          <input type="text" placeholder="Name *" class="text-type" id="name" />
-          <div class="select-wrapper">
-            <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
+    gtag("config", "UA-14236414-1");
+  </script>
+</head>
+
+<body>
+  <div class="msg-box">
+    <span class="inner-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
+      suscipit quaerat unde magni architecto adipisci blanditiis,
+      necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit
+      assumenda quod rerum, minus explicabo consectetur!</span>
+    <div class="close-box" onclick="closebox()">OK</div>
+  </div>
+  <div class="form-div">
+    <span class="heading">Registration</span>
+    <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+    <div class="form-container">
+      <div class="input-el">
+        <input type="text" placeholder="Name *" class="text-type" id="name" />
+        <!-- <div class="select-wrapper">
+          <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
                     <div class="events-list"></div> -->
-            <input list="college_input" placeholder="Select your College"
-            autocomplete="off" class="events-input" onclick="this.focus()""
-            onfocus="showData('college_input')">
-            <datalist id="college_input" autocomplete="off"> </datalist>
-          </div>
+        <!-- <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input"
+            onclick="this.focus()""
+            onfocus=" showData('college_input')">
+          <datalist id="college_input" autocomplete="off"> </datalist> -->
+        <!-- </div> -->
+        <input type="text" placeholder="College's Name *" class="text-type" id="college_name" />
 
-          
-          <input type="text" placeholder="Video link *" class="text-type" id="videoLink" />
-          <div id="addFileContainer">
-            <input type="file" placeholder="Add file" class="file" id="real-file" hidden="hidden" />
-            <button id="custom-button">CHOOSE FILE</button>
-            <div id="custom-text">No file chosen</div>
-          </div>
-        
-          
+
+        <input type="text" placeholder="Video link *" class="text-type" id="videoLink" />
+        <div id="addFileContainer">
+          <input type="file" placeholder="Add file" class="file" id="real-file" hidden="hidden" />
+          <button id="custom-button">CHOOSE FILE</button>
+          <div id="custom-text">No file chosen</div>
         </div>
-        <div class="input-el">
-          <div class="select-wrapper">
-            <!-- <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onfocus="displaylist()" onkeyup="filterFunction()" />
+
+
+      </div>
+      <div class="input-el">
+        <div class="select-wrapper">
+          <!-- <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onfocus="displaylist()" onkeyup="filterFunction()" />
                     <div class="events-list"></div> -->
-            <!-- <select id="events_input" autocomplete="off">
+          <!-- <select id="events_input" autocomplete="off">
                         <option disabled selected>Select your events</option>
                     </select> -->
-            <input
-              list="events_input"
-              placeholder="Select your events"
-              autocomplete="off"
-              class="events-input"
-              onclick="this.focus()"
-              onfocus="showData('events_input')"
-            />
-            <datalist id="events_input" autocomplete="off"> </datalist>
-          </div>
-          <div class="selected-events"></div>
+          <input list="events_input" placeholder="Select your events" autocomplete="off" class="events-input"
+            onclick="this.focus()" onfocus="showData('events_input')" />
+          <datalist id="events_input" autocomplete="off">
 
-          <input
-            type="email"
-            placeholder="Email *"
-            class="text-type"
-            id="email"
-          />
-
-          <input
-            type="number"
-            step="0"
-            placeholder="Phone *"
-            class="text-type"
-            id="phone"
-          />
+          </datalist>
         </div>
-      </div>
-      <div class="g-recaptcha-container">
-        <div
-          class="g-recaptcha"
-          data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"
-        ></div>
-      </div>
-      <div class="reg-button-container">
-        <span class="register" onclick="prereg()">REGISTER</span>
+        <div class="selected-events"></div>
+
+        <input type="email" placeholder="Email *" class="text-type" id="email" />
+
+        <input type="number" step="0" placeholder="Phone *" class="text-type" id="phone" />
       </div>
     </div>
-  </body>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="./js/register.js"></script>
+    <div class="g-recaptcha-container">
+      <div class="g-recaptcha" data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"></div>
+    </div>
+    <div class="reg-button-container">
+      <span class="register" onclick="prereg()">REGISTER</span>
+    </div>
+  </div>
+</body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="./js/register.js"></script>
+
 </html>
