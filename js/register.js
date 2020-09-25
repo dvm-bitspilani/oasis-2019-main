@@ -243,14 +243,10 @@ function closebox() {
 
 function prereg() {
   const name = document.getElementById("name").value;
-  // const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
-  const file = document.getElementById("real-file").value;
-  // const year = document.getElementById("yos_opt").value;
-  // const gender = document.getElementById('gender_input').value;
-  // const isChoreo = (document.getElementById("choreo").value == 'true');
-  // const isHeaOfSoc = (document.getElementById("head-of-soc").value == 'true');
+  const file = document.querySelector("input[type='file']");
+  const link = document.getElementById("videoLink").value;
   var v = grecaptcha.getResponse();
   console.log(v);
   if (v == "") {
@@ -258,19 +254,26 @@ function prereg() {
     return;
   }
   data = {
-    email_id: email,
+    email: email,
     name: name,
-    // gender,
-    // city: city,
-    // year,
-    file: file,
     phone: phone,
-    college_id: collegeid,
-    events: eventsidarr,
-    // choreographer: isChoreo,
-    // head_of_society: isHeaOfSoc,
+    college: collegeid,
+    event: eventsidarr,
     captcha: v
   };
+  if (link) {
+    console.log("helolini")
+    data["link"] = link;
+  }
+  else {
+    data["link"] = "";
+  }
+  if (file) {
+    console.log("helofiel")
+    data["file"] = file;
+
+
+  }
   console.log(data);
 
   if (
@@ -288,18 +291,13 @@ function prereg() {
 
     const form_data = new FormData();
     for (var key in data) {
+      if(key === "file"){
+        form_data.append('file', file.files[0]);
+      }
       form_data.append(key, data[key]);
     }
-
     fetch("https://www.bits-oasis.org/registration/atkt/", {
       method: "post",
-      headers: {
-        // Accept: "application/json, text/plain, */*",
-        // Accept: "application/json, text/plain, */*",
-        // "Content-Type": "multipart/form-data"
-        // 'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-        'Content-Type': 'multipart/form-data'
-      },
       body: form_data
     })
       .then(function (response) {
