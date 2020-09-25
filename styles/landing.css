@@ -67,12 +67,16 @@
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: 2vw;
-    background: url('../images/assets/logo_final.png');
+    margin-top: -4vh;
+    /* background: url('../images/assets/logo_final_20.png');
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat; */
     cursor: pointer;
+}
+
+.logo-img {
+    width: 150%;
 }
 
 .social-links {
@@ -174,6 +178,23 @@
     width: 70%;
     height: auto;
     margin-top: 20vh;
+}
+
+.landing-text {
+    color: white;
+    text-align: center;
+    font-family: "Arvo";
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+.landing-text > div:not(:nth-child(1)) {
+    margin-top: 4%;
+}
+
+#landing-2 {
+    font-size: 6vw;
 }
 
 #hamburger {
@@ -376,10 +397,10 @@
         left: 5%;
         top: -2.5%;
         margin-top: 1vh;
-        background: url('../images/assets/logo_final.png');
+        /* background: url('../images/assets/logo_final_20.png');
         background-position: center;
-        background-size: contain;
         background-repeat: no-repeat;
+        background-size: cover; */
     }
     .open-nav {
         display: block;
