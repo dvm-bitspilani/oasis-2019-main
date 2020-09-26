@@ -302,7 +302,7 @@ function prereg() {
   else {
     data["link"] = "";
   }
-  if (file) {
+  if (file && eventsidarr[0] == '168') {
     console.log("helofiel")
     data["file"] = file;
 
