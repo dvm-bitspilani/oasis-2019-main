@@ -78,6 +78,33 @@ body {
   margin-left: 5vh;
 }
 
+.instructionsContainer{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5vh;
+  /* background-color: red; */
+  flex-direction: column;
+  font-family: Haarlem;
+  color: white;
+}
+
+.instructionsContainer > .instructionsHeading{
+  font-size: 3em;
+}
+
+.instructionsContainer > .instructionsSubHeading{
+  font-size: 2em;
+  width: 100%;
+  margin: 2vh 0;
+}
+
+.instructionsContainer > .textSet{
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
 .form-div > .back-btn {
   float: right;
   margin-right: 5vh;

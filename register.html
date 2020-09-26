@@ -1,89 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <title>Registration</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="./styles/register.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
-  <title>Registration</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-14236414-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+      gtag("config", "UA-14236414-1");
+    </script>
+  </head>
 
-    gtag("config", "UA-14236414-1");
-  </script>
-</head>
-
-<body>
-  <div class="msg-box">
-    <span class="inner-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
-      suscipit quaerat unde magni architecto adipisci blanditiis,
-      necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit
-      assumenda quod rerum, minus explicabo consectetur!</span>
-    <div class="close-box" onclick="closebox()">OK</div>
-  </div>
-  <div class="form-div">
-    <span class="heading">Registration</span>
-    <a href="./index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
-    <div class="form-container">
-      <div class="input-el">
-        <input type="text" placeholder="Name *" class="text-type" id="name" />
-        <div class="select-wrapper">
-          <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
-                    <div class="events-list"></div> -->
-          <input list="college_input" placeholder="Select your College" autocomplete="off" class="events-input"
-            onclick="this.focus()""
-            onfocus=" showData('college_input')">
-          <datalist id="college_input" autocomplete="off"> </datalist>
+  <body>
+    <div class="msg-box">
+      <span class="inner-text"
+        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
+        suscipit quaerat unde magni architecto adipisci blanditiis,
+        necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit
+        assumenda quod rerum, minus explicabo consectetur!</span
+      >
+      <div class="close-box" onclick="closebox()">OK</div>
+    </div>
+    <div class="form-div">
+      <span class="heading">Registration</span>
+      <a href="./index.html" class="back-btn"
+      ><i class="fas fa-arrow-left"></i
+    ></a>
+      <div class="instructionsContainer">
+        <div class="instructionsHeading">Standard Guidelines</div>
+        <div class="textSet standardGuidlines">
+          <ul>
+            <li>
+              All content shall be in good taste and shall not be obscene,
+              vulgar, libellous, defamatory, immoral, insensitive, insulting,
+              annoying or hurt anyone’s religious sentiments
+            </li>
+            <li>
+              Participant shall NOT refer to any commercial product service
+              unless absolutely required for creative purposes
+            </li>
+            <li>
+              Participant should gracefully accept that the decisions of the
+              Host College OC, members of Team ATKT, or any appointed external
+              judges for any of the competitions
+            </li>
+          </ul>
         </div>
-        <!-- <input type="text" placeholder="College's Name *" class="text-type" id="college_name" /> -->
-
-
-        <input type="text" placeholder="Video link *" class="text-type" id="videoLink" />
-        <div id="addFileContainer">
-          <input type="file" placeholder="Add file" class="file" id="real-file" hidden="hidden" />
-          <button id="custom-button">CHOOSE FILE</button>
-          <div id="custom-text">No file chosen</div>
+        <div class="instructionsHeading">Technical Guidelines</div>
+        <div class="instructionsSubHeading">A. Video Optimisation</div>
+        <div class="textSet standardGuidlines">
+          <ul>
+            <li>Shoot horizontally – vertical videos are not allowed</li>
+            <li>
+              Choose your frame carefully. Make sure you don’t have people
+              walking in the background, and the background is aesthetically
+              pleasing. Experiment with a few backgrounds before shooting your
+              performance
+              <ul>
+                <li>Place your device such that the camera is at eye level,</li>
+                <li>
+                  Frame yourself such that your facial expressions are clear,
+                  and your body movements are captured fully.
+                </li>
+                <li>
+                  For dancers, stand only as far back from the camera, as you
+                  need to be – don’t be so far that the frame is mostly empty
+                  space
+                </li>
+                <li>
+                  Ensure that your head, hands and torso are not cut by the
+                  frame.
+                </li>
+                <li>
+                  Look at your device camera while performing and make sure you
+                  are framed correctly, preferably centred in the frame
+                </li>
+              </ul>
+            </li>
+            <li>
+              Experiment with lighting to get the best video possible and ensure
+              your face is well lit.
+              <ul>
+                <li>Make sure the light source isn’t behind you.</li>
+                <li>Dark and silhouette videos will be rejected</li>
+              </ul>
+            </li>
+            <li>
+              Try to ensure that your background is a solid colour/texture wall.
+            </li>
+            <li>
+              You need to be dressed such that your clothes contrast the colours
+              of the background, so that you are clearly visible.
+            </li>
+            <li>
+              Please be dressed for the occasion and trade in your jammies or
+              home wear for a more refined wardrobe
+            </li>
+            <li>
+              Hairstyling and makeup is allowed, but make sure your hair doesn’t
+              cover your face
+            </li>
+            <li>
+              Use a tripod/ stable surface if shooting with a phone/DSLR. Avoid
+              handheld shoots
+            </li>
+          </ul>
         </div>
+        <div class="instructionsSubHeading">B. Sound Optimisation</div>
+        <div class="textSet standardGuidlines">
+          <ul>
+            <li>
+              Conduct a test and ensure your sound input and output by making
+              different permutations and combinations of devices to see what
+              works best for you
+            </li>
+            <li>
+              Choose a silent area to shoot in. Try switching off the fans or
+              other noisy appliances while shooting
+            </li>
+            <li>
+              Tip: For better audio quality, use headphones with microphones
+            </li>
+            <li>
+              Please face your laptop or mobile while speaking, so that the
+              sound gets captured well. It will cut off if you look away from
+              your device while speaking
+            </li>
+            <li>
+              Ensure the words are well enunciated and speak with enough pauses.
+            </li>
+            <li>
+              By default, Zoom edits the audio output to remove background
+              noise, echo and refines the sound. This helps when you are only
+              speaking. But in case if music is being played through a player on
+              your device or via an instrument, these default Zoom settings must
+              be tweaked to get the best output
+            </li>
+          </ul>
+        </div>
+        <div class="instructionsSubHeading">C. Upload Guidelines </div>
+        <div class="textSet standardGuidlines">
+          <ul>
+            <li>
+              Maximum duration of the video should be 3 mins
 
+            </li>
+            <li>
+              The video should be uploaded on your Youtube channel as an unlisted video (the video will not be publicly available and can be watched by only using the shared link)
 
+            </li>
+            <li>
+              The Title of the video should be &ltEvent&gt &ltspace&gt &ltYour Name&gt.
+
+            </li>
+            <li>
+              After uploading, you need to copy the link of your video paste below.
+
+            <li>
+              After pasting the video link, click the submit button below.
+
+            </li> 
+          </ul>
+        </div>
       </div>
-      <div class="input-el">
-        <div class="select-wrapper">
-          <!-- <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onfocus="displaylist()" onkeyup="filterFunction()" />
+      <!-- <a href="./index.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i
+      ></a> -->
+      <div class="form-container">
+        <div class="input-el">
+          <input type="text" placeholder="Name *" class="text-type" id="name" />
+          <div class="select-wrapper">
+            <!-- <input type="text" placeholder="Select your College" class="events-input" id="college_input" onclick="displaylist3()" onfocus="displaylist3()" onkeyup="filterFunction2()" />
                     <div class="events-list"></div> -->
-          <!-- <select id="events_input" autocomplete="off">
+            <input list="college_input" placeholder="Select your College"
+            autocomplete="off" class="events-input" onclick="this.focus()""
+            onfocus=" showData('college_input')">
+            <datalist id="college_input" autocomplete="off"> </datalist>
+          </div>
+          <!-- <input type="text" placeholder="College's Name *" class="text-type" id="college_name" /> -->
+
+          <input
+            type="text"
+            placeholder="Video link *"
+            class="text-type"
+            id="videoLink"
+          />
+          <div id="addFileContainer">
+            <input
+              type="file"
+              placeholder="Add file"
+              class="file"
+              id="real-file"
+              hidden="hidden"
+            />
+            <button id="custom-button">CHOOSE FILE</button>
+            <div id="custom-text">No file chosen</div>
+          </div>
+        </div>
+        <div class="input-el">
+          <div class="select-wrapper">
+            <!-- <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onfocus="displaylist()" onkeyup="filterFunction()" />
+                    <div class="events-list"></div> -->
+            <!-- <select id="events_input" autocomplete="off">
                         <option disabled selected>Select your events</option>
                     </select> -->
-          <input list="events_input" placeholder="Select your events" autocomplete="off" class="events-input"
-            onclick="this.focus()" onfocus="showData('events_input')" />
-          <datalist id="events_input" autocomplete="off"></datalist>
+            <input
+              list="events_input"
+              placeholder="Select your events"
+              autocomplete="off"
+              class="events-input"
+              onclick="this.focus()"
+              onfocus="showData('events_input')"
+            />
+            <datalist id="events_input" autocomplete="off"></datalist>
+          </div>
+          <div class="selected-events"></div>
+
+          <input
+            type="email"
+            placeholder="Email *"
+            class="text-type"
+            id="email"
+          />
+
+          <input
+            type="number"
+            step="0"
+            placeholder="Phone *"
+            class="text-type"
+            id="phone"
+          />
         </div>
-        <div class="selected-events"></div>
-
-        <input type="email" placeholder="Email *" class="text-type" id="email" />
-
-        <input type="number" step="0" placeholder="Phone *" class="text-type" id="phone" />
+      </div>
+      <div class="g-recaptcha-container">
+        <div
+          class="g-recaptcha"
+          data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"
+        ></div>
+      </div>
+      <div class="reg-button-container">
+        <span class="register" onclick="prereg()">REGISTER</span>
       </div>
     </div>
-    <div class="g-recaptcha-container">
-      <div class="g-recaptcha" data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"></div>
-    </div>
-    <div class="reg-button-container">
-      <span class="register" onclick="prereg()">REGISTER</span>
-    </div>
-  </div>
-</body>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="./js/register.js"></script>
-
+  </body>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="./js/register.js"></script>
 </html>
