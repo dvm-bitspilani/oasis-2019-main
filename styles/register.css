@@ -21,10 +21,10 @@ body {
   font-family: "SFpro";
   src: url("../fonts/ProductSans-Medium.woff");
 }
-.text-type::-webkit-inner-spin-button, 
-.text-type::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+.text-type::-webkit-inner-spin-button,
+.text-type::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .msg-box {
   position: absolute;
@@ -78,6 +78,33 @@ body {
   margin-left: 5vh;
 }
 
+.instructionsContainer{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5vh;
+  /* background-color: red; */
+  flex-direction: column;
+  font-family: Haarlem;
+  color: white;
+}
+
+.instructionsContainer > .instructionsHeading{
+  font-size: 3em;
+}
+
+.instructionsContainer > .instructionsSubHeading{
+  font-size: 2em;
+  width: 100%;
+  margin: 2vh 0;
+}
+
+.instructionsContainer > .textSet{
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
 .form-div > .back-btn {
   float: right;
   margin-right: 5vh;
@@ -105,6 +132,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   flex-flow: column;
+  /* background-color:  red; */
 }
 
 .input-el .text-type {
@@ -297,7 +325,7 @@ select:focus {
   margin-bottom: 2vh;
   cursor: pointer;
 }
-@supports (-moz-appearance:none) {
+@supports (-moz-appearance: none) {
   .checkboxes option {
     background: #02021b;
     text-align: start;
@@ -321,6 +349,48 @@ select:focus {
   justify-content: center;
   width: 100%;
   margin: 0.5% 0;
+}
+
+#addFileContainer,
+#videoLink{
+  display: none;
+}
+
+#addFileContainer{
+  display: none;
+  width: 60%;
+  /* background-color: red; */
+  justify-content: center;
+  flex-direction: column; ;
+  align-items: center;
+}
+
+/* #custom-button{
+  width: 60%;
+} */
+
+#custom-text{
+  margin: 2vh;
+  color: #cbcbcb;
+  font-size: 1.4em;
+  font-family: sf-ui;
+}
+
+#custom-button{
+  cursor: pointer;
+  background-color: #02021b;
+  width: 100%;
+  padding: 2% 3% 2% 6%;
+  border-radius: 40px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1.4em;
+  font-family: sf-ui;
+  outline: none;
+}
+
+#custom-button:focus{
+  outline: none;
 }
 
 @media (max-width: 500px) {
