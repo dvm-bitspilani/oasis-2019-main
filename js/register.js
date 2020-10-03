@@ -29,7 +29,7 @@ var events_arr = [
 
 
 var addFileContainer = document.getElementById("addFileContainer");
-var videoLink = document.getElementById("videoLink");
+// var videoLink = document.getElementById("videoLink");
 
 var realFile = document.getElementById("real-file");
 var customButton = document.getElementById("custom-button");
@@ -40,10 +40,10 @@ function showLink(events) {
     if (events.length === 1) {
       if (events[0] === "168") {
         addFileContainer.style.display = "flex";
-        videoLink.style.display = "none";
+        // videoLink.style.display = "none";
       }
       else {
-        videoLink.style.display = "block";
+        // videoLink.style.display = "block";
         addFileContainer.style.display = "none";
       }
     }
@@ -54,11 +54,11 @@ function showLink(events) {
       else {
         addFileContainer.style.display = "none";
       }
-      videoLink.style.display = "block";
+      // videoLink.style.display = "block";
     }
   }
   else {
-    videoLink.style.display = "none";
+    // videoLink.style.display = "none";
     addFileContainer.style.display = "none";
   }
 }
