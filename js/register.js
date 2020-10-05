@@ -272,7 +272,25 @@ function getcollegeid(e) {
 function closebox() {
   msg_box.style.transform = "translate(-50%) scale(0)";
 }
+function clear() {
+  document.getElementById('email').value = ''
+  document.getElementById("phone").value = ''
+  document.getElementById("videoLink").value = ''
+  document.getElementById('name').value = ''
+  document.getElementsByClassName('events-input')[0].value = ''
+  document.getElementsByClassName('selected-events')[0].innerHTML = ''
+  document.getElementsByClassName('selected-events')[0].style.display = 'none';
+  var events = document.getElementById('events_input').options
+  for (var i = 0; i < events.length; i++) {
+    events[i].disabled = false
+  }
+  console.log(document.getElementById("real-file").value)
 
+  document.getElementsByClassName('file')[0].value = ''
+  console.log(document.getElementById("real-file").value)
+  document.getElementById("custom-text").innerHTML = "No File Chosen";
+  document.getElementById("addFileContainer").style.display='none'
+}
 function prereg() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -281,6 +299,7 @@ function prereg() {
   const file = document.querySelector("input[type='file']");
   const link = document.getElementById("videoLink").value;
   var v = grecaptcha.getResponse();
+  
   console.log(v);
   if (v == "") {
     alert("Please select Captcha");
@@ -340,8 +359,12 @@ function prereg() {
       })
       .then(function (result) {
         console.log(result.message);
+        
         document.getElementsByClassName("inner-text")[0].innerHTML =
           result.message;
+        if(result.message=='Successfully registered'){
+          clear()
+        }
         msg_box.style.transform = "translate(-50% , -50%) scale(1)";
         grecaptcha.reset();
       })
