@@ -355,8 +355,9 @@ select:focus {
   margin: 0.5% 0;
 }
 
-#addFileContainer,
-#videoLink{
+#addFileContainer
+/* #videoLink */
+{
   display: none;
 }
 
