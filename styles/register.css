@@ -90,6 +90,10 @@ body {
   color: white;
 }
 
+.regOver {
+  font-size: 36px;
+}
+
 .instructionsContainer > .instructionsHeading{
   font-size: 3em;
 }
