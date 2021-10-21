@@ -185,15 +185,15 @@ document.getElementsByClassName("Contact-div")[0].addEventListener("touchmove", 
 
 
 var profpic = [
-    "Kartikeya.JPG",
+    "garvit.jpeg",
     // "Parth.jpg",
-    "Nischay.jpg",
-    "Rishabh.jpg",
-    "Ruchir.jpg",
-    "Sujith.png",
-    "Rutul.jpeg",
-    "rahul.jpg",
-    "abhi.jpg"
+    "sample.png",
+    "shourya.jpeg",
+    "abhinav.jpeg",
+    "aman.jpeg",
+    "siddharth.jpeg",
+    "sample.png"
+    // "abhi.jpg"
 ];
 
 var url = "images/contacts/";
