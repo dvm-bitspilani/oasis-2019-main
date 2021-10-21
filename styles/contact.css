@@ -74,6 +74,7 @@
 }
 
 .des-card .prof-pic {
+    object-fit: cover;
     width: 108px;
     height: 108px;
     border-radius: 50%;
